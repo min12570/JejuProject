@@ -9,11 +9,19 @@ public class RoomInfoVO {
 	private String room_content;
 	private String room_URL;
 	private String room_date;
+	private int room_remain;
+	
 	public int getRoom_id() {
 		return room_id;
 	}
 	public void setRoom_id(int room_id) {
 		this.room_id = room_id;
+	}
+	public int getRoom_remain() {
+		return room_remain;
+	}
+	public void setRoom_remain(int room_remain) {
+		this.room_remain = room_remain;
 	}
 	public String getRoom_name() {
 		return room_name;

@@ -3,13 +3,13 @@ package packageInfo;
 public class PackageInfoVO {
 	private int p_id;
 	private String p_name;
-	private String p_week;
-	private int p_cost;
+	private int p_weekdayCost;
+	private int p_weekendCost;
 	private String p_region;
 	private String p_image;
 	private String p_content;
 	private String p_URL;
-	private int p_personCnt;
+	private int p_perCost;
 	
 	public int getP_id() {
 		return p_id;
@@ -23,18 +23,7 @@ public class PackageInfoVO {
 	public void setP_name(String p_name) {
 		this.p_name = p_name;
 	}
-	public String getP_week() {
-		return p_week;
-	}
-	public void setP_week(String p_week) {
-		this.p_week = p_week;
-	}
-	public int getP_cost() {
-		return p_cost;
-	}
-	public void setP_cost(int p_cost) {
-		this.p_cost = p_cost;
-	}
+
 	public String getP_region() {
 		return p_region;
 	}
@@ -59,13 +48,25 @@ public class PackageInfoVO {
 	public void setP_URL(String p_URL) {
 		this.p_URL = p_URL;
 	}
-	public int getP_personCnt() {
-		return p_personCnt;
+	public int getP_weekdayCost() {
+		return p_weekdayCost;
 	}
-	public void setP_personCnt(int p_personCnt) {
-		this.p_personCnt = p_personCnt;
+	public void setP_weekdayCost(int p_weekdayCost) {
+		this.p_weekdayCost = p_weekdayCost;
 	}
-	
+	public int getP_weekendCost() {
+		return p_weekendCost;
+	}
+	public void setP_weekendCost(int p_weekendCost) {
+		this.p_weekendCost = p_weekendCost;
+	}
+	public int getP_perCost() {
+		return p_perCost;
+	}
+	public void setP_perCost(int p_perCost) {
+		this.p_perCost = p_perCost;
+	}
+
 	
 
 }
