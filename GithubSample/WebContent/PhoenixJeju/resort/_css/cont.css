@@ -1,0 +1,697 @@
+@charset "utf-8";
+
+@import url(default.css);
+@import url(layout.css);
+@import url(member.css);
+@import url(bbs.css);
+@import url(bbs_write.css);
+
+/* font */
+.font_n13				{font:normal 13px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+.font_n14				{font:normal 14px/23px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+.font_n16				{font:normal 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555}
+.font_b13				{font:bold 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+.font_b14				{font:bold 14px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+.font_b15				{font:bold 15px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555;}
+.font_b16				{font:bold 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555;}
+.font_b16_r				{font:bold 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#005689;}
+.font_b16_3				{font:bold 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#333;}
+.font_b22				{font:bold 22px/30px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555;}
+.font_b30r				{font:bold 30px/26px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#9c191d;}
+
+
+/*����*/
+.line_gray					{width:100%; border-top:1px solid #ddd}
+
+
+/*��ư*/
+.btn_w103			{display:inline-block; width:103px; height:25px; padding:5px 0 0 0; text-align:center; font:bold 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; background:#0b4a65;}
+.btn_w103:hover		{background:#666;}
+
+.btn_w130			{display:inline-block; width:130px; height:28px; padding:7px 0 0 0; text-align:center; font:bold 14px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; background:#0b4a65;}
+.btn_w130:hover		{background:#666;}
+
+.btn_g_w130			{display:inline-block; width:130px; height:28px; padding:7px 0 0 0; text-align:center; font:bold 14px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; background:#666;}
+.btn_g_w130:hover	{background:#444;}
+
+.btn_r				{display:inline-block; height:22px; padding:4px 12px 0 12px; text-align:center; font:bold 12px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; background:#0b4a65;}
+.btn_r:hover		{background:#444;}
+
+.btn_g				{display:inline-block; height:22px; padding:4px 12px 0 12px; text-align:center; font:bold 12px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; background:#8b8a8f;}
+.btn_g:hover		{background:#444;}
+
+.btn_radius_r			{display:inline-block; height:22px; padding:2px 12px 0 6px; border:1px solid #0b4a65; font:normal 12px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff !important; border-radius:2px !important; background:url('../_img/cont/btn_icon03.png') #0b4a65 no-repeat 95% 9px;}
+.btn_radius_r:hover		{background:url('../_img/cont/btn_icon03.png') #777 no-repeat 95% 9px; border:1px solid #777; color:#fff !important;}
+
+.btn_line_w140			{display:inline-block; width:100px; height:28px; padding:7px 18px 0 20px; font:bold 14px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#777 !important; border:1px solid #777; background:url('../_img/cont/btn_icon02.png') no-repeat 80% 12px;}
+.btn_line_w140:hover	{background:url('../_img/cont/btn_icon01.png') #777 no-repeat 80% 12px; color:#fff !important;}
+
+.btn_line_radius_g			{display:inline-block; height:20px; padding:2px 12px 0 7px; font:bold 12px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#777 !important; border:1px solid #999; border-radius:2px; background:url('../_img/cont/btn_icon04.png') #f0f0f0 no-repeat 90% 8px;}
+.btn_line_radius_g:hover	{background:url('../_img/cont/btn_icon03.png') #777 no-repeat 90% 8px; color:#fff !important;}
+
+
+/*input*/
+input.w150				{width:150px; height:34px; padding-left:10px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444;}
+input.h32				{width:150px; height:32px; margin:2px 0 0 0; padding-left:10px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+select.w150				{width:150px; height:34px; padding-left:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;}
+select.w130				{width:130px; height:37px; padding-left:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;}
+select.w230				{width:230px; height:34px; padding-left:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 13px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;}
+select.w140				{width:140px; height:28px; padding-left:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px/15px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;}
+select.h22				{height:22px; padding-left:5px; border-top:1px solid #bebebe; border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 13px/13px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;}
+
+/* 이미지부분 - 평면도 VR 미포함 */
+div.pic01							{width:100%; overflow:hidden; position:relative;}
+div.pic01 .big_img					{float:left; width:770px; }
+div.pic01 .thumb					{float:right; width:192px; height:460px; overflow:hidden; background:#222}
+div.pic01 .thumb li					{opacity:0.3; cursor:pointer}
+div.pic01 .thumb li span			{z-index:10}
+div.pic01 .thumb li.on span			{width:192px; height:115px; display:block; position:absolute; cursor:pointer; background:url('/PP/_img/cont/pic_select02.png') no-repeat 0 0}
+div.pic01 .thumb li.on				{opacity:1}
+
+
+div.pic01 .prev				{position:absolute; width:192px; height:29px; top:0; right:0; z-index:100;  text-align:center;  }
+div.pic01 .prev a			{display:block; width:100%; height:19px; padding:10px 0 0 0; background:#000; opacity:0.5; 
+							-moz-transition: all 300ms;  -o-transition: all 300ms;  -webkit-transition: all 300ms;  transition: all 300ms;}
+div.pic01 .prev a:hover		{opacity:0.9}
+div.pic01 .next				{position:absolute; width:192px; height:29px;  bottom:0; right:0; z-index:100; text-align:center;}
+div.pic01 .next a			{display:block; width:100%; height:19px; padding:10px 0 0 0; background:#000; opacity:0.5; 
+							-moz-transition: all 300ms;  -o-transition: all 300ms;  -webkit-transition: all 300ms;  transition: all 300ms;}
+div.pic01 .next a:hover		{opacity:0.9}
+
+
+/* 이미지부분 - 평면도 VR포함 */
+div.pic02							{width:100%; overflow:hidden; position:relative;}
+div.pic02 .big_img					{float:left; width:770px; }
+div.pic02 .vr						{width:192px; overflow:hidden; z-index:100; float:right;}
+div.pic02 .vr a						{float:left; display:block; height:40px; padding:12px 0 0 0; text-align:right; font:bold 15px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; }
+div.pic02 .vr .btn01				{width:95px;   border-right:1px solid #bfbaa8; background:url('../_img/cont/img_plan.png') #a49c83 no-repeat 15px 18px ; color:#fff}
+div.pic02 .vr .btn01:hover			{background:url('../_img/cont/img_plan.png') #8b836c no-repeat 15px 18px ;}
+div.pic02 .vr .btn02				{width:90px; padding:12px 6px 0 0; background:url('../_img/cont/img_camera.png') #989684 no-repeat 24px 18px ;  color:#fff}
+div.pic02 .vr .btn02:hover			{background:url('../_img/cont/img_camera.png') #807e6b no-repeat 24px 18px ;}
+div.pic02 .vr .btn03				{width:100%; padding:12px 0 0 100px; text-align:left;  background:url('../_img/cont/img_camera.png') #989684 no-repeat 68px 18px;  color:#fff;}
+div.pic02 .vr .btn03:hover			{background:url('../_img/cont/img_camera.png') #807e6b no-repeat 68px 18px;}
+div.pic02 .vr .btn04				{width:100%; padding:12px 0 0 100px; text-align:left;  background:url('../_img/cont/img_map.png') #989684 no-repeat 68px 18px;  color:#fff;}
+div.pic02 .vr .btn04:hover			{background:url('../_img/cont/img_map.png') #807e6b no-repeat 68px 18px;}
+div.pic02 .vr .btn05				{width:95px;   border-right:1px solid #bfbaa8; background:url('../_img/cont/img_map02.png') #a49c83 no-repeat 15px 18px ; color:#fff;}
+div.pic02 .vr .btn05:hover			{background:url('../_img/cont/img_map02.png') #8b836c no-repeat 15px 18px ;}
+div.pic02 .vr .btn06				{width:100%; padding:12px 0 0 90px; text-align:left;  background:url('../_img/cont/img_map02.png')#989684 no-repeat 65px 18px;  color:#fff;}
+div.pic02 .vr .btn06:hover			{background:url('../_img/cont/img_map02.png') #807e6b no-repeat 65px 18px;}
+
+
+
+
+div.pic02 .thumb					{float:right; width:192px; height:370px; overflow:hidden; position:relative; margin:27px 0 0 0; background:#222}
+div.pic02 .thumb li					{opacity:0.3}
+div.pic02 .thumb li span			{z-index:10}
+div.pic02 .thumb li.on span			{width:192px; height:124px; display:block; position:absolute; cursor:pointer; background:url('../_img/cont/pic_select.png') no-repeat 0 0}
+div.pic02 .thumb li.on				{opacity:1}
+div.pic02 .vr_img .vr_i				{}
+div.pic02 .vr_img .vr_list			{height:25px; padding:9px 10px 0 10px; background:#414141; color:#666}
+div.pic02 .vr_img .vr_list a		{padding:0 20px 0 20px; color:#999}
+div.pic02 .vr_img .vr_list a:hover	{color:#fff}
+div.pic02 .vr_img .vr_list a.on		{color:#fff}
+
+
+div.pic02 .prev				{position:absolute; width:192px; height:29px; top:52px; right:0; z-index:100;  text-align:center;  }
+div.pic02 .prev a			{display:block; width:100%; height:19px; padding:8px 0 0 0; background:#000; opacity:0.7; 
+							-moz-transition: all 300ms;  -o-transition: all 300ms;  -webkit-transition: all 300ms;  transition: all 300ms;}
+div.pic02 .prev a:hover		{opacity:0.9}
+div.pic02 .next				{position:absolute; width:192px; height:29px;  bottom:-2px; right:0; z-index:100; text-align:center;}
+div.pic02 .next a			{display:block; width:100%; height:19px; padding:8px 0 0 0; background:#000; opacity:0.7; 
+							-moz-transition: all 300ms;  -o-transition: all 300ms;  -webkit-transition: all 300ms;  transition: all 300ms;}
+div.pic02 .next a:hover		{opacity:0.9}
+
+/*����Ʈ �� - ��ũ, ���Ϸ���, ��������*/
+ul.sitetap			{overflow:hidden;}
+ul.sitetap li		{float:left; margin-left:5px; cursor:pointer;}
+
+
+/*��Ű���̺�Ʈ*/
+div.pack_search					{overflow:hidden; background:#f8f8f8; border:1px solid #e5e5e5; padding:17px 36px;}
+div.pack_search	div.date		{float:left; overflow:hidden;}
+div.pack_search	div.date span	{display:block; float:left;}
+div.pack_search	div.all			{float:right;}
+div.pack_search	div.all select		{height:29px; padding-left:5px; border-top:1px solid #bebebe; opacity:0; cursor:pointer; position:absolute;
+									border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;
+}
+div.pack_search	div.all span		{display:block; height:29px; padding:5px 0 0 10px; text-overflow:ellipsis; overflow:hidden; cursor:pointer;
+									background:url("../_img/bbs/uiForm.png") #fff no-repeat right 13px; 
+									border-left:1px solid #bebebe; border-top:1px solid #bebebe;  border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4;}
+
+div.bbs_line	{border-bottom:1px solid #ddd;}
+
+ul.gallery03				{overflow:hidden;}
+ul.gallery03 li				{width:310px; float:left; margin:20px 9px 10px 9px;}
+ul.gallery03 li h4			{margin:15px 0 0 0; }
+ul.gallery03 li h4 a		{font:bold 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555; }
+ul.gallery03 li h4 a:hover	{text-decoration:underline}
+ul.gallery03 li .t01		{margin:10px 0 0 0; font:bold 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666; letter-spacing:-0.8pt;}
+ul.gallery03 li .t02		{font:normal 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+ul.gallery03 li img.pp		{border-bottom:4px solid #016099; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+ul.gallery03 li img.pi		{border-bottom:4px solid #eb7203; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+
+ul.gallery04				{overflow:hidden;}
+ul.gallery04 li				{width:300px; float:left; margin:20px 9px 10px 9px;}
+ul.gallery04 li h4			{margin:15px 0 0 0; }
+ul.gallery04 li h4 a		{font:bold 16px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555; }
+ul.gallery04 li h4 a:hover	{text-decoration:underline}
+ul.gallery04 li .t01		{margin:10px 0 0 0; font:bold 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666; letter-spacing:-0.8pt;}
+ul.gallery04 li .t02		{font:normal 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+
+
+/*�޷�*/
+div.calender						{position:absolute; width:220px; height:235px; border:1px solid #ccc; background:#fff}
+div.calender .date					{position:relative; width:100%; margin:5px 0 0 0; overflow:hidden;}
+div.calender .date .datePrev		{position:absolute; width:20px; left:12px; top:8px; z-index:50}
+div.calender .date .dateNow			{position:relative; width:100%; padding:4px 0 0 0; text-align:center; z-index:30; font:bold 14px/18px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; }
+div.calender .date .dateNext		{position:absolute; right:12px;  top:8px; z-index:50}
+
+table.calender					{width:196px; margin:40px auto 0 auto; border-bottom:1px solid #e5e5e5;}
+table.calender thead th			{text-align:center; height:20px; font:normal 11px/14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555;}
+table.calender tbody tr			{border-left:1px solid #e5e5e5;}
+table.calender tbody td			{text-align:center; height:26px; border-top:1px solid #e5e5e5; border-right:1px solid #e5e5e5;}
+table.calender tbody td	a		{width:100%; display:block; height:26px; font:normal 13px/25px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777}
+table.calender tbody td	a:hover	{background:#e5e5e5; color:#000;}
+table.calender tbody td	a.today	{background:#0b4a65; color:#fff; font-weight:bold;}
+
+
+/*���տ���޷�*/
+div.re_cal						{position:absolute; margin:0 0 0 20px; width:315px; height:277px; background:#fff}
+div.re_cal .date				{position:relative; width:100%; margin:15px 0 0 0; overflow:hidden;}
+div.re_cal .date .datePrev		{position:absolute; width:20px; left:12px; top:8px; z-index:50}
+div.re_cal .date .dateNow		{position:relative; width:100%; padding:4px 0 0 0; text-align:center; z-index:30; font:bold 15px/18px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; }
+div.re_cal .date .dateNext		{position:absolute; right:12px;  top:8px; z-index:50;}
+
+table.re_cal					{width:306px; margin:40px auto 0 auto; border-bottom:1px solid #c9c9c9;}
+table.re_cal thead th			{text-align:center; height:25px; font:normal 11px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#888;}
+table.re_cal tbody tr			{border-left:1px solid #c9c9c9;}
+table.re_cal tbody td			{text-align:center; height:26px; border-top:1px solid #c9c9c9; border-right:1px solid #c9c9c9;}
+table.re_cal tbody td.no		{background:#f1f1f1; height:32px;}
+
+table.re_cal tbody td a				{width:100%; display:block; height:32px; font:bold 12px/31px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777}
+table.re_cal tbody td a:hover		{background:#e5e5e5; color:#000;}
+table.re_cal tbody td a.okay		{background:#0b4a65; color:#fff; font-weight:bold;}
+table.re_cal tbody td a.standby		{background:#ffe2cc; color:#5a5858; font-weight:bold;}
+table.re_cal tbody td a.lottery		{background:#66cdaa; color:#fff; font-weight:bold;}
+table.re_cal tbody td a.impossible 	{background:#6d6d6d; color:#b3b3b3; font-weight:bold;}
+table.re_cal tbody td a.receipt		{background:#6495ed; color:#fff; font-weight:bold;}
+table.re_cal tbody td a.yet			{background:#744fd3; color:#fff; font-weight:bold;}
+table.re_cal tbody td a.done		{background:#ffffff; color:#ccc; font-weight:bold; text-decoration:line-through;}
+table.re_cal tbody td a.sucess		{background:#ffffff; color:#777; font-weight:bold; }
+
+
+
+/*���տ��� ����*/
+div.se_form			{width:1000px; padding:0 0 20px 0; overflow:hidden; border-bottom:1px solid #bbb;  background:url(../_img/cont/se_form_bg.jpg) repeat-y 0 0; }
+div.se_form div		{float:left;}
+
+div.sel_box					{width:230px;}
+div.sel_box p.form_tit		{border-right:1px solid #777; background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+
+ul.sel_list				{  padding:0 0 0 1px; }
+ul.sel_list li a		{display:block; width:208px; height:26px; padding:9px 0 3px 20px; border-top:1px solid #bbb; border-bottom:1px solid #bbb; background:#fff;  font:normal 13px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#000}
+ul.sel_list li a:hover	{display:block; width:208px; height:26px; padding:9px 0 3px 20px; background:#fff url(../_img/bbs/se_on.png) no-repeat 90% 50%}
+ul.sel_list li.on a		{color:#000; font-weight:bold;  background:#fff}
+ul.sel_list li.off a	{color:#777; font-weight:bold;  background:#fff}
+
+ul.fa_list				{  }
+ul.fa_list li a			{display:block; width:211px; height:26px; padding:9px 0 3px 18px; border-top:1px solid #bbb; border-bottom:1px solid #bbb; background:#fff;  font:normal 13px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#000}
+ul.fa_list li a:hover	{display:block; width:211px; height:26px; padding:9px 0 3px 18px; background:#fff url(../_img/bbs/se_on.png) no-repeat 90% 50%}
+ul.fa_list li.on a		{color:#000; font-weight:bold;  background:#fff url(../_img/bbs/se_on.png) no-repeat 90% 50%}
+ul.fa_list li.off a		{color:#000; font-weight:bold;  background:#fff url(../_img/bbs/se_off.png) no-repeat 90% 50%}
+
+ul.list				{padding:10px 0 10px 0; }
+ul.list li			{padding:0 0 0 15px; color:#666; border:none;}
+ul.list li a		{display:block; width:163px !important; height:auto !important; font-weight:normal !important; border:none !important; padding:7px 20px 8px 13px !important; background:none !important; font:bold 12px/13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica" !important; color:#7c7b7b !important;}
+ul.list li a:hover	{width:163px !important; padding:7px 20px 8px 13px !important; font-weight:bold; color:#0b4a65 !important; }
+ul.list li.on a		{font-weight:bold !important; background:#0b4a65 !important; color:#fff !important; }
+
+a.top_none	{border-top:0 !important;}
+
+
+/**/
+.border_t_g	{border-top:1px solid #ddd}
+.border_b_g	{border-bottom:1px solid #ddd}
+.back_fff	{background:#fff;}
+
+div.result_box				{width:540px;}
+div.result_box p.re_tit		{background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+div.result_box div.img_box	{width:517px; overflow:hidden; padding:20px 23px 0 23px;}
+
+ul.re_info				{float:left; padding:0 0 0 20px; overflow:hidden;}
+ul.re_info li			{font:normal 13px/24px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555;}
+ul.re_info li span		{font-weight:bold;}
+ul.re_info li.title		{font:bold 15px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
+ul.re_info li.w_120		{float:left; width:120px;}
+ul.re_info li.w_155		{float:left; width:155px;}
+ul.re_info li.w_200		{float:left; width:200px;}
+
+ul.re_info02				{width:439px; float:left; padding:20px 0 20px 20px; overflow:hidden; background:#fff;}
+ul.re_info02 li				{font:normal 13px/24px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555;}
+ul.re_info02 li span		{font-weight:bold;}
+ul.re_info02 li.w_120		{float:left; width:120px;}
+ul.re_info02 li.w_155		{float:left; width:155px;}
+
+p.red_text	{padding:0 0 0 20px; font:bold 16px/40px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#9f0710;}
+
+div.result_box ul.re_text			{margin:140px 0 0 0; padding:10px 23px 0 23px;}
+div.result_box ul.re_text li		{padding:0 0 0 10px; font:normal 13px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; background:url(../_img/bbs/g_dot.jpg) no-repeat 0 10px;}
+div.result_box ul.re_text li span	{font-weight:bold;}
+
+
+/*üũ�� üũ�ƿ�*/
+div.se_cal			{width:1000px; /*height:408px;*/ height:444px; overflow:hidden; border-bottom:1px solid #bbb;  background:url(../_img/cont/se_cal_bg.jpg) repeat-y 0 0; }
+div.se_cal div		{float:left;}
+
+div.check				{width:689px; /*height:408px;*/ height:444px; overflow:hidden;}
+div.check .in_out		{ width:330px;}
+p.tit					{background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+p.tit1					{padding:11px 0 15px 0px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#222222; text-align:center;}
+
+div.option						{width:311px; }
+div.option div.op_cont			{padding:20px 0 0 20px; overflow:hidden; font:normal 13px/28px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666; }
+div.option div.op_cont p.name	{font:bold 16px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
+div.option div.op_cont p span	{font-weight:bold;}
+div.option p.tit				{border-left:1px solid #777; background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+
+div.option div.op_cont div.updown			{width:280px; height:35px; overflow:hidden; font:normal 13px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+div.option div.op_cont div.updown p.text	{width:65px; float:left; font:bold 13px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+
+p.acount			{float:left; overflow:hidden;  height:28px; margin:0 0 0 30px;  background:#fff; border:1px solid #bbb;}
+p.acount input		{float:left; width:38px; height:26px; border:none; font:normal 13px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777; padding:0 0 0 3px; }
+p.acount span		{float:left; width:17px; height:26px; }
+p.acount a			{float:left; width:12px; height:8px;  padding:7px 5px 0 0; background:#fff;}
+p.acount a.down		{padding:0 5px 0 0; }
+
+
+/*��ǥ��*/
+div.color_box		{margin:282px 0 0 0; padding:0 0 12px 23px; font:bold 12px/12px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+
+
+/*��������*/
+div.choice			{width:689px; border-top:1px solid #bbb; padding:12px 0 0 20px; font:normal 13px/25px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; }
+div.choice span		{font:bold 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
+input.co_date		{height:25px; border:1px solid #bbb; font:normal 13px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777; padding:0 0 0 3px;}
+
+
+/*������ ����*/
+div.re_info							{width:1000px; padding:0 0 20px 0;  overflow:hidden; border-bottom:1px solid #bbb; background:url(../_img/cont/re_info_bg.gif) repeat-y 0 0;}
+div.re_info	div						{width:500px; float:left;}
+div.re_info div.info_cont			{width:454px; padding:16px 20px 0 25px;}
+div.re_info div.info_cont p			{font:normal 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+div.re_info div.info_cont p span	{font:bold 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+div.re_info p.re_info_tit			{border-right:1px solid #777; background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+div.re_info p.bor_bottom			{padding:0 0 7px; border-bottom:1px solid #ddd;}
+
+
+/*��������*/
+div.re_last							{width:1000px; padding:0 0 20px 0; border-bottom:1px solid #bbb; background:url(../_img/cont/re_last_bg.gif) repeat-y 0 0;}
+div.re_last div.top					{overflow:hidden; padding:20px 0 0 20px; }
+div.re_last div.top p				{float:left; width:323px; font:normal 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+div.re_last div.top p span.bold		{font-weight:bold; font-size:14px;}
+div.re_last div.top p span.b_bold	{padding:0 0 0 20px; font:bold 14px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
+div.re_last div.top p span.r_bold	{padding:0 0 0 20px; font:bold 16px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#9f0710;}
+
+div.t_info		{overflow:hidden; padding:7px 0 0 20px; font:normal 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+div.t_info span	{font:bold 13px/24px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+
+
+/*�Ϸ�������*/
+div.last_form				{width:1000px; padding:0 0 20px 0; overflow:hidden; border-bottom:1px solid #bbb; }
+.last_bg01					{background:url(../_img/cont/last_form_bg.gif) repeat-y 0 0;}
+.last_bg02					{background:url(../_img/cont/last_form_bg02.gif) repeat-y 0 0;}
+div.last_form div			{float:left;}
+div.last_form div p.re_tit	{background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
+
+div.result_box02				{width:540px;}
+div.result_box02 div.img_box	{width:493px; overflow:hidden; padding:20px 23px 0 23px;}
+
+div.re_info_fini				{width:948px; overflow:hidden;  border-left:1px solid #bbb; border-right:1px solid #bbb; border-bottom:1px solid #bbb; background:#f0f0f0; padding:25px 25px 30px 25px;}
+div.re_info_fini div			{width:455px;}
+div.re_info_fini p				{padding:0 0 10px 10px; border-bottom:1px solid #ddd; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
+div.re_info_fini ul.info_ul		{overflow:hidden; padding:0 0 0 10px;}
+div.re_info_fini ul.info_ul li			{float:left; font:normal 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666 }
+div.re_info_fini ul.info_ul li span		{font-weight:bold;}
+
+
+/**/
+div.re_event				{overflow:hidden; padding:40px 0 20px 0; border-bottom:1px solid #ddd; border-top:1px solid #ddd;}
+
+ul.re_gallery				{overflow:hidden; float:left; width:673px;}
+ul.re_gallery li			{width:210px; float:left; margin:0 10px 10px 0;}
+ul.re_gallery li p			{width:}
+ul.re_gallery li h4			{margin:15px 0 0 0; width:200px;  overflow:hidden;  white-space:nowrap; text-overflow:ellipsis; }
+ul.re_gallery li h4 a		{font:bold 16px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#555; }
+ul.re_gallery li h4 a:hover	{text-decoration:underline}
+ul.re_gallery li .t01		{width:200px;  overflow:hidden;  white-space:nowrap; text-overflow:ellipsis; margin:2px 0 0 0; font:bold 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666; letter-spacing:-0.8pt;}
+ul.re_gallery li .t02		{font:normal 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#666}
+
+
+div.evnet_sms				{float:left;  font:normal 12px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#777;}
+div.evnet_sms p.tit_16b		{font:bold 15px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#333;}
+div.sms_box					{height:125px; width:280px; padding:10px 10px 10px 10px; background:#f0f0f0; border:1px solid #ddd; overflow-y:auto; word-wrap:break-word; word-break:break-all;}
+div.sms_box p.sms_txt		{width:270px font:normal 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+p.eve_phone					{font:bold 13px/24px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+p.eve_phone input			{height:24px; font:normal 13px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#777;}
+
+
+
+/*��������*/
+div.go_cal			{width:1000px; height:408px; overflow:hidden; border-bottom:1px solid #bbb; background:url(../_img/cont/gol_bg.jpg) repeat-y 0 0;}
+div.go_cal div		{float:left;}
+
+div.gol_date			{width:366px; height:408px; overflow:hidden; }
+div.gol_date .cal		{width:366px; padding:0 0 0 1px;}
+
+div.gol_ta			{width:234px;}
+table.gol_ta		{width:100%; text-align:center;}
+table.gol_ta tr				{cursor:pointer;}
+table.gol_ta tr:hover td	{background:#f8f8f8; color:#333}
+table.gol_ta th				{background:#f0f0f0; padding:10px 0; font:bold 14px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#444; border-bottom:1px solid #bbb;}
+table.gol_ta td				{padding:10px 0; font:normal 13px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#888;  border-bottom:1px solid #eee; }
+table.gol_ta td.on			{background:#f8f8f8; font-weight:bold; color:#333}
+
+div.gol_sc			{width:234px; height:320px; overflow-y:auto; word-wrap:break-word; word-break:break-all; }
+
+div.gol_info		{width:400px;}
+div.gol_info_01		{width:100%; height:133px; border-bottom:1px solid #bbb; padding:18px 0 40px 30px; }
+div.gol_info_02		{background:#f0f0f0; margin:0 0 0 1px; width:370px; padding:18px 0 28px 28px;} 
+
+div.golf_cont			{padding:6px 0 0 0;}
+div.golf_cont p			{padding:6px 0 0 0; font:normal 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+div.golf_cont p span	{font:bold 13px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+
+
+/*��Ű�������ݾ�*/
+div.money01			{width:311px; }
+
+
+/*��������*/
+div.coupon				{width:1000px; padding:45px 0 0 0; overflow:hidden; background-color:#f9f9f9; border-top:2px solid #b8b8b8; border-bottom:1px solid #ddd;}
+
+div.coupon_ch				{width:960px; padding:20px; overflow:hidden; border-top:2px solid #b8b8b8; border-bottom:1px solid #ddd;}
+div.coupon_ch div.cou_img	{width:490px; float:left; overflow:hidden ; border-right:1px solid #f1f1f1;}
+div.coupon_ch 
+ul.cou_ul		{float:left; padding:10px 0 0 25px;}
+ul.cou_ul li	{padding:0 0 0 10px; font:normal 13px/24px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777; background:url(../_img/bbs/g_dot.jpg) no-repeat 0 10px;}
+
+
+/*���տ��� �ܿ�������ȸ*/
+ul.tab_red						{overflow:hidden;}
+ul.tab_red li					{float:left; }
+ul.tab_red li a					{display:block; width:170px; height:30px; padding:10px 0 0 0; border-top:1px solid #ccc; border-bottom:1px solid #ccc; border-right:1px solid #ccc; text-align:center; font:bold 14px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+ul.tab_red li a:hover			{color:#0b4a65; background:#f8f8f8;}
+ul.tab_red li.on				{background:#0b4a65; }
+ul.tab_red li.on a				{color:#fff; border:1px solid #0b4a65;}
+ul.tab_red li.on a:hover		{background:#0b4a65;}
+ul.tab_red li.first				{border-left:1px solid #ccc;}
+ul.tab_red li a.selected		{background:#0b4a65;  border:1px solid #0b4a65; color:#fff;}
+
+ul.reser					{width:125px; margin: 0 0 5px 8px;}
+ul.reser li					{overflow:hidden; margin-top:5px;}
+ul.reser li a				{display:block; font:normal 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+ul.reser li a:hover			{color:#0b4a65; text-decoration:underline;}
+ul.reser li.no				{font:normal 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#b8b8b8;}
+
+
+ul.date_page					{margin:0 0 0 385px;font:bold 20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#444;}
+ul.date_page li					{float:left}
+ul.date_page li a				{border:1px solid #6a6a6a; padding:2px 15px; margin-left:5px; background:url('../_img/bbs/cal_prev.png') #fff no-repeat 48% 50%;}
+ul.date_page li a:hover			{border:1px solid #6a6a6a; padding:2px 15px; margin-left:5px; background:url('../_img/bbs/cal_prev_b.png') #6a6a6a no-repeat 48% 50%;}
+ul.date_page li a.ne			{border:1px solid #6a6a6a; padding:2px 15px; margin-left:5px; background:url('../_img/bbs/cal_next.png') #fff no-repeat 48% 50%;}
+ul.date_page li a.ne:hover		{border:1px solid #6a6a6a; padding:2px 15px; margin-left:5px; background:url('../_img/bbs/cal_next_b.png') #6a6a6a no-repeat 48% 50%;}
+
+p.re_date		{margin-left:8px; margin-top:-2px; text-align:left; font:bold 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#444;}
+p.re_date_red	{margin-left:8px; margin-top:-2px; text-align:left; font:bold 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#0b4a65;}
+p.re_date_blue	{margin-left:8px; margin-top:-2px; text-align:left; font:bold 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#191696;}
+
+
+table.re_table						{width:100%; border-top:2px solid #878787;}
+table.re_table thead th				{background:#f3f3f3; padding:10px; vertical-align:middle; text-align:center; border-right:1px solid #f3f3f3; border-left:1px solid #f3f3f3; font:bold 14px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#616161}
+table.re_table .border_b			{border-bottom:1px solid #ccc;}
+
+table.re_table tbody th				{text-align:center; padding:11px 0; vertical-align:top;  border-right:1px solid #e2e2e2; border-bottom:1px solid #e2e2e2; background:#f9f9f9; font:bold 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666666}
+table.re_table tbody th.left		{text-align:left; padding:10px 0 10px 15px;}
+table.re_table tbody td				{padding:10px 0; text-align:center; vertical-align:top; border-bottom:1px solid #e2e2e2; border-left:1px solid #e2e2e2; font:normal 13px/21px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666666}
+table.re_table tbody td.left		{padding-left:20px; text-align:left;}
+table.re_table tbody .last			{border-bottom:1px solid #c7c7c7;}
+table.re_table tbody .first			{border-left:none; text-align:center;}
+
+table.re_table thead th.top			{background:#ececec; border-right:1px solid #ddd; border-top:1px solid #ddd; border-bottom:1px solid #ddd;}
+table.re_table thead th.top_r		{background:#ececec; border-right:1px solid #d1d8e7; border-bottom:1px solid #ddd; border-top:1px solid #ddd;}
+table.re_table thead th.red			{background:#f3dddb; border-right:1px solid #dfcdcd; border-bottom:1px solid #dfcdcd; border-left:1px solid #dfcdcd; border-top:1px solid #dfcdcd;}
+table.re_table thead th.blue		{background:#dbe2f3; border:1px solid #d1d8e7;}
+table.re_table tbody td.redbg		{background:#fff8f7; border-left:1px solid #e2e2e2;}
+table.re_table tbody td.bluebg		{background:#f3f8fc; border-right:1px solid #e2e2e2;}
+
+
+/*���տ��� Ȯ�κ������*/
+div.reco_search						{overflow:hidden; background:#f8f8f8; border:1px solid #e5e5e5; padding:17px 36px;}
+div.reco_search	div.date			{float:right; overflow:hidden;}
+div.reco_search	div.date span		{display:block; float:left;}
+div.reco_search	div.all				{float:left}
+div.reco_search	div.all select		{height:29px; padding-left:5px; border-top:1px solid #bebebe; opacity:0; cursor:pointer; position:absolute;
+									border-left:1px solid #bebebe; border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; font:normal 14px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; vertical-align:middle;
+}
+div.reco_search	div.all span		{display:block; height:29px; padding:5px 0 0 10px; text-overflow:ellipsis; overflow:hidden; cursor:pointer;
+									background:url("../_img/bbs/uiForm.png") #fff no-repeat right 13px; 
+									border-left:1px solid #bebebe; border-top:1px solid #bebebe;  border-right:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4;}
+
+a.reco_line							{padding: 3px 8px 4px 8px; border:1px solid #0b4a65; border-radius:2px; font:normal 12px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#0b4a65;}
+a.reco_line:hover					{background:#0b4a65; font-weight:bold; color:#fff; }
+
+
+
+/*���տ��� ����Ȯ�κ������*/
+div.re_confirm						{width:1000px; overflow:hidden; padding:39px 0 0 0; margin:20px auto 30px auto; border-top:2px solid #b8b8b8; border-bottom:1px solid #ddd; background:#f9f9f9;}
+div.re_confirm	.con_cy				{padding:0 240px 0 60px; margin:0 0 38px 0; float:left; background:url('../_img/cont/con_img01.png')no-repeat 90% 70%; border-right:1px solid #eee; }
+div.re_confirm  .con_wr				{padding:0 170px 38px 60px; float:left; background:url('../_img/cont/con_img02.png')no-repeat 100% 70%;}
+div.re_confirm	p.t01				{font:bold 18px/20px  "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica" ; color:#333;}
+div.re_confirm	p.t02				{height:70px; margin:20px 0 0 0; font:normal 14px/20px  "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica" ; color:#666;}
+div.re_confirm	p.con_btn			{padding:13px 36px 15px 20px; cursor:pointer; font:bold 15px/15px  "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#fff;  
+										border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; background:#0b4a65 url('../_img/member/go.png')no-repeat 90% 50%;}
+div.re_confirm	p.con_btn:hover		{background:#333 url('../_img/member/go.png')no-repeat 90% 50%}
+
+
+/*�˾��ҽ�*/
+.layer {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100000;}
+.layer .bg {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+.layer .pop-layer {display:block;}
+
+.layer2 {display:none; position:fixed; _position:absolute; top:0; left:0; width:100%; height:100%; z-index:100000;}
+.layer2 .bg2 {position:absolute; top:0; left:0; width:100%; height:100%; background:#000; opacity:.5; filter:alpha(opacity=50);}
+.layer2 .pop-layer {display:block;}
+
+.pop-layer	 {display:none; position: absolute; top: 50%; left: 50%; width:450px; height:auto;  background-color:#fff; z-index: 10;}	
+
+div.pop_tit			{overflow:hidden; padding:20px 30px 20px 30px; background:#0b4a65; overflow:hidden;}
+div.pop_tit h3		{float:left; font:bold 18px/23px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";  color:#fff; letter-spacing:-0.5pt}
+
+div.pop_cont	{padding:25px 30px 25px 30px;}
+div.pop_cont p		{font:bold 13px/34px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";; color:#666;}
+div.pop_cont select	{font:normal 12px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";; color:#666;}
+
+
+
+
+
+
+
+
+
+/*ȸ�������*/
+h4.mem					{padding:0 0 0 15px; font:bold 16px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; background:url('../_img/cont/h4_tit.gif') no-repeat 0 10px}
+h4.mem span				{font:normal 14px/25px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444;}
+
+ul.mlounge_tab				{height:60px; border-left:1px solid #ddd; border-bottom:2px solid #ededed; margin-top:30px; overflow:hidden; cursor:pointer;}
+ul.mlounge_tab li				{width:248px; height:58px; vertical-align:middle; float:left; overflow:hidden;}
+ul.mlounge_tab li.custab_off	{border-top:1px solid #ddd; border-left:1px solid #fff; border-bottom:1px solid #b1b2b3; border-right:1px solid #dedede; 								
+								background: #fdfdfd;
+								background: -moz-linear-gradient(top,  #fdfdfd 0%, #f8f8f8 100%);
+								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f8f8f8));
+								background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: -o-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: -ms-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: linear-gradient(to bottom,  #fdfdfd 0%,#f8f8f8 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f8f8f8',GradientType=0 );
+								}
+ul.mlounge_tab li.custab_over	{border-top:1px solid #ddd; border-left:1px solid #fff; border-bottom:1px solid #b1b2b3; border-right:1px solid #dedede;}
+ul.mlounge_tab li.custab_on	{border-top:1px solid #0b4a65; border-right:1px solid #dedede; border-bottom:1px solid #0b4a65; border-right:1px solid #005689;
+								background: #0b4a65;
+								background: -moz-linear-gradient(top,  #0b4a65 0%, #0b4a65 100%);
+								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b4a65), color-stop(100%,#0b4a65));
+								background: -webkit-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: -o-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: -ms-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: linear-gradient(to bottom,  #0b4a65 0%,#0b4a65 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b4a65', endColorstr='#0b4a65',GradientType=0 );
+								}
+
+ul.mlounge_tab li p					{float:left; font:bold 14px/18px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#888; }
+ul.mlounge_tab li p.cus_icon		{margin:15px 0 0 70px; }
+ul.mlounge_tab li p.cus_icon01		{margin:15px 0 0 50px; }
+ul.mlounge_tab li p.cus_text01		{margin:18px 0 0 17px; }
+ul.mlounge_tab li p.on				{color:#fff; }
+
+
+
+.btn_line			{display:inline-block; height:25px; padding:6px 18px 0 20px; font:bold 13px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666 !important; 
+					border:1px solid #999; background:url('../_img/cont/btn_icon02.png') no-repeat 93% 12px;}
+.btn_line:hover		{background:url('../_img/cont/btn_icon01.png') #777 no-repeat 93% 12px; color:#fff !important; border:1px solid #777;}
+
+.btn_line_on			{display:inline-block; height:25px; padding:6px 18px 0 20px; font:bold 13px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666 !important; border:1px solid #999; background:url('../_img/cont/btn_icon02.png') no-repeat 85% 12px;}
+.btn_line_on:hover		{background:url('../_img/cont/btn_icon01.png') #777 no-repeat 85% 12px; color:#fff !important; border:1px solid #777;}
+
+
+.tab_lounge						{margin-bottom:15px; padding:7px 20px; border:2px solid #666; color:#ddd; display:inline-block;}
+.tab_lounge a.on				{font-weight:bold;}
+.tab_lounge a.on:hover			{text-decoration:none}
+.tab_lounge a					{color:#333; padding:0 5px;}
+.tab_lounge a:hover				{text-decoration:underline}
+
+
+
+/*ä��ȳ�tab*/
+
+ul.hire_tab				{height:60px; border-left:1px solid #ddd; border-bottom:2px solid #ededed; margin-top:30px; overflow:hidden; cursor:pointer;}
+ul.hire_tab li				{width:331px; height:58px; vertical-align:middle; float:left; overflow:hidden;}
+ul.hire_tab li.custab_off	{border-top:1px solid #ddd; border-left:1px solid #fff; border-bottom:1px solid #b1b2b3; border-right:1px solid #dedede; 								
+								background: #fdfdfd;
+								background: -moz-linear-gradient(top,  #fdfdfd 0%, #f8f8f8 100%);
+								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdfdfd), color-stop(100%,#f8f8f8));
+								background: -webkit-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: -o-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: -ms-linear-gradient(top,  #fdfdfd 0%,#f8f8f8 100%);
+								background: linear-gradient(to bottom,  #fdfdfd 0%,#f8f8f8 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdfdfd', endColorstr='#f8f8f8',GradientType=0 );
+								}
+ul.hire_tab li.custab_over	{border-top:1px solid #ddd; border-left:1px solid #fff; border-bottom:1px solid #b1b2b3; border-right:1px solid #dedede;}
+ul.hire_tab li.custab_on	{border-top:1px solid #0b4a65; border-right:1px solid #dedede; border-bottom:1px solid #0b4a65; border-right:1px solid #005689;
+								background: #0b4a65;
+								background: -moz-linear-gradient(top,  #0b4a65 0%, #0b4a65 100%);
+								background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b4a65), color-stop(100%,#0b4a65));
+								background: -webkit-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: -o-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: -ms-linear-gradient(top,  #0b4a65 0%,#0b4a65 100%);
+								background: linear-gradient(to bottom,  #0b4a65 0%,#0b4a65 100%);
+								filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b4a65', endColorstr='#0b4a65',GradientType=0 );
+								}
+
+ul.hire_tab li p				{float:left; font:bold 14px/18px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#888; }
+ul.hire_tab li p.cus_icon		{margin:17px 0 0 63px; }
+ul.hire_tab li p.cus_icon01		{margin:17px 0 0 78px; }
+ul.hire_tab li p.cus_text01	{margin:18px 0 0 17px; }
+
+ul.hire_tab li p.on			{color:#fff; }
+
+
+
+/*����Ʈ*/
+div.print				{width:668px; overflow:hidden; margin:10px; padding:0 0 20px 0; border-bottom:1px solid #c9c9c9;border-left:1px solid #c9c9c9; 4px;border-right:1px solid #c9c9c9;}
+p.print_txt				{margin:10px; font:normal 13px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666;}
+
+div.print ul.print_ul		{float:left; width:270px; padding:10px 30px 0 30px; }
+div.print ul.print_ul li	{overflow:hidden;  padding:5px 8px 8px 10px; font:normal 13px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; background:url(../_img/bbs/g_dot.jpg) no-repeat 0 15px;}
+div.print ul.print_ul li p			{width:90px; font-weight:bold; float:left;}
+div.print ul.print_ul li p.w_big01	{width:200px; font-weight:normal;}
+
+div.print ul.print_ul01			{float:left; padding:10px 30px 0 30px; }
+div.print ul.print_ul01 li		{overflow:hidden;  padding:5px 8px 8px 10px; font:normal 13px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#444; background:url(../_img/bbs/g_dot.jpg) no-repeat 0 15px;}
+div.print ul.print_ul01 li p	{width:90px; font-weight:bold; float:left;}
+div.print ul.print_ul01 li p.w_big	{width:500px; font-weight:normal;}
+
+
+
+/* �̿�ȳ� - ȸ��Ұ��κ� */
+ul.history						{margin:20px 0 0 0;}
+ul.history li					{overflow:hidden; padding:10px 0 15px 0; border-bottom:1px solid #ddd;}
+ul.history li h4				{width:100px; float:left; padding:0 0 0 10px; font:bold 22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#9c191d; }
+ul.history li table				{width:880px; float:left; margin:4px 0 0 0;}
+ul.history li table th			{padding:3px 0 0 0; font:bold 14px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#222;}
+ul.history li table td			{padding:3px 0 0 0; font:normal 13px/22px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#777;}
+
+
+/* ȸ��Ұ� - ceo�λ縻 08-21�߰� */
+div.ceo							{padding:50px; overflow:hidden; border-top:1px solid #e8e7e1; border-bottom:1px solid #e8e7e1;
+								 background:url('../_img/cont/ceo_bg.png')repeat-y}
+div.ceo .font01					{font:normal 16px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#222}
+div.ceo .font02					{font:normal 13px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666}
+div.ceo	.ceosign				{overflow:hidden; float:right; font:bold 15px/30px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#5f4e3a}
+div.ceo	.ceosign span.name		{font:bold 18px/26px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"}
+
+
+.btn_down						{display:inline-block; width:138px; padding:15px 16px 15px 0; border:1px solid #ccc;  text-align:center;
+								font:bold 14px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666; background:#f9f9f9 url('../_img/cont/btn_icon05.png')no-repeat 85% 51%;}
+.btn_down:hover					{background:#666 url('../_img/cont/btn_icon01.png')no-repeat 85% 51%; color:#fff; border:1px solid #666;}
+
+div.ci_down						{width:1000px; margin:0 auto; overflow:hidden}
+div.ci_cont						{width:320px; float:left; margin-top:20px;}
+h4.com							{padding-left:20px; font:bold 22px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#222; background:url('../_img/cont/h4_tit.gif') no-repeat 0 10px}
+
+
+
+/* Submenu ���� */
+div#submenu							{ position:relative; width:1098px; min-height:48px; margin:0px auto 30px auto; border:1px solid #bfada1}
+ol.subm								{float:left; }
+ol.subm li							{width:100px; position:relative;  float:left; padding:0 50px 0 0; margin:0 0 0 15px;  border-right:1px solid #dac5b8; background:url(../_img/cont/submenu_bg01.png) no-repeat 90% 18px; font:normal 13px/48px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+ol.subm li.home						{width:48px; height:48px; padding:0; margin:0; cursor:pointer; border-right:1px solid #dac5b8; background:url(../_img/comn/sub_home.gif) no-repeat 50% 50%;}
+ol.subm li.room_list				{width:100px; position:relative; float:left; padding:0 50px 0 0; margin:0 0 0 15px;  border-right:1px solid #dac5b8; background:url(../_img/cont/submenu_bg02.png) no-repeat 90% 20px; }
+ol.subm li.room_list a				{display:block; width:150px; cursor:pointer; font:normal 13px/48px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+
+ol.sec-depth						{/*display:none;*/ position:absolute; margin:-49px 0 0 -16px; padding:0 0 13px 0; background:#fff; z-index:99; border:1px solid #bfada1; }
+ol.sec-depth li						{width:100px; height:35px; background:none; border:none; cursor:pointer;}
+ol.sec-depth li a					{display:block; font:normal 13px/30px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666;}
+ol.sec-depth li a:hover				{color:#ba8e72; font-weight:bold; text-decoration:underline}
+ol.sec-depth li.on a				{color:#ba8e72; font-weight:bold;}
+
+div#submenu p.map
+
+
+/* 직영 및 제휴체인 */
+
+div.tab_m							{overflow:hidden; padding:0 0 30px 0; border-bottom:1px solid #e8e8e8;}
+div.tab_m div.tab_left				{float:left;}
+div.tab_m div.tab_left h4			{padding:0 0 0 12px; font:bold 16px/16px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#0b4a65; background:url(http://www.phoenixpark.co.kr/pp/_img/cont/h4_redbg.jpg) no-repeat 0 2px;}
+div.tab_m div.tab_left h5			{padding:20px 0 0 12px; font:bold 15px/15px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666; }
+div.tab_m div.tab_left p.tab_text	{width:525px; padding:10px 0 0 10px; font:normal 13px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666}
+
+div.tab_m ul.tab_ul			{float:right; width:350px; padding:13px 25px 20px 25px; background:#f3f3f3;}
+div.tab_m ul.tab_ul li		{padding:5px 0 0 10px;  background:url('http://www.phoenixpark.co.kr/pp/_img/cont/dot_gray.gif') no-repeat 0 13px ; font:normal 13px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666}
+div.tab_m ul.tab_ul li span	{font-weight:bold;}
+
+ul.list_13						{}
+ul.list_13 li					{padding:3px 0 0 10px; background:url('../_img/cont/dot_gray2.gif') no-repeat 0 14px; font:normal 13px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#666}
+ul.list_13 .b					{font-weight:bold;}
+ul.list_13 .red					{color:#97161a}
+ul.list_13 li a.more			{font:bold 12px/22px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#97161a; text-decoration:underline}
+ul.list_13 li a.more:hover		{color:#000}
+ul.list_13 li.bg_no				{background:none;}
+
+
+/* 2016.11.14 추가 - 리조트소개 */
+
+#container_info		{width:950px; /*margin:150px*/ margin:80px auto 0 auto;}
+
+div.info						{overflow:hidden; height:560px;}
+div.info div.info_img			{float:left; width:510px; padding:0 0 0 20px}
+div.info div.info_img p.img01	{transition : all 0ms ease-in-out 0; transform : translate(0, 0)}
+div.info div.info_img p.img02	{transition : all 0ms ease-in-out 0; transform : translate(0, 0)}
+
+div.info div.info_text			{float:right; width:355px; padding:110px 0 0 0; font:normal 16px/28px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#7f7f7f; letter-spacing:-0.5pt;}
+div.info div.info_text p.tx01	{transition : all 600ms ease-in-out 400ms; transform : translate(0, -100px)}
+div.info div.info_text p.tx02	{transition : all 900ms ease-in-out 400ms; transform : translate(0, -100px)}
+div.info div.info_text p.tx03	{transition : all 1500ms ease-in-out 400ms; transform : translate(0, -100px)}
+div.info div.info_text p.tx04	{transition : all 2000ms ease-in-out 400ms; transform : translate(0, -100px)}
+
+
+/* 2016.12.01 추가 */
+p.brand_visual	{width:100%; margin-top:95px; height:383px; background:url('../_img/info/brand_visual.jpg') no-repeat 50% 50%; background-size:cover }
+
+p.brand_info	{margin-bottom:30px; font:normal 16px/28px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#747474; letter-spacing:-0.5;}
+p.sub_tit		{font:bold 14px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#747474;}
+p.en_kor		{font:bold 10px/16px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#a1a1a1;}
+p.brand_img01	{padding:38px 0; text-align:center; width:310px; border:1px solid #747474; margin-top:5px}
+p.brand_img02	{padding:37px 0; text-align:center; width:310px; border:1px solid #747474;  margin-top:5px}
+
+
+a.brand_file	{display:block; margin-bottom:10px; padding:10px 10px 13px 10px; width:160px; box-sizing:border-box; border:1px solid #747474; background:url('../_img/info/brand_file.png') no-repeat 90% 50%; font:normal 12px/15px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#747474; }
