@@ -11,17 +11,20 @@ public class DBTest extends Biz {
 	public static void main(String[] args) throws SQLException {
 		// TODO Auto-generated method stub
 		
-		Connection con = (Connection) getConnection();//mySql ¿¬°á
+		Connection con = (Connection) getConnection();//mySql ï¿½ï¿½ï¿½ï¿½
 		
 		Statement st = (Statement) con.createStatement();
 		 
         String sql;
-        sql = "select * FROM people;";
+//        sql = "select * FROM people;";
+        sql = "select * FROM users;";
+        
 
         ResultSet rs = st.executeQuery(sql);
         String sqlRecipeProcess = "";
         while (rs.next()) {
-            sqlRecipeProcess = rs.getString("firstname");
+//            sqlRecipeProcess = rs.getString("firstname");
+        	 sqlRecipeProcess = rs.getString("user_id");
         }
         System.out.println(sqlRecipeProcess);
         
