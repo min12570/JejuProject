@@ -8,10 +8,10 @@
 var package_number;
 function goReser(){
 	package_number =0;
-	package_number = $(".cus_text05").attr('id');
+	package_number = $("btn_white").attr('id');
 	//alert(package_number);
 	//alert("package_number "+package_number);
-	location.href='./resort/reservation/re_package.html';	
+	location.href='../../resort/reservation/re_package.html';	
 }
 
 //클릭이벤트 설정
