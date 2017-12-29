@@ -1,5 +1,5 @@
 -- 1229 DDL, by hyunjeong
-/* table drop 
+/* table drop 문
 drop table reservation;
 drop table users;
 drop table package;
