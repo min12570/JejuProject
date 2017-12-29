@@ -4,7 +4,7 @@
 @import url(layout.css);
 
 
-#wrap {position:relative;width:auto;margin:0 auto; z-index:100; padding-top:80px;min-width:1240px;max-width:2560px}
+#wrap {position:relative;width:auto;margin:0 auto; z-index:100; padding-top:10px;min-width:1240px;max-width:2560px}
 
 
 

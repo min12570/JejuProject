@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body							{background:}
-div#wrap						{position:relative; margin:0 auto; min-width:1200px; max-width:2560px; width:auto; padding-top:80px; background:#fff}
+div#wrap						{position:relative; margin:0 auto; min-width:1200px; max-width:2560px; width:auto; padding-top:10px; background:#fff}
 /* Header 영역 */
 /* 20150803 수정 start */
 div#header						{width:1200px; margin:0 auto; overflow:hidden;  padding:30px 0}
