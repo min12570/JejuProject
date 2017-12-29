@@ -10,9 +10,9 @@ a.btn_white					a.btn_white {
     display: inline-block;
     padding: 9px 20px 10px 20px;
     border: 1px solid #d5d5d5;
-    border-radius: 3px;
+   /*border-radius: 3px;*/
     -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
+    /*-moz-border-radius: 3px;*/
     font: bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
     color: #555;
     background: #fff;
@@ -230,6 +230,7 @@ div.view_top p.not_over					{vertical-align:middle; background-color:#fafafa; cu
 
 
 div.bbs_cont					{margin:35px 21px;}
+
 /* 20150721 수정 start */
 div.bbs_cont_1to1				{padding:35px 21px; border-bottom:1px solid #606060; margin:-1px 0 0 0;}
 div.reply_1to1					{border-bottom:1px solid #b1999a; /*border-top:1px solid #606060;  border-left:1px solid #bbb; border-right:1px solid #bbb; */}
