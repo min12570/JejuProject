@@ -10,7 +10,24 @@ public class PackageInfoVO {
 	private String p_content;
 	private String p_URL;
 	private int p_perCost;
+	private int p_cost;
 	
+	//ahreum add
+	public PackageInfoVO(int p_id, String p_name, int p_weekdaycost, int p_weekendcost, int p_percost, int p_cost,
+			String p_region, String p_image, String p_content, String p_url) {
+		// TODO Auto-generated constructor stub
+		this.p_id = p_id;
+		this.p_name = p_name;
+		this.p_weekdayCost = p_weekdaycost;
+		this.p_weekendCost = p_weekendcost;
+		this.p_perCost = p_percost;
+		this.p_cost = p_cost;
+		this.p_region = p_region;
+		this.p_image = p_image;
+		this.p_content = p_content;
+		this.p_URL = p_url;
+		
+	}
 	public int getP_id() {
 		return p_id;
 	}
@@ -66,7 +83,12 @@ public class PackageInfoVO {
 	public void setP_perCost(int p_perCost) {
 		this.p_perCost = p_perCost;
 	}
-
+	public int getP_cost() {
+		return p_cost;
+	}
+	public void setP_cost(int p_cost) {
+		this.p_cost = p_cost;
+	}
 	
 
 }
