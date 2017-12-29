@@ -19,10 +19,10 @@ public class Biz {
 		Connection con = null;
 		Statement st = null;
 		try {
-			//°³°³ÀÎÀÇ °ÍÀ¸·Î ³Ö¾î¼­ test ÇØÁÖ¼¼¿ë										//dbÀÌ¸§	//id	//pw
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mySql" , "root", "mysql");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾î¼­ test ï¿½ï¿½ï¿½Ö¼ï¿½ï¿½ï¿½										//dbï¿½Ì¸ï¿½	//id	//pw
+			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/MySQL" , "root", "mysql");
 			con.setAutoCommit(false);
-			System.out.println("success!");
+			System.out.println("DB Connection success!");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
