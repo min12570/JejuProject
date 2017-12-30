@@ -9,9 +9,10 @@ var package_number;
 function goReser(){
 	package_number =0;
 	package_number = $("btn_white").attr('id');
+	packageList();
 	//alert(package_number);
 	//alert("package_number "+package_number);
-	location.href='../../resort/reservation/re_package.html';	
+	//location.href='../../resort/reservation/re_package.html';	
 }
 
 //클릭이벤트 설정
@@ -26,29 +27,43 @@ $('.rsu_package li ul li').unbind("click").bind("click",function(){
 
 // 패키지 선택 기본선택
 //휘닉스 스쿠버 선택시, 15번이다
-//$('.rsu_package li ul li:eq('+package_number+')').trigger('click');
 $('.rsu_package li ul li:eq('+package_number+')').trigger('click');
 
-//이용 인원 선택
-function packDetailSet(selkey)
+
+function packageList(){
+	location.href="main.package?db=all";
+}
+
+
+//------------------------------------------
+//패키지 리스트 설정
+function packageListSet()
 {
-	var codeArr = selkey.split("-");
+	$('.rsu_package').empty();
 
-	$('.rsu_packdetail').empty();
+	//package list add
+	//package 정보 불러와서 보여주기
+//	location.href = "main.big?view=add";
+	location.href="package?db=all";
 
-	$.each(locationJson[parseInt(codeArr[0])].label[parseInt(codeArr[1])].items,function(key,val){
-		$('.rsu_packdetail').append('<li class="off"><a href="javascript:;" class="top_none" code="'+selkey+'-'+key+'-'+val.id+'">'+val.item+'</a></li>');
-	});
+		//console.log(key+", "+val.text);
+		$('.rsu_package').append('<li class="on"><a href="javascript:;" class="'+(key==0?'top_none':'')+'">'+val.text+'</a></li>');
+		$('.rsu_package > li:eq('+key+')').append('<ul class="list"></ul>');
 
-	// 클릭이벤트 설정
-	$('.rsu_packdetail li').unbind("click").bind("click",function(){
-		$('.rsu_packdetail li').removeClass('on').addClass('off');
-		$(this).removeClass('off').addClass('on');
-		var selkey = $('a',this).attr('code');
-		allRefleshFlag = true;
-		choiceContentSet(selkey);
-	});
+		$.each(val.label,function(key2,val2){
+			//console.log(key2+", "+val2.text);
+			$('.rsu_package > li:eq('+key+') > ul.list').append('<li><a href="javascript:;" code="'+key+'-'+key2+'">- '+val2.text+'</a></li>');
+		});
 
-	// 이용 인원 선택 기본선택
-	$('.rsu_packdetail li:eq(0)').trigger('click');
+		// 클릭이벤트 설정
+		$('.rsu_package li ul li').unbind("click").bind("click",function(){
+			$('.rsu_package li ul li').removeClass('on').addClass('off');
+			$(this).removeClass('off').addClass('on');
+			var selkey = $('a',this).attr('code');
+			packDetailSet(selkey);
+		});
+
+		// 패키지 선택 기본선택
+		$('.rsu_package li ul li:eq(0)').trigger('click');
+
 }
