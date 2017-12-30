@@ -96,6 +96,8 @@ public class PackageServlet extends HttpServlet {
 			biz.close(con);//connection end	
 		}
 		
+		//정민 아 이 부분이얌!!
+		
 		next = "/re_package.jsp";
 		System.out.println(next);
 		RequestDispatcher rd = request.getRequestDispatcher(next);

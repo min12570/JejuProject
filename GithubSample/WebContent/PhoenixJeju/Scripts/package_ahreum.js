@@ -31,6 +31,7 @@ $('.rsu_package li ul li:eq('+package_number+')').trigger('click');
 
 
 function packageList(){
+	alert("왔다");
 	location.href="main.package?db=all";
 }
 
