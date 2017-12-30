@@ -6,25 +6,14 @@ a.btn_red					{display:inline-block; width:200px; padding:14px 0 16px 0; text-al
 a.btn_red:hover				{background:#333; }
 a.btn_gray					{display:inline-block; width:200px; padding:14px 0 16px 0; text-align:center; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; background:#666;  font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
 a.btn_gray:hover			{background:#333;}
-a.btn_white					a.btn_white {
+
+a.btn_white			{
     display: inline-block;
     padding: 9px 20px 10px 20px;
     border: 1px solid #d5d5d5;
-   border-radius: 3px;
+    border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    font: bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
-    color: #555;
-    background: #fff;
-}
-
-a.btn_white					a.btn_white {
-    display: inline-block;
-    padding: 9px 20px 10px 20px;
-    border: 1px solid #d5d5d5;
-   /*border-radius: 3px;*/
-    -webkit-border-radius: 3px;
-    /*-moz-border-radius: 3px;*/
     font: bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
     color: #555;
     background: #fff;
