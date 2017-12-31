@@ -118,6 +118,8 @@ ALTER TABLE reservation
 		);
 		
 insert into users values ("joins1", "1234", "joins@emai.com", "010-1111-2222");
+insert into package values(0, "휘닉스 스쿠버", 302000 , 387000 , 66000 , null , "제주", "", "", "");
 
 
 select * from users;
+select * from package;
