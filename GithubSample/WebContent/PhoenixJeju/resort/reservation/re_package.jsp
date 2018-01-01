@@ -132,8 +132,8 @@
 			</div>
 
 			<section class="content-wrapper main-content clear-fix">
-
-				<link href="../_css/cont.css" type="text/css" rel="stylesheet">
+				<!-- 정민 수정 css복구 -->
+				<link href="../../resort/_css/cont.css" type="text/css" rel="stylesheet">
 				<script type="text/javascript" charset="utf-8">
 					// Internet Explorer 버전 체크
 					var IEVersionCheck = function() {
