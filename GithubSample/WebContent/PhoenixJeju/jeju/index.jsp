@@ -134,7 +134,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl09', 'ctl01', [], [], [], 
                             <img src="../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></a>
                             <ul class="nav02 s_n02">
                                 <li><a href="/jeju/accommodation/velraterrace">벨라테라스(콘도)</a></li>
-                                <li><a href="../Site/event/jejuPackage.html">패키지예약</a></li>
+                                <li><a href="../Site/event/jejuPackage.jsp">패키지예약</a></li>
                                 <!-- <a href="javascript:;" id=7 onclick="goReser1('휘닉스 스쿠버')" class="btn_white"
 				style = "position: absolute;right:50px;position:fixed;z-index:100;" alt="예약하기 플로팅 버튼">예약하기</a> -->
                                 <li><a href="/jeju/accommodation/hillius">힐리우스(별장)</a></li>
