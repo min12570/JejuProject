@@ -661,13 +661,14 @@ ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
 							</div>
 						</div>
 
+
 						<div class="re_info mt20">
 							<div class="">
 								<p class="re_info_tit">예약자정보</p>
 								<div class="info_cont">
 									<p>
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="caller" style="width: 100px">
+											type="text" name="caller" valus =style="width: 100px">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
