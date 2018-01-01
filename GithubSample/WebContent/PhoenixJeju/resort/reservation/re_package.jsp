@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
+<%@ page import="packageInfo.PackageInfoVO" %>
+<%@ page import="java.util.ArrayList" %>
+<!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -14,6 +20,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
 <body>
+
+
 	<form method="post" action="./re_package" id="ctl01">
 		<div class="aspNetHidden">
 			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
@@ -288,7 +296,7 @@
 													릴렉싱테라피</a></li>
 											<li class="on"><a href="javascript:;" code="1-3">-
 													휘닉스 스쿠버</a></li>
-											<li class="off"><a href="javascript:;" code="1-4">-
+											<li class="off"> <a href="javascript:;" code="1-4">-
 													수영장사우나패키지</a></li>
 											<li class="off"><a href="javascript:;" code="1-5">-
 													민트하우스그릴패키지</a></li>
@@ -299,10 +307,19 @@
 								<p class="form_tit">이용 인원 선택</p>
 								<ul class="sel_list rsu_packdetail"></ul>
 							</div>
+							<%
+ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
+//Object obj = request.getAttribute("packList2");
+//if(obj != null) {
+//	PackageInfoVO pi = (PackageInfoVO)request.getAttribute("packList2");
+//	out.println(pi.getP_name());
+//}
+%>
 
 							<div class="result_box">
+							
 								<p class="re_tit">선택 정보</p>
-
+								
 								<div class="img_box rsu_choiceContent">
 									<!-- <p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px;" href="javascript:;">상세보기</a></p> -->
 
@@ -310,24 +327,40 @@
 										<img src="../../resort/_img/comn/logo2.png"
 											style="width: 100%;" class="pkgImg">
 									</p>
+									<% if(list.size() != 0) {
+								PackageInfoVO data = null;
+								for (int i = 0; i < list.size(); i++) {
+									data = (PackageInfoVO)list.get(i);
+								%>
 
 
 									<ul class="re_info" style="width: 265px;">
+									<li>패키지 이름 : <%=  data.getP_name() %>
+									<%	}
+									} else { %>
+									<td> 데이터가 없음</td>
+									
+										
+									<% }%>
+							
 										<li class="title">산패키지(조식포함)</li>
 										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
 										<li><span>인원 : </span>2인</li>
 										<li><span>요금 : </span>148,000원</li>
 										<li><span>투숙기간 : </span>1박</li>
 
+
 										<li class="title mt10" style="width: 265px;">[성수기] 주중
 											2인(조식+양떼목장)</li>
 										<li><span>구성 : </span>주중객실+조식+케이블카(양떼)</li>
 										<li><span>안내1 : </span>케이블카는 현장상황에따라 운휴될수있습니다.(월요일 휴무)</li>
 										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>
+											
 									</ul>
 								</div>
 							</div>
 						</div>
+							
 
 						<div class="se_cal mt15">
 							<div class="check f_l">

@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+
+
 
 
 <!DOCTYPE html>
@@ -21,6 +25,14 @@
         ga('create', 'UA-87590871-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script type="text/javascript">
+			function goReser1(s) {
+				
+				location.href="../../resort/reservation/re_package.jsp";
+				request.setParam
+				
+				}
+			</script>
 </head>
 <body>
     <form method="post" action="./package_view?seq=12447" id="ctl01">
@@ -222,6 +234,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 					<p class="cus_text01">포토이벤트</p>
 				</li>
 			</ul>
+			
 
 		<!--제목 삭제  <h3 class="bbs_tit mt40">패키지</h3>-->	
 
@@ -235,8 +248,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 				</p>
 			</div>
 			<div class="bbs_cont">
+
 				<img src="../../file/resort/Package/pkg_160803_5_01.jpg" alt="스쿠버이미지" />
-					<a href="javascript:;" id=7 onclick="goReser();" class="btn_white"
+				
+									<a href="javascript:;" id=7 onclick="goReser1('휘닉스 스쿠버')" class="btn_white"
 				style = "position: absolute;right:50px;position:fixed;z-index:100;" alt="예약하기 플로팅 버튼">예약하기</a>
 			</div>
 			
