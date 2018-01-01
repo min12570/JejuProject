@@ -83,6 +83,23 @@ function guestMerketChange()
 	}, "json");
 }
 
+//토글기능
+$(document).ready(function() {
+	$("#py_li").click(function() {
+		$("#py_ul").slideToggle("slow");
+	});
+
+});
+
+$(document).ready(function() {
+	$("jeju_li").click(function() {
+		$("#jeju_ul").slideToggle("slow");
+	});
+
+});
+
+
+
 
 // 패키지 리스트 설정
 function packageListSet()
@@ -110,7 +127,10 @@ function packageListSet()
 		// 패키지 선택 기본선택
 		$('.rsu_package li ul li:eq(0)').trigger('click');
 	});
+	
+
 }
+
 
 
 // 이용 인원 선택
