@@ -42,12 +42,13 @@ public class PackageServlet extends HttpServlet {
 		System.out.println("dbServlet");
 		String db = request.getParameter("db");
 		String next="";
-		ArrayList<Object> list = new ArrayList<>();
+		ArrayList<PackageInfoVO> list = new ArrayList<>();
+		// 아름아 이부분 잠시 수정했오 ArrayList<Object> list = new ArrayList<>();
 		//ArrayList list = new ArrayList();
 		
 		if(db.equals("all")) {
 			Connection con = (Connection) biz.getConnection();//mySql ����
-			
+			 
 			Statement st = null;
 			try {
 				st = (Statement) con.createStatement();
@@ -93,6 +94,10 @@ public class PackageServlet extends HttpServlet {
 			}
 	        System.out.println(list.size());
 	        request.setAttribute("packList", list);
+	        
+	      // request.setAttribute("pName", "임의로 넣은 값");
+	      // request.setAttribute("aa", "넘어가라");
+	        
 			biz.close(con);//connection end	
 		}
 		
