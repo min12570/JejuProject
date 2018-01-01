@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
+<%@ page import="packageInfo.PackageInfoVO" %>
+<%@ page import="java.util.ArrayList" %>
+<!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
 
 
 <!DOCTYPE html>
@@ -8,7 +13,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" />
 
 <link href="../favicon03.ico" rel="shortcut icon" type="image/x-icon" />
-        <script src="/Scripts/modernizr-2.6.2.js"></script>
+        <script src="../Scripts/modernizr-2.6.2.js"></script>
+         <script src="../Scripts/index_To_JejuPackage.js"></script>
     <link href="../favicon03.ico" rel="shortcut icon" type="image/x-icon" /><meta name="viewport" content="width=device-width" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="stylesheet" type="text/css" href="../jeju/_css/main.css" />
 
     <!-- 휘닉스 호텔 & 리조트 구글 애널리틱스 -->
@@ -129,7 +135,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl09', 'ctl01', [], [], [], 
                             <img src="../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></a>
                             <ul class="nav02 s_n02">
                                 <li><a href="/jeju/accommodation/velraterrace">벨라테라스(콘도)</a></li>
-                                <li><a href="../Site/event/jejuPackage.html">패키지예약</a></li>
+                                <li id = "jejuPackageReserve"><a href="javascript:;">패키지예약</a></li>
                                 <li><a href="/jeju/accommodation/hillius">힐리우스(별장)</a></li>
                             </ul>
                         </li>
@@ -660,7 +666,13 @@ $(document).ready(function() {
     };
 </script>
 
-
+<script >
+$(function(){
+	$('#jejuPackageReserve').click(function(){
+		location.href = '../Site/event/jejuPackage.jsp';
+	});
+});
+</script>
 
 
     <!-- //큰 팝업 -->
@@ -1086,7 +1098,7 @@ $(document).ready(function() {
         var x1 = temp[7].split("=");
 
         weather_wtemp1.innerHTML = parseInt(t1[1]) + "℃";
-        weather_wimg.src = "/jeju/_img/weather/we64_" + (i1[1].length == 1 ? "0" : "") + i1[1] + ".png";
+        weather_wimg.src = "../jeju/_img/weather/we64_" + (i1[1].length == 1 ? "0" : "") + i1[1] + ".png";
         weather_wtxt1.innerHTML = x1[1];
     }
     weather_set();
