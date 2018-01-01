@@ -33,6 +33,9 @@
 				
 				}
 			</script>
+			<script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
+<script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
+<script src="../../Scripts/package_ahreum.js" type="text/javascript"></script>
 </head>
 <body>
     <form method="post" action="./package_view?seq=12447" id="ctl01">
