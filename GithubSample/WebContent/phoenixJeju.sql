@@ -123,3 +123,37 @@ insert into package values(0, "휘닉스 스쿠버", 302000 , 387000 , 66000 , n
 
 select * from users;
 select * from package;
+
+
+-- 1월 예약 데이터 삽입
+insert into jan_res values(1, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(2, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(3, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(4, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(5, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(6, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(7, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(8, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(9, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(10, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(11, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(12, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(13, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(14, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(15, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(16, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(17, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(18, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(19, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(20, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(21, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(22, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(23, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(24, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(25, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(26, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(27, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(28, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(29, 2, 2, 2, 2, 2, 2, 2);
+insert into jan_res values(30, 2, 2, 2, 2, 2, 2, 2);
+

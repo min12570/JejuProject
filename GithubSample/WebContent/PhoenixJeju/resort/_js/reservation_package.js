@@ -84,19 +84,18 @@ function guestMerketChange()
 }
 
 //토글기능
-$(document).ready(function() {
-	$("#py_li").click(function() {
-		$("#py_ul").slideToggle("slow");
-	});
-
+$(document).ready(function(){
+    $("#py_list").click(function(){
+        $("#py_ul").slideToggle("slow");
+    });
+    
+     $("#jeju_list").click(function(){
+        $("#jeju_ul").slideToggle("slow");
+        
+    });
 });
 
-$(document).ready(function() {
-	$("jeju_li").click(function() {
-		$("#jeju_ul").slideToggle("slow");
-	});
 
-});
 
 
 
