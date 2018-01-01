@@ -335,7 +335,7 @@ ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
 
 
 									<ul class="re_info" style="width: 265px;">
-									<li>패키지 이름 : <%=  data.getP_name() %>
+									<h1><li>패키지 이름 : <%=  data.getP_name() %></h1> <!-- 정민 수정// db로 패키지 목록 불러오기 아직 더 수정해야함 -->
 									<%	}
 									} else { %>
 									<td> 데이터가 없음</td>

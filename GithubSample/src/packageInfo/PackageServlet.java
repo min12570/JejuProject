@@ -42,7 +42,7 @@ public class PackageServlet extends HttpServlet {
 		System.out.println("dbServlet");
 		String db = request.getParameter("db");
 		String next="";
-		ArrayList<PackageInfoVO> list = new ArrayList<>();
+		ArrayList<PackageInfoVO> list = new ArrayList<PackageInfoVO>();
 		// 아름아 이부분 잠시 수정했오 ArrayList<Object> list = new ArrayList<>();
 		//ArrayList list = new ArrayList();
 		
@@ -95,6 +95,7 @@ public class PackageServlet extends HttpServlet {
 	        System.out.println(list.size());
 	        request.setAttribute("packList", list);
 	        
+	        
 	      // request.setAttribute("pName", "임의로 넣은 값");
 	      // request.setAttribute("aa", "넘어가라");
 	        
@@ -103,8 +104,9 @@ public class PackageServlet extends HttpServlet {
 		
 		//정민 아 이 부분이얌!!
 		
-		next = "/re_package.jsp";
+		next = "/PhoenixJeju/resort/reservation/re_package.jsp";
 		System.out.println(next);
+		System.out.println("디비에서 넘어온 패키지 이름" + list.get(0).getP_name());
 		RequestDispatcher rd = request.getRequestDispatcher(next);
 		rd.forward(request, response);
 	}
