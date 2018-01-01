@@ -83,17 +83,6 @@ function guestMerketChange()
 	}, "json");
 }
 
-//토글기능
-$(document).ready(function(){
-    $("#py_list").click(function(){
-        $("#py_ul").slideToggle("slow");
-    });
-    
-     $("#jeju_list").click(function(){
-        $("#jeju_ul").slideToggle("slow");
-        
-    });
-});
 
 
 
