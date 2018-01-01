@@ -251,7 +251,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 
 				<img src="../../file/resort/Package/pkg_160803_5_01.jpg" alt="스쿠버이미지" />
 				
-									<a href="javascript:;" id=7 onclick="goReser1('휘닉스 스쿠버')" class="btn_white"
+									<a href="javascript:;" id=7 onclick="goReser1()" class="btn_white"
 				style = "position: absolute;right:50px;position:fixed;z-index:100;" alt="예약하기 플로팅 버튼">예약하기</a>
 			</div>
 			
