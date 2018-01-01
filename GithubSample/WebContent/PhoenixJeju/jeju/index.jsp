@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
-<%@ page import="packageInfo.PackageInfoVO" %>
-<%@ page import="java.util.ArrayList" %>
-<!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
-
-
+    pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head><title>
