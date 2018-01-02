@@ -510,6 +510,7 @@ $(document).ready(function(){
 												<ul class="font_n13 pl10"> <li>인터넷 예약시 온라인 카드 결제 또는 현금 입금 가능합니다.</li><p> * 계좌안내 : 우리은행 1005-801-081715 예금주 (주)보광제주</p><p> * 입금시 투숙자명과 동일한 이름으로 송금해 주십시오.</p><li> 상기 요금에는 세금 및 봉사료가 포함되어 있습니다.</li><li><b> 패키지 예약 문의 :  </b> 1577-0069(ARS 객실예약 1번)</li></ul>
 												<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
 												<h3 style="color: rgb(132, 108, 74);">취소/변경 수수료 안내</h3>
+
 												<ul class="font_n13 pl10"> <li>도착일 기준 7일전까지 위약금 없이 취소/변경 가능합니다. (도착일 6일전 ~ 미도착 : 10~50 취소/변경 수수료 발생)</li><li> 패키지 상품 세부 구성에 대한 부분 환불은 불가능합니다.</li></ul>
 
 												<p style="text-align:center; background:#ffffff; padding:20px;"><a href="#" class="close"><b>X</b></a></p>
