@@ -668,10 +668,11 @@ var path = window.location.pathname;
 $(function(){
 	$('#PackageReserve').click(function(){
 		if( path.search( "jeju" )){
+			
 			location.href = '../Site/event/jejuPackage.jsp';
 		}
 		
-	});
+	}); 
 });
 </script>
 
