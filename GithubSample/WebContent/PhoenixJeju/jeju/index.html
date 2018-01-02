@@ -171,7 +171,7 @@ ul.sitemenu li {
 								<img src="../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
 								<a href="../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
                                 <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
-                                <a href="javascript:;" onclick="jejuPackageReserve();">패키지예약</a>
+                                <a href="javascript:;" onclick="packageReserve();">패키지예약</a>
                                 <a href="../jeju/accommodation/hillius">힐리우스(별장)</a>
 								</ul>
 								<ul class="column">
@@ -310,11 +310,17 @@ $(document).ready(function() {
 });
 
 //지윤
-function jejuPackageReserve(){
-	 location.href = '../Site/event/jejuPackage.jsp';
+var path = window.location.pathname;
+function packageReserve(){
+	if( path.search( "jeju" )){
+		
+		location.href = '../Site/event/jejuPackage.jsp';
+	}
 }
 
 </script>
+
+
 <SCRIPT>
 	$(document).ready(function(){
 		getPiMainNoticeList();
