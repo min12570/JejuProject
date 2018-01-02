@@ -10,6 +10,47 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>휘닉스 호텔앤드리조트 | PHOENIX HOTELS &amp; RESORTS</title>
+
+
+<!-- 지윤 체크박스 데이터에 따라 값 변경 -->
+<script language="javascript">
+var week_type, people_num;
+var totalCost;
+function update_week(week_type){
+	if(week_type=='weekend'){
+		totalCost = document.getElementById("costId").value;
+		totalCost += 65000;
+		document.getElementById("costId").value = totalCost;
+		document.getElementById("costText").innerHTML = totalCost+'원';
+	}else if(week_type=='weekday'){
+		totalCost = document.getElementById("costId").value;
+		totalCost -= 65000;
+		document.getElementById("costId").value = totalCost;
+		document.getElementById("costText").innerHTML = totalCost+'원';
+	}
+}
+
+function update_people(people_num){
+	var num=0, preNum;
+	preNum = document.getElementById("peopleNumId").value;
+	if((people_num - preNum)>0){//인원수 늘어나면 
+		totalCost = document.getElementById("costId").value;//현재 요금 가져옴
+		num = (people_num - document.getElementById("peopleNumId").value);//인원 차이 구함
+		totalCost = totalCost + (66000*num);//인원 수 만큼 더해 줌
+		 //b는 id = 'b'
+	}else if((people_num - document.getElementById("peopleNumId").value)<0){//인원수 줄어들면
+		alert("minus");
+		totalCost = document.getElementById("costId").value;//현재 요금 가져옴
+		num = (document.getElementById("peopleNumId").value - people_num );//인원 차이 구함
+		totalCost = totalCost - (66000*num);//인원 수 만큼 빼줌
+	}
+	document.getElementById("peopleNumId").value = people_num;//인원 수정
+	document.getElementById("peopleText").innerHTML = people_num+'명';
+	
+	document.getElementById("costId").value = totalCost;//요금 수정
+	document.getElementById("costText").innerHTML = totalCost+'원';
+}
+</script>
 <!-- 정민 수정 제이쿼리 레이어팝업 시도 -->
 <style> 
 /* 마스크 뛰우기 */
@@ -396,23 +437,23 @@ $(document).ready(function(){
 									<li class="on"><a class="top_none">요일 선택</a>
 										<form>
 											<fieldset>
-												<label> 주중 <input type="radio" name="week_type"
-													value="weekday" id="weekday"/>
-												</label> <label for="id">주말</label> <input type="radio"
-													name="week_type" value="weekend" id ="weekend"/>
+												<label> 주중 <input type=radio name=week_type
+													value='weekday' id=weekday onclick="update_week('weekday');" checked/>
+												</label> <label for="id">주말</label> <input type=radio
+													name=week_type value='weekend' id =weekend onclick="update_week('weekend');"/>
 											</fieldset>
 										</form>
 									</li>
 									<li class="on"><a class="top_none">인원 선택</a>
 										<form>
 											<fieldset>
-												<label> 2명 <input type="radio" name="people_num"
-													value="2" />
+												<label> 2명 <input type=radio name='people_num'
+													value='2' onclick="update_people(2);" checked/>
 												</label> 
-												<label for="id">3명</label> <input type="radio"
-													name="people_num" value="3" id="id" />
-												<label> 4명 </label><input type="radio" name="people_num"
-													value="4" />
+												<label for="id">3명</label> <input type=radio
+													name='people_num' value='3' id=id onclick="update_people(3);"/>
+												<label> 4명 </label><input type=radio name='people_num'
+													value='4' onclick="update_people(4);"/>
 												
 											</fieldset>
 										</form>
@@ -467,8 +508,8 @@ $(document).ready(function(){
 									<ul class="re_info" style="width: 265px;">
 										<li class="title"><%=  data.getP_name() %></li>
 										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
-										<li><span>인원 : </span>2인</li>
-										<li><span>요금 : </span>148,000원</li>
+										<li id='peopleNumId' value = '2' ><span>인원 : </span><span id = 'peopleText'>2인</span></li>
+										<li id='costId' value = '302000' ><span>요금 : </span><span id = 'costText'>302,000원</span></li>
 										<li><span>투숙기간 : </span>1박</li>
 
 
