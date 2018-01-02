@@ -390,9 +390,34 @@ $(document).ready(function(){
 								</ul>
 							</div>
 							<div class="sel_box">
-								<p class="form_tit">옵션 선택</p>
-								<ul class="sel_list rsu_packdetail"></ul>
-				
+								<!-- 지윤이 수정 체크박스 -->
+								<p class="form_tit">이용 옵션 선택</p>
+								<ul class="sel_list rsu_package">
+									<li class="on"><a class="top_none">요일 선택</a>
+										<form>
+											<fieldset>
+												<label> 주중 <input type="radio" name="week_type"
+													value="weekday" id="weekday"/>
+												</label> <label for="id">주말</label> <input type="radio"
+													name="week_type" value="weekend" id ="weekend"/>
+											</fieldset>
+										</form>
+									</li>
+									<li class="on"><a class="top_none">인원 선택</a>
+										<form>
+											<fieldset>
+												<label> 2명 <input type="radio" name="people_num"
+													value="2" />
+												</label> 
+												<label for="id">3명</label> <input type="radio"
+													name="people_num" value="3" id="id" />
+												<label> 4명 </label><input type="radio" name="people_num"
+													value="4" />
+												
+											</fieldset>
+										</form>
+									</li>
+								</ul>
 							</div>
 							<%
 								ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
