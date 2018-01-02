@@ -318,8 +318,11 @@
 								</ul>
 							</div>
 							<div class="sel_box">
-								<p class="form_tit">이용 인원 선택</p>
+								<p class="form_tit">옵션 선택</p>
 								<ul class="sel_list rsu_packdetail"></ul>
+								<li>인원</li>
+								<li>주중</li>
+								<
 							</div>
 							<%
 ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
@@ -342,22 +345,16 @@ ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
 											style="width: 100%;" class="pkgImg">
 									</p>
 									<% if(list.size() != 0) {
-								PackageInfoVO data = null;
-								for (int i = 0; i < list.size(); i++) {
-									data = (PackageInfoVO)list.get(i);
-								%>
+											PackageInfoVO data = null;
+											for (int i = 0; i < list.size(); i++) {
+												data = (PackageInfoVO)list.get(i);
+									%>
 
-
+									<!-- 정민 수정// db로 패키지 목록 불러오기 아직 더 수정해야함 -->
 									<ul class="re_info" style="width: 265px;">
-									<h1><li>패키지 이름 : <%=  data.getP_name() %></h1> <!-- 정민 수정// db로 패키지 목록 불러오기 아직 더 수정해야함 -->
-									<%	}
-									} else { %>
-									<td> 데이터가 없음</td>
+								
 									
-										
-									<% }%>
-							
-										<li class="title">산패키지(조식포함)</li>
+										<li class="title"><%=  data.getP_name() %></li>
 										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
 										<li><span>인원 : </span>2인</li>
 										<li><span>요금 : </span>148,000원</li>
@@ -369,7 +366,12 @@ ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
 										<li><span>구성 : </span>주중객실+조식+케이블카(양떼)</li>
 										<li><span>안내1 : </span>케이블카는 현장상황에따라 운휴될수있습니다.(월요일 휴무)</li>
 										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>
-											
+											<%	}
+									} else { %>
+									<td> 데이터가 없음</td>
+										
+									<% }%>
+							
 									</ul>
 								</div>
 							</div>
@@ -661,14 +663,13 @@ ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
 							</div>
 						</div>
 
-
 						<div class="re_info mt20">
 							<div class="">
 								<p class="re_info_tit">예약자정보</p>
 								<div class="info_cont">
 									<p>
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="caller" valus =style="width: 100px">
+											type="text" name="caller" style="width: 100px">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
