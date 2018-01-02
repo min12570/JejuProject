@@ -662,6 +662,7 @@ $(document).ready(function() {
     };
 </script>
 
+
 <script >
 var path = window.location.pathname;
 $(function(){
@@ -669,9 +670,11 @@ $(function(){
 		if( path.search( "jeju" )){
 			location.href = '../Site/event/jejuPackage.jsp';
 		}
+		
 	});
 });
 </script>
+
 
 
     <!-- //큰 팝업 -->
