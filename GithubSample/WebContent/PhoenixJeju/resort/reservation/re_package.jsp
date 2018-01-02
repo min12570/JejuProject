@@ -10,6 +10,76 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>휘닉스 호텔앤드리조트 | PHOENIX HOTELS &amp; RESORTS</title>
+<!-- 정민 수정 제이쿼리 레이어팝업 시도 -->
+<style> 
+/* 마스크 뛰우기 */
+#mask {  
+    position:absolute;  
+    z-index:9000;  
+    background-color:#000;  
+    display:none;  
+    left:0;
+    top:0;
+} 
+/* 팝업으로 뜨는 윈도우 css  */ 
+.window_jm{
+    display: none;
+    position:absolute;  
+    left:50%;
+    top:50px;
+    margin-left: -500px;
+    width:1000px;
+    height:500px;
+    background-color:#FFF;
+    z-index:10000;   
+ }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+function wrapWindowByMask() {
+	
+	//화면의 높이와 너비를 구한다.
+    var maskHeight = $(document).height();  
+    var maskWidth = $(window).width();  
+
+    //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+    $("#mask").css({"width":maskWidth,"height":maskHeight});  
+
+    //애니메이션 효과 - 일단 0초동안 까맣게 됐다가 60% 불투명도로 간다.
+
+    $("#mask").fadeIn(0);      
+    $("#mask").fadeTo("slow",0.6);    
+
+    //윈도우 같은 거 띄운다.
+    $(".window_jm").show();
+
+}
+
+$(document).ready(function(){
+    //검은 막 띄우기
+    $(".openMask").click(function(e){
+        e.preventDefault();
+        wrapWindowByMask();
+    });
+
+    //닫기 버튼을 눌렀을 때
+    $(".window_jm .close").click(function (e) {  
+        //링크 기본동작은 작동하지 않도록 한다.
+        e.preventDefault();  
+        $("#mask, .window_jm").hide();  
+    });       
+
+    //검은 막을 눌렀을 때
+    $("#mask").click(function () {  
+        $(this).hide();  
+        $(".window_jm").hide();  
+
+    });      
+
+});
+
+
+</script>
 <meta name="keywords"
 	content="PHOENIX, PHOENIX PYEONGCHANG, PHOENIX SNOWPARK, PHOENIX HOTELS &amp; RESORTS, PHOENIX JEJU, PHOENIX CC, 휘닉스, 휘닉스 호텔앤드리조트, 휘닉스평창, 휘닉스 평창, 휘닉스 스노파크, 휘닉스 스노우파크, 휘닉스 제주 섭지코지, 휘닉스 제주, 유민미술관, 평창 동계올림픽, 휘닉스 블루캐니언, 휘닉스 CC, 휘닉스 컨트리클럽" />
 <!--<link href="../../Content/Site.css" rel="stylesheet" />-->
@@ -46,6 +116,8 @@
 			}
 			//]]>
 		</script>
+		
+		
 
 
 		<script
@@ -320,60 +392,100 @@
 							<div class="sel_box">
 								<p class="form_tit">옵션 선택</p>
 								<ul class="sel_list rsu_packdetail"></ul>
-								<li>인원</li>
-								<li>주중</li>
-								<
+				
 							</div>
 							<%
-ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
-//Object obj = request.getAttribute("packList2");
-//if(obj != null) {
-//	PackageInfoVO pi = (PackageInfoVO)request.getAttribute("packList2");
-//	out.println(pi.getP_name());
-//}
-%>
-
-							<div class="result_box">
+								ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
+								//Object obj = request.getAttribute("packList2");
+								//if(obj != null) {
+								//	PackageInfoVO pi = (PackageInfoVO)request.getAttribute("packList2");
+								//	out.println(pi.getP_name());
+								//}
+							%>
 							
+							
+							<div class="result_box">
 								<p class="re_tit">선택 정보</p>
-								
 								<div class="img_box rsu_choiceContent">
+								<div>
 									<!-- <p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px;" href="javascript:;">상세보기</a></p> -->
 
 									<p class="f_l" style="width: 230px; height: 170px;">
-										<img src="../../resort/_img/comn/logo2.png"
+										<img src="../../resort/_img/comn/scuba_image.jpg"
 											style="width: 100%;" class="pkgImg">
+											
 									</p>
 									<% if(list.size() != 0) {
 											PackageInfoVO data = null;
 											for (int i = 0; i < list.size(); i++) {
 												data = (PackageInfoVO)list.get(i);
 									%>
+									
+									<!-- 정민 수정 JSON 객체 생성 -->
+									
+									<script>
+										$(function() {
+											$("#clickPackage").click(function() {
+												var packageArray = new Array();
+												var packageInfo = new Object();
+				
+												packageInfo.p_name = <%= data.getP_name() %>
+												packageInfo.p_personCnt = "2";
+												
+									
+												
+											})
+										})
+									</script>
 
 									<!-- 정민 수정// db로 패키지 목록 불러오기 아직 더 수정해야함 -->
 									<ul class="re_info" style="width: 265px;">
-								
-									
-										<li class="title"><%=  data.getP_name() %></li>
+										<li class="title">이름 : <%=  data.getP_name() %></li>
 										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
 										<li><span>인원 : </span>2인</li>
 										<li><span>요금 : </span>148,000원</li>
 										<li><span>투숙기간 : </span>1박</li>
 
 
-										<li class="title mt10" style="width: 265px;">[성수기] 주중
+										<!-- 정민 수정 패키지 정보 보여주는 값 수정 <li class="title mt10" style="width: 265px;">[성수기] 주중
 											2인(조식+양떼목장)</li>
 										<li><span>구성 : </span>주중객실+조식+케이블카(양떼)</li>
 										<li><span>안내1 : </span>케이블카는 현장상황에따라 운휴될수있습니다.(월요일 휴무)</li>
-										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>
-											<%	}
+										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>-->
+						
+									</ul>
+								
+			
+								</div>
+								</div>
+								<!-- 정민 수정 // 레이어 팝업 시도 -->
+								<div id="wrap_jm">
+									<div id="container_jm">
+										<div id ="mask"></div>
+											<div class="window_jm">
+												<p style="width:1000px;height:500px;text-align:center;font-size:20px;vertical-align:middle;">패키지 이름 : <%= data.getP_name() %></p>
+               										 <p style="text-align:center; background:#ffffff; padding:20px;"><a href="#" class="close">닫기X</a></p>
+											</div>
+								 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
+												<tr>
+								 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+												 </tr>
+								  				<tr>
+								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+													<td align="center">
+                   					   				<a href="#" class="openMask"> <span>자세히 보기</span></a>
+                    								</td>
+              					  				</tr>  
+								 			</table>
+									</div>
+								</div>
+								<%	}
 									} else { %>
 									<td> 데이터가 없음</td>
 										
 									<% }%>
-							
-									</ul>
-								</div>
 							</div>
 						</div>
 							
