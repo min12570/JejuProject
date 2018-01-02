@@ -19,12 +19,12 @@ var totalCost;
 function update_week(week_type){
 	if(week_type=='weekend'){
 		totalCost = document.getElementById("costId").value;
-		totalCost += 65000;
+		totalCost += 85000;
 		document.getElementById("costId").value = totalCost;
 		document.getElementById("costText").innerHTML = totalCost+'원';
 	}else if(week_type=='weekday'){
 		totalCost = document.getElementById("costId").value;
-		totalCost -= 65000;
+		totalCost -= 85000;
 		document.getElementById("costId").value = totalCost;
 		document.getElementById("costText").innerHTML = totalCost+'원';
 	}
