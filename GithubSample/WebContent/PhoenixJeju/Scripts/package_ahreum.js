@@ -6,32 +6,33 @@
 
 
 var package_number;
-function goReser(){
-	package_number =0;
-	package_number = $("btn_white").attr('id');
+function goReser(p_number){
+	//package_number =0;
+	//package_number = $("btn_white").attr('id');
+	//p_number 값 받아와서 default 설정 가능!
 	packageList();
 	//alert(package_number);
 	//alert("package_number "+package_number);
-	//location.href='../../resort/reservation/re_package.html';	
+	//location.href='../../resort/reservation/re_package.html?p_number';	
 }
 
 //클릭이벤트 설정
 $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	$('.rsu_package li ul li').removeClass('on').addClass('off');
 	$(this).removeClass('off').addClass('on');
-	var selkey = $('a',this).attr('code');
-	//alert(selkey);
+	//var selkey = $('a',this).attr('code');
 	//alert(selkey);
 	//packDetailSet(selkey);
 });
 
 // 패키지 선택 기본선택
-//휘닉스 스쿠버 선택시, 15번이다
-$('.rsu_package li ul li:eq('+package_number+')').trigger('click');
-
+//휘닉스 스쿠버 선택시,6번이다
+//location.href='../../resort/reservation/re_package.html?p_number';
+/*temp = location.href.split("?");
+document.writｅ(name + " " + content);*/
+//$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
 
 function packageList(){
-	alert("왔다");
 	location.href="main.package?db=all";
 }
 
