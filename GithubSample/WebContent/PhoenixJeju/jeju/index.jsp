@@ -129,8 +129,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl09', 'ctl01', [], [], [], 
                         <li><a href="/jeju/accommodation/velraterrace">
                             <img src="../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></a>
                             <ul class="nav02 s_n02">
+                            <!-- ddd -->
                                 <li><a href="/jeju/accommodation/velraterrace">벨라테라스(콘도)</a></li>
-                                <li id = "jejuPackageReserve"><a href="javascript:;">패키지예약</a></li>
+                                <li id = "packageReserve"><a href="javascript:;">패키지예약</a></li>
                                 <li><a href="/jeju/accommodation/hillius">힐리우스(별장)</a></li>
                             </ul>
                         </li>
@@ -662,9 +663,12 @@ $(document).ready(function() {
 </script>
 
 <script >
+var path = window.location.pathname;
 $(function(){
-	$('#jejuPackageReserve').click(function(){
-		location.href = '../Site/event/jejuPackage.jsp';
+	$('#PackageReserve').click(function(){
+		if( path.search( "jeju" )){
+			location.href = '../Site/event/jejuPackage.jsp';
+		}
 	});
 });
 </script>
@@ -828,7 +832,7 @@ $(function(){
                     <a href="../jeju/accommodation/velraterrace">ACCOMMODATION</a>
                     <ul id="accommodation_depth_2" class="depth02">
                         <li style="width: 105px;"><a href="../jeju/accommodation/velraterrace">벨라테라스 (콘도)</a></li>
-                        <li><a href="../site/event/package">패키지예약</a></li>
+                        <li id = "PackageReserve"><a href="javascript:;">패키지예약</a></li>
                         <li><a href="../jeju/accommodation/hillius">힐리우스 (별장)</a></li>
                         <li><a href=''></a></li>
 

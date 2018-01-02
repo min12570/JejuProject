@@ -208,6 +208,17 @@ div.se_form div		{float:left;}
 div.sel_box					{width:230px;}
 div.sel_box p.form_tit		{border-right:1px solid #777; background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
 
+
+/*체크 박스*/
+fieldset{
+	border:0px;
+	height:30px;
+	margin:15px;
+}
+label{
+	padding: 10px;
+}
+
 ul.sel_list				{  padding:0 0 0 1px; }
 ul.sel_list li a		{display:block; width:208px; height:26px; padding:9px 0 3px 20px; border-top:1px solid #bbb; border-bottom:1px solid #bbb; background:#fff;  font:normal 13px/18px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica"; color:#000}
 ul.sel_list li a:hover	{display:block; width:208px; height:26px; padding:9px 0 3px 20px; background:#fff url(../_img/bbs/se_on.png) no-repeat 90% 50%}
