@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
-<%@ page import="packageInfo.PackageInfoVO" %>
-<%@ page import="java.util.ArrayList" %>
+    pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" /><title>

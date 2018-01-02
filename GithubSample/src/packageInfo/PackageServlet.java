@@ -39,7 +39,8 @@ public class PackageServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("dbServlet");
+		System.out.println("dbsssServlet");
+		System.out.println("101aaaaafasfasjiyoon");
 		String db = request.getParameter("db");
 		String next="";
 		ArrayList<PackageInfoVO> list = new ArrayList<PackageInfoVO>();
@@ -47,22 +48,31 @@ public class PackageServlet extends HttpServlet {
 		//ArrayList list = new ArrayList();
 		
 		if(db.equals("all")) {
+			System.out.println("101aaaaafasfasjiyoon");
 			Connection con = (Connection) biz.getConnection();//mySql ����
-			 
+			//여기까진 됨
 			Statement st = null;
+			System.out.println("101aaaaafasfasjiyoon");
 			try {
+				System.out.println("101aaaaafasfasjiyoon");
 				st = (Statement) con.createStatement();
+				System.out.println("01aaaaafasfasjiyoon");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
+			System.out.println("111aaaaafasfasjiyoon");
+			
 			 
 	        String sql;
 	        sql = "select * FROM package;";
 
 	        ResultSet rs = null;
+	        System.out.println("1aaaaafasfasjiyoon");
 			try {
 				rs = st.executeQuery(sql);
+				System.out.println("2aaaaafasfasjiyoon");
+				System.out.println(rs+"sss");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
