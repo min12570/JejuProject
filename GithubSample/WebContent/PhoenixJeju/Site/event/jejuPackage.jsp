@@ -48,7 +48,7 @@
 
 <script type="text/javascript">
 function goToJejuIndex() {
-	location.href="../../jeju/index.html";
+	location.href="../../PhoenixJeju/jeju/index.html";
 }
 //<![CDATA[
 var theForm = document.forms['ctl01'];
