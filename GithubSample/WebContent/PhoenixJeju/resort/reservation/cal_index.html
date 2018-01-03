@@ -23,7 +23,7 @@
 }
 
 .date-picker-wrapper {
-	position: absolute;
+	position: relative;
 	z-index: 1;
 	border: 1px solid #bfbfbf;
 	background-color: #efefef;
@@ -34,7 +34,6 @@
 	font-family: Arial;
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 	box-sizing: initial;
-	
 }
 
 .date-picker-wrapper.inline-wrapper {
@@ -80,7 +79,10 @@
 	background-color: #fff;
 	padding: 5px;
 	cursor: default;
-	position: relative;
+	position: absolute;
+	left: 150px;
+	top : 50px;
+
 	_overflow: hidden;
 }
 
@@ -182,7 +184,7 @@
 	z-index: 1;
 	width: 15px;
 	height: 100%;
-	background-color: red;
+	background-color: white;
 	font-size: 0;
 	line-height: 0;
 	float: left;
@@ -256,7 +258,7 @@
 }
 
 .date-picker-wrapper .drp_top-bar {
-	line-height: 1.4;
+	line-height: 50;
 	position: relative;
 	padding: 10px 40px 10px 0;
 }
@@ -400,11 +402,10 @@
 	bottom: -4px;
 }
 
-.date-picker-wrapper.two-months.no-gap .month1 .next,
+/* .date-picker-wrapper.two-months.no-gap .month1 .next,
 	.date-picker-wrapper.two-months.no-gap .month2 .prev {
 	display: none;
-}
-
+} */
 .date-picker-wrapper .week-number {
 	padding: 5px 0;
 	line-height: 1;
@@ -456,7 +457,7 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 	{
 		'default':  //default language: English
 		{
-			'selected': 'Selected:',
+			'selected': '선택날짜 : ',
 			'day':'Day',
 			'days': 'Days',
 			'apply': 'Close',
@@ -487,7 +488,7 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 			'default-single' : 'Please select a date',
 			'default-less' : 'Please select a date range less than %d days',
 			'default-range' : 'Please select a date range between %d and %d days',
-			'default-default': 'Please select a date range',
+			'default-default': '체크인 날짜와 체크아웃날짜를 선택하세요.',
 			'time':'Time',
 			'hour':'Hour',
 			'minute':'Minute'
@@ -2246,10 +2247,6 @@ $(function()
 	margin: 30px 0;
 }
 
-.date-picker-wrapper .month-wrapper table .day.lalala {
-	background-color: orange;
-}
-
 .options {
 	display: none;
 	border-left: 6px solid #8ae;
@@ -2259,20 +2256,13 @@ $(function()
 	background-color: #eee;
 	border-radius: 4px;
 }
-
-.date-picker-wrapper.date-range-picker19 .day.first-date-selected {
-	background-color: red !important;
-}
-
-.date-picker-wrapper.date-range-picker19 .day.last-date-selected {
-	background-color: orange !important;
-}
 </style>
 </head>
 <body>
 
 	<div id="wrapper">
-		<div class="demo"> 여기선 된다.<input id="date-range12" size="40" value="">
+		<div class="demo">
+			날짜 : <input id="date-range12" size="40" value="">
 			<div id="date-range12-container" style="width: 456px;"></div>
 		</div>
 	</div>
