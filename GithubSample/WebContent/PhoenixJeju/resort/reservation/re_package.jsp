@@ -1145,7 +1145,8 @@
 								</p>
 								<select id="payHow" class="w140 f_l ml10" name="payment"
 									style="width: 170px;">
-									<option selected="selected" mcode="">계좌이체</option></select>
+									<option selected="selected" mcode="">계좌이체</option>
+									<option mcode="">카드결제</option></select>
 								<p class="f_l ">
 									&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="co_date"
 										name="payAgreeChk"> 위약규정 사항을 확인하고
