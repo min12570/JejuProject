@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-
-
-
-
+]
 <!DOCTYPE html>
 <html lang="ko">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" /><title>
@@ -35,6 +32,7 @@
 			<script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
 <script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
 <script src="../../Scripts/package_ahreum.js" type="text/javascript"></script>
+<script src="../../Scripts/user_jm.js" type="text/javascript"></script>
 </head>
 <body>
     <form method="post" action="./package_view?seq=12447" id="ctl01">
