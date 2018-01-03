@@ -31,6 +31,7 @@ function reservation_chk(){
 		location.href='../../resort/reservation/re_package_complete.jsp';
 	}else{
 		alert("지원하지 않는 기능입니다");
+		
 	}
 }
 // 패키지 선택 기본선택

@@ -205,3 +205,5 @@ INSERT INTO `jan_res` (`jan_day`, `d_ondol`, `d_twin`, `t_ondol`, `o_ondol`, `su
                     ELSE 'SUITE_O(SOLD OUT)' END     AS SUITE_O
  FROM JAN_RES
  WHERE jan_day = 20180102;
+
+ select * from users;
