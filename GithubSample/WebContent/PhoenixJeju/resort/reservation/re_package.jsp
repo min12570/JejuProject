@@ -50,6 +50,15 @@ function update_people(people_num){
 	document.getElementById("costId").value = totalCost;//요금 수정
 	document.getElementById("costText").innerHTML = totalCost+'원';
 }
+//객실타입, 숙박일수에 따른 패키지 금액
+var stayDay=2, roomTypeCost;
+function totalCostOp(){
+	roomTypeCost = document.getElementById("roomType").value;
+	roomTypeCost = document.getElementById("costId").value + (roomTypeCost*10000) ;
+	roomTypeCost = roomTypeCost * stayDay;
+	document.getElementById("totalPackageCost").innerHTML = roomTypeCost+'원';
+}
+
 </script>
 
 <!-- 정민 수정 제이쿼리 레이어팝업 시도 -->
@@ -835,8 +844,17 @@ $(document).ready(function(){
 									</div>
 									<div class="updown">
 										<p class="text">객실타입</p>
-										<select name="roomType" class="w140 ml30" style="width: 130px"
-											onchange="roomTypeChangeReflesh()"></select>
+										<select id = "roomType" name="roomType" class="w140 ml30" style="width: 130px"
+											onchange="totalCostOp();">
+											<!-- 지윤 - totalCostOp(투숙기간) -->
+										<option value=0 selected>로얄더블온돌</option>
+										<option value=0>로얄더블트윈</option>
+										<option value=0>로얄트윈온돌</option>
+										<option value=3>로얄오션온돌</option>
+										<option value=10>로얄스위트A</option>
+										<option value=10>로얄스위트B</option>
+										<option value=13>로얄스위트O</option>
+											</select>
 									</div>
 
 									<!--div class="updown" >
@@ -865,7 +883,7 @@ $(document).ready(function(){
 							<div class="money01">
 								<p class="tit" style="">결제금액</p>
 								<p class="pt25 pl20 font_b15">
-									패키지 금액 <span class="font_b16_r ml20 room_total_price_display">0원</span>
+									패키지 금액 <span id='totalPackageCost' class="font_b16_r ml20 room_total_price_display">302000원</span>
 								</p>
 							</div>
 						</div>
