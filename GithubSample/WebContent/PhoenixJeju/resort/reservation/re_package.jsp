@@ -504,7 +504,7 @@ $(document).ready(function(){
 										})
 									</script>
 
-									<!-- 정민 수정// db로 패키지 목록 불러오기 아직 더 수정해야함 -->
+									<!-- 정민 수정// db로 패키지 목록 불러오기  -->
 									<ul class="re_info" style="width: 265px;">
 										<li class="title"><%=  data.getP_name() %></li>
 										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
@@ -526,7 +526,7 @@ $(document).ready(function(){
 								</div>
 								<!-- 정민 수정 // 레이어 팝업 시도 -->
 								<div id="wrap_jm">
-									<div id="container_jm">
+									<div i치d="container_jm">
 										<div id ="mask"  ></div>
 											<div class="window_jm" style="overflow:scroll;">
 											
@@ -542,7 +542,7 @@ $(document).ready(function(){
 												</div>
 												<br><br><br>
 												<h3 style="color: rgb(132, 108, 74);">상품 세부안내</h3>
-												<ul class="font_n13 pl10"> <li><b>실내풀 스쿠버&nbsp;/ 조식쿠폰 수령장소 : 오렌지동 프론트데스크</b></li><li> 객실 정원 외 인원 추가시 인원 추가비용은 인당 25,000원 입니다.(최대 2인 추가 가능)</li><li><b> 조식 인원 추가시 특별요금 적용</b></li><p> 대인 19,000원(14세 이상), 소인 13,000원(8세~13세 이하), 미취학 7,000원(만 3세 ~ 7세 이하), 유아 무료(만 3세미만)</p><li><b>&nbsp;실내풀 스쿠버 이용안내</b></li><p>- 위치 : 블루동 1층 064-731-7706</p><p>- 시간 : 09:00 ~ 18:00&nbsp;</p><p>- 실스쿠버 다이빙의 실제적인 체험 프로그램으로 물 속에서 자기 자신의 호흡으로 물 위로 뜨지도 않고 가라 앉지도 않는 우주 공간에 떠있는 듯한 중성 부력을 느껴보는 스쿠버 다이빙 입문의 1단계 (초등학교 고학년 이상, 추후 2,3단계 후 자격증 취득 가능)&nbsp;</p><li><b>실내풀 스쿠버 체험은 사전예약 후 이용가능합니다.</b></li><li><font color="#ff0000"><strong>매월 1,3주 수요일 수영장&amp;사우나 휴장으로 1,3주 수요일 투숙 패키지 이용 시 목요일에 스쿠버교육을 이용하셔야 합니다.</strong><br style="clear: both;"></font></li></ul>
+												<ul class="font_nw13 pl10"> <li><b>실내풀 스쿠버&nbsp;/ 조식쿠폰 수령장소 : 오렌지동 프론트데스크</b></li><li> 객실 정원 외 인원 추가시 인원 추가비용은 인당 25,000원 입니다.(최대 2인 추가 가능)</li><li><b> 조식 인원 추가시 특별요금 적용</b></li><p> 대인 19,000원(14세 이상), 소인 13,000원(8세~13세 이하), 미취학 7,000원(만 3세 ~ 7세 이하), 유아 무료(만 3세미만)</p><li><b>&nbsp;실내풀 스쿠버 이용안내</b></li><p>- 위치 : 블루동 1층 064-731-7706</p><p>- 시간 : 09:00 ~ 18:00&nbsp;</p><p>- 실스쿠버 다이빙의 실제적인 체험 프로그램으로 물 속에서 자기 자신의 호흡으로 물 위로 뜨지도 않고 가라 앉지도 않는 우주 공간에 떠있는 듯한 중성 부력을 느껴보는 스쿠버 다이빙 입문의 1단계 (초등학교 고학년 이상, 추후 2,3단계 후 자격증 취득 가능)&nbsp;</p><li><b>실내풀 스쿠버 체험은 사전예약 후 이용가능합니다.</b></li><li><font color="#ff0000"><strong>매월 1,3주 수요일 수영장&amp;사우나 휴장으로 1,3주 수요일 투숙 패키지 이용 시 목요일에 스쿠버교육을 이용하셔야 합니다.</strong><br style="clear: both;"></font></li></ul>
 												<p>&nbsp;</p>
 												<h3 style="color: rgb(132, 108, 74);">이용절차</h3>
 												<h3 style="color: rgb(132, 108, 74);"><img src="http://www.phoenixpark.co.kr/File/Resort/Package/img_jeju_package(1).jpg"></h3>
@@ -552,9 +552,8 @@ $(document).ready(function(){
 												<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
 												<h3 style="color: rgb(132, 108, 74);">취소/변경 수수료 안내</h3>
 
-												<ul class="font_n13 pl10"> <li>도착일 기준 7일전까지 위약금 없이 취소/변경 가능합니다. (도착일 6일전 ~ 미도착 : 10~50 취소/변경 수수료 발생)</li><li> 패키지 상품 세부 구성에 대한 부분 환불은 불가능합니다.</li></ul>
-
-												<p style="text-align:center; background:#ffffff; padding:20px;"><a href="#" class="close"><b>X</b></a></p>
+												<ul class="font_n13 pl10"> <li>도착일 기준 7일전까지 위약금 없이 취소/변경 가능합니다. (도착일 6일전 ~ 미도착 : 10~50 취소/변경 수수료 발생)</li><li> 패키지 상품 세부 구성에 대한 부분 환불은 불가능합니다.</li></ul><br><br>
+												<p style="text-align:center; background:#ffffff; padding:20px;"><a href="#" class="close"><img src="../../resort/_img/comn/close.png" style="width:5%;vertical-align:middle;" ></a></p>
 										
 											</div>
 								 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -562,11 +561,11 @@ $(document).ready(function(){
 								 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 												 </tr>
 								  				<tr>
-								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-								  				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-													<td align="center">
-                   					   				<a href="#" class="openMask"> <span>자세히 보기</span></a>
+
+								  				
+													<td>
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   					   				<a href="#" class="openMask"><img src="../../resort/_img/comn/search.png" style="width:3%;vertical-align:middle;" >&nbsp;<span style="color:#474747;font-weight:bold">자세히 보기</span></a>
                     								</td>
               					  				</tr>  
 								 			</table>
