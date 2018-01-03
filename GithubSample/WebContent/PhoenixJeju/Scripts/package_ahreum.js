@@ -20,11 +20,64 @@ function goReser(p_number){
 $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	$('.rsu_package li ul li').removeClass('on').addClass('off');
 	$(this).removeClass('off').addClass('on');
+	alert(temp[1]);
+	showPackages(temp[1]);
 	//var selkey = $('a',this).attr('code');
 	//alert(selkey);
 	//packDetailSet(selkey);
 });
+$( document ).ready(function() {
+    readPackageJSON();
+});
 
+var pNum = [];
+var pImg = [];
+function readPackageJSON(){
+	$.getJSON('../../package.json', function (data) {
+		for (var j = 0; j < data.length; j++) {
+			pNum.push(data[j].name);
+			pImg.push(data[j].img);
+	    }
+	});
+}
+
+function showPackages(Pid){
+	var Name = pNum[Pid];
+	var img = pImg[Pid];
+	var Name = pNum[Pid];
+	var imgURL = "<img src="+img+" style='width: 100%;' class='pkgImg'>";
+	$('.re_info .title').html(Name);
+	$('.img_box rsu_choiceContent div .f_l').html(imgURL);
+}
+
+/*
+function readJobJson() {
+	   $.getJSON('http://apis.joins.com/pagecall/?u=http://joongang.joins.com/Innovation/future/json/status_result.json', function (data) {
+	   // $.getJSON('./json/status_result.json', function (data) {
+	    printJobJSON(data);
+	    });
+	}
+	function printJobJSON(jsonData) {
+	    statusData = jsonData;
+	    var jLength = jsonData.length;
+	    var jobNames = '<div style="color:#01f3fd">ㄱ</div>';
+	    for (var j = 0; j < jLength; j++) {
+	        if (jobNamesNum != jsonData[j].JobsNum) {
+	            jobNamesNum = jsonData[j].JobsNum;
+	            jobNames = jobNames + '<br/><div style="color:#01f3fd">' + jobNamesCategory[jobNamesNum] + '</div>';
+	        }
+	        selectName[j] = jsonData[j].Jobs.replace(",", " ");
+	        jobNames = jobNames + '<div class="list_item" onclick=inputName(selectName[' + j + ']);>' + selectName[j] + '</div>';
+	        availableTags.push(selectName[j]);
+	    }
+	    jobNames = jobNames + '<br/><br/>';
+	    $('#future_job_list').html(jobNames);
+	}
+
+	var selectName = [];
+	function inputName(name) {
+	    $('#searchJob').val(name);
+	}*/
 function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
 	//alert(payHow);
@@ -44,6 +97,7 @@ temp = temp[1].split("=");
 $('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
 
 function packageList(p_number){
+	readPackageJSON();
 	location.href="main.package?db=all&p_num="+p_number;
 }
 

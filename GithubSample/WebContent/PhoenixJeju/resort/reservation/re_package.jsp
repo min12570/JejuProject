@@ -11,8 +11,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>휘닉스 호텔앤드리조트 | PHOENIX HOTELS &amp; RESORTS</title>
-
-
+<script src="../../Scripts/package_ahreum.js"></script>
+<script src="../../Scripts/package_ahreum2.js"></script>
 <!-- 지윤 체크박스 데이터에 따라 값 변경 -->
 <script language="javascript">
 	var week_type, people_num;
@@ -630,7 +630,7 @@
 												id='peopleText'>2인</span></li>
 											<li id='costId' value='302000'><span>요금 : </span><span
 												id='costText'>302,000원</span></li>
-											<li><span>투숙기간 : </span>1박</li>
+											<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
 
 
 											<!-- 정민 수정 패키지 정보 보여주는 값 수정 <li class="title mt10" style="width: 265px;">[성수기] 주중
@@ -1270,5 +1270,4 @@
 
 	});
 </script>
-<script src="../../Scripts/package_ahreum.js"></script>
 </html>
