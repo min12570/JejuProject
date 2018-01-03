@@ -176,22 +176,23 @@ onclick="location.href='/resort/reservation/re_coupon'">
 					<div class="img_box" >
 						<p class="f_l"><img src="../../resort/_img/comn/scuba_image.jpg" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
 						<ul class="re_info" style="width:265px;">
-							<li class="title">(릴렉싱테라피)주중</li>
+							<li class="title">(휘닉스 스쿠버)주중</li>
 							<li><span>타입 : </span>콘도</li>
 							<li><span>인원 : </span>2인</li>
-							<li><span>요금 : </span>252,000원</li>
-							<li><span>투숙기간 : </span>2017년 11월 01일 ~ 2018년 03월 31일</li>
-							<li class="title mt10" style="width:265px;">[11/1~3/31]테라피(주중2인)</li>
-							<li><span>구성 : </span>객실+조식+두피케어</li>
+							<li><span>요금 : </span>272,000원</li>
+							<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
+
+							<li class="title mt10" style="width:265px;">[12/1~3/31]얼리버드_스쿠버(주중2인)</li>
+							<li><span>구성 : </span>객실+조식+실내풀스쿠버체험(50~60분)</li>
 							<li><span>안내1 : </span>- 오션뷰 요청시 3만원 추가 됩니다.</li>
-							<li><span>안내2 : </span>- 쿠폰은 체크인 시 프론트에서 제공합니다.</li>
+							<li><span>안내2 : </span>- 쿠폰은 체크인 시 프론트에서 제공합니다</li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="" style="width:460px;">
 					<p class="re_tit">결제정보</p>
-					<p class="font_b16_3 pt15 pl20 pb15 rsv_date" style="border-bottom:1px solid #ddd; width:100%;">일정 : 2015.07.01 ~ 2015.07.02<br/>숙박일수 : 1일</p>
+					<p class="font_b16_3 pt15 pl20 pb15 rsv_date" style="border-bottom:1px solid #ddd; width:100%;">일정 : 2018.01.05 ~ 2018.01.06<br/>숙박일수 : 1일</p>
 
 					<ul class="re_info mt10">
 						<li class="w_120 rooms"><span>객실수 :</span> 1실</li>
