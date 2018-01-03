@@ -45,6 +45,9 @@
 </div>
 
 <script type="text/javascript">
+function goToJejuIndex() {
+	location.href="../../jeju/index.html";
+}
 //<![CDATA[
 var theForm = document.forms['ctl01'];
 if (!theForm) {
@@ -93,7 +96,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                             <img src="../../pyeongchang/_img/gnb/phoenixresort_off.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
-                        <li><a href="../../jeju/index">
+                        <li><a href="javascript:;" onclick="goToJejuIndex();">
                             <img src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
                     </ul>
                     <div class="gnbmenu">
