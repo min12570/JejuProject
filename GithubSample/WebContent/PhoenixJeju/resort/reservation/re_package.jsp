@@ -51,8 +51,9 @@ function update_people(people_num){
 	document.getElementById("costText").innerHTML = totalCost+'원';
 }
 </script>
+
 <!-- 정민 수정 제이쿼리 레이어팝업 시도 -->
-<style> 
+<style>
 /* 마스크 뛰우기 */
 #mask {  
     position:absolute;  
@@ -77,6 +78,10 @@ function update_people(people_num){
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
+var path = window.location.pathname;
+function goToJejuIndex() {
+	location.href="../../jeju/index.html";
+}
 function wrapWindowByMask() {
 	
 	//화면의 높이와 너비를 구한다.
@@ -203,7 +208,7 @@ $(document).ready(function(){
 								alt="휘닉스 호텔&리조트" /></a></li>
 						<li><a href="/pyeongchang/index"> <img
 								src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
-						<li><a href="/jeju/index"> <img
+						<li><a href="javascript:;" onclick="goToJejuIndex();"> <img
 								src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
 					</ul>
 					<div class="gnbmenu">
