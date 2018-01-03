@@ -131,7 +131,7 @@ select * from package;
 
 -- User 데이터 삽입
 INSERT INTO `users` (`user_id`, `user_pw`, `user_email`, `user_contact`) VALUES
-	('조인스', '1234', 'joins@emai.com', '010-1111-2222'),
+	('조인스', '1234', 'joins@email.com', '010-1111-2222'),
 	('김아름', '1234', 'kar@email.com', '010-3333-4444'),
 	('김정민', '1234', 'kjm@email.com', '010-4444-5555'),
 	('정지윤', '1234', 'jjy@email.com', '010-2222-4444'),
@@ -150,7 +150,8 @@ INSERT INTO `room` (`room_id`, `room_name`, `room_cost`, `room_image`, `room_con
 -- 패키지 데이터 삽입
 INSERT INTO `package` (`p_id`, `p_name`, `p_weekdaycost`, `p_weekendcost`, `p_percost`, `p_cost`, `p_region`, `p_image`, `p_content`, `p_url`) VALUES
 	(0, '휘닉스 스쿠버', 302000, 387000, 66000, NULL, '제주', '../file/resort/Package/upload_201611162efae3cb.jpg', '', '');
-
+INSERT INTO `package` (`p_id`, `p_name`, `p_weekdaycost`, `p_weekendcost`, `p_percost`, `p_cost`, `p_region`, `p_image`, `p_content`, `p_url`) VALUES
+	(1, '맛있는 해랑[근고기모듬]', 260000, 345000, 16000, NULL, '제주', '../file/resort/Package/upload_201611162efae3cb.jpg', '', '');
 -- 
 
 -- 1월 예약 데이터 삽입
@@ -188,6 +189,10 @@ INSERT INTO `jan_res` (`jan_day`, `d_ondol`, `d_twin`, `t_ondol`, `o_ondol`, `su
 	(20180130, 2, 2, 2, 2, 2, 2, 2);
 
 	select * from jan_day;
+	
+	UPDATE users
+	SET user_email = 'joins@email.com'
+	WHERE user_id = '조인스';
 	
 	SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 'D_ONDOL'
                     ELSE 'D_ONDOL(SOLD OUT)' END 	 AS D_ONDOL
