@@ -27,7 +27,7 @@ $('.rsu_package li ul li').unbind("click").bind("click",function(){
 
 function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
-	alert(payHow);
+	//alert(payHow);
 	if (payHow == "계좌이체") {
 		location.href='../../resort/reservation/re_package_complete.jsp';
 	}else{
