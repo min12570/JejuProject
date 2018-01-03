@@ -20,7 +20,7 @@ function goReser(p_number){
 $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	$('.rsu_package li ul li').removeClass('on').addClass('off');
 	$(this).removeClass('off').addClass('on');
-	alert(temp[1]);
+	alert("왔다");
 	showPackages(temp[1]);
 	//var selkey = $('a',this).attr('code');
 	//alert(selkey);
