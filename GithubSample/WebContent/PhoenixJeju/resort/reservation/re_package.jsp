@@ -1139,8 +1139,9 @@
 								<p class="f_l">
 									<span>결제방법</span>
 								</p>
-								<select class="w140 f_l ml10" name="payment"
-									style="width: 170px;"></select>
+								<select id="payHow" class="w140 f_l ml10" name="payment"
+									style="width: 170px;">
+									<option selected="selected" mcode="">계좌이체</option></select>
 								<p class="f_l ">
 									&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="co_date"
 										name="payAgreeChk"> 위약규정 사항을 확인하고
@@ -1153,7 +1154,7 @@
 						<div class="c mt30">
 							<!-- <a class="btn_g_w130" href="javascript:;">취소</a>  -->
 							<a class="btn_w130 btn_reservation" href="javascript:;"
-								onclick="reservation();">예약하기</a>
+								onclick="reservation_chk();">예약하기</a>
 							<!-- /resort/reservation/re_package_complete -->
 							<img src="../../resort/_img/comn/loading.gif" alt="로딩중입니다."
 								id="roomprice_loading" style="display: none;">

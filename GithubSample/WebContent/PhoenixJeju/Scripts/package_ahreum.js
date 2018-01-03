@@ -25,6 +25,15 @@ $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	//packDetailSet(selkey);
 });
 
+function reservation_chk(){
+	alert("왔다");
+	var payHow = document.getElementById("payHow").value;
+	if (payHow = "계좌이체") {
+		location.href='../../resort/reservation/re_package_complete.jsp';
+	}else{
+		alert("지원하지 않는 기능입니다");
+	}
+}
 // 패키지 선택 기본선택
 //휘닉스 스쿠버 선택시,6번이다
 //location.href='../../resort/reservation/re_package.html?p_number';

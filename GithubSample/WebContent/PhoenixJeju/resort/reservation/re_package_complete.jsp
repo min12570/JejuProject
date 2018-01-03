@@ -79,11 +79,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                 <div id="gnb_area">
                     <ul class="sitemenu">
                         <li><a href="/resort/intro">
-                            <img src="/pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
+                            <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
-                            <img src="/pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
-                        <li><a href="/jeju/index">
-                            <img src="/pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
+                            <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
+                        <li><a href="../../jeju/index">
+                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
                     </ul>
                     <div class="gnbmenu">
                         <ul class="gnb">
@@ -115,10 +115,10 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                     </div>
                 </div>
 
-                <div id="header">
-                    <h1><a href="/resort/intro">
-                        <img src="/resort/_img/comn/logo.gif" alt="휘닉스 호텔&리조트 로고" /></a></h1>
-                </div>
+<!--                <div id="header">
+                    <h1><a href="../../resort/intro">
+                        <img src="../../resort/_img/comn/logo.gif" alt="휘닉스 호텔&리조트 로고" /></a></h1>
+                </div> -->
             </div>
             
             <section class="content-wrapper main-content clear-fix">
@@ -164,7 +164,6 @@ onclick="location.href='/resort/reservation/re_coupon'">
 			</ul>
 
 			<div class="c mt50 pb30">
-				<p><img src="../_img/cont/re_finish.png" alt="리조트로고"/></p>
 				<p class="font_b22 mt10">감사합니다.<br/>패키지 예약이 정상적으로 처리 되었습니다.</p>
 				<p class="font_n16 mt10">기타 궁금하신 사항이 있으시면 Q&A 게시판 또는 전화주시면 성심껏 답변 드리겠습니다.</p>
 			</div>
@@ -174,7 +173,7 @@ onclick="location.href='/resort/reservation/re_coupon'">
 					<p class="re_tit" style="border-right:1px solid #777;">패키지정보</p>
 
 					<div class="img_box" >
-						<p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
+						<p class="f_l"><img src="../../resort/_img/comn/scuba_image.jpg" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
 						<ul class="re_info" style="width:265px;">
 							<li class="title"></li>
 							<li></li>
@@ -210,17 +209,17 @@ onclick="location.href='/resort/reservation/re_coupon'">
 				<div class="f_l">
 					<p class="">예약자정보</p>
 					<ul class="info_ul mt10">
-						<li class="caller" style="width:200px;"></li>
-						<li class="rsrv_phone_no"></li>
-						<li class=" pt5 cs_email" style="width:200px;" ></li>
+						<li class="caller" style="width:200px;"><span>예약자명 : </span> 김아름</li>
+						<li class="rsrv_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
+						<li class=" pt5 cs_email" style="width:200px;"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
 					</ul>
 				</div>
 				<div class="f_r">
 					<p class="">투숙자정보</p>
 					<ul class="info_ul mt10" style="">
-						<li class="guest_name" style="width:200px;"></li>
-						<li class="use_phone_no"></li>
-						<li class="pt5 rs_email" style="width:200px;"></li>
+						<li class="guest_name" style="width:200px;"><span>예약자명 : </span> 김아름</li>
+						<li class="use_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
+						<li class="pt5 rs_email" style="width:200px;"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
 					</ul>
 				</div>
 			</div>
