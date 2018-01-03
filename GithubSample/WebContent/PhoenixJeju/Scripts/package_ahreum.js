@@ -55,7 +55,6 @@ function packageListSet()
 
 	//package list add
 	//package 정보 불러와서 보여주기
-//	location.href = "main.big?view=add";
 	location.href="package?db=all";
 
 		//console.log(key+", "+val.text);

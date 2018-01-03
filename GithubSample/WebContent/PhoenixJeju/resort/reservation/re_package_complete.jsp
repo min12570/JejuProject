@@ -65,6 +65,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 <script src="/ScriptResource.axd?d=Ft0qnPitlPXzUEL4OBoLnVNtlvGq6bOBIHnwkGkYstea3LntMQf8VqDNNibttCmmwW7OPPOPWgXyk4FldDxiVCPI5gt8czKr0Z2UJkGWatHzMpwpMqS0LM1ixJ5JiIJkujCAcZtdghnQ3MQqC1IuBXTUvFSZ8uTbAQ8KrUfe38rWA4yz0&amp;t=3d6efc1f" type="text/javascript"></script>
 <script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
 <script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
+<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="466ED907" />
@@ -83,8 +84,66 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                             <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
-                        <li><a href="../../jeju/index">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
+                        <div class="dropdown">
+                        <li class="dropbtn"><a href="../jeju/index.html">
+                            <img src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
+						<div class="dropdown-content">
+							<div class="row">
+								<ul class="column">
+								<div class="depth01" onclick="location.href=../../jeju/intro/info'">
+                            	<img src="../../jeju/_img/comn/tmn01.gif" ov_src="../jeju/_img/comn/tmn01_on.gif" _src="../jeju/_img/comn/tmn01.gif" alt="Intro" /></div>                         
+                                <a href="../jeju/intro/info">리조트소개</a>
+                                <a href="../jeju/intro/resortmap">단지안내도</a>
+                                <a href="../Site/event/event">이벤트</a></li>
+                                <a href="../jeju/intro/news_letter">NEWS LETTER</a>
+                                <a href="../jeju/intro/sketch">현장스케치</a>
+                                <a href="../jeju/intro/golf">가이드</a>                           
+								</ul>
+								<ul class="column">
+								<div class="depth01" onclick="location.href=../jeju/accommodation/velraterrace'">
+								<img src="../../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
+								<a href="../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
+                                <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
+                                <a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
+                                <a href="../jeju/accommodation/hillius">힐리우스(별장)</a>
+								</ul>
+								<ul class="column">
+									<div class="depth01" onclick="location.href=../jeju/dining/mint'">
+                            		<img src="../../jeju/_img/comn/tmn03.gif" ov_src="../jeju/_img/comn/tmn03_on.gif" _src="../jeju/_img/comn/tmn03.gif" alt="DINING" /></div>
+									<a href="/jeju/dining/mint">민트</a>
+									<a href="/jeju/dining/haerang">해랑</a>
+									<a href="/jeju/dining/seobji">섭지</a>
+									<a href="/jeju/dining/cozy">코지</a>
+									<a href="/jeju/dining/bbq">불턱BBQ</a>
+									<a href="/jeju/dining/moonlight">문라이트</a>
+									<a href="/jeju/dining/cozysnack">코지스넥</a>
+									<a href="/jeju/dining/blue">아일랜드블루</a>
+								</ul>
+								<ul class="column">
+								<div class="depth01" onclick="location.href=../jeju/architecture/index'">
+                            	<img src="../../jeju/_img/comn/tmn06.gif" ov_src="../jeju/_img/comn/tmn06_on.gif" _src="../jeju/_img/comn/tmn06.gif" alt="ARCHITECTURE" /></div>
+								<a href="/jeju/architecture/yumin">유민미술관</a>
+                                <a href="/jeju/architecture/glasshouse">글라스하우스</a>
+                                <a href="/jeju/architecture/agora">아고라</a>
+								</ul>
+								<ul class="column">
+								<div class="depth01" onclick="location.href=../jeju/activities/seopjireports'">
+                           		<img src="../../jeju/_img/comn/tmn04.gif" ov_src="../jeju/_img/comn/tmn04_on.gif" _src="../jeju/_img/comn/tmn04.gif" alt="ACTIVITIES" /></div>
+                                <a href="/jeju/activities/seopjireports">레저</a>
+                                <a href="/jeju/activities/kongkong">엔터테인먼트</a>
+								</ul>
+								<ul class="column">
+								<div class="depth01" onclick="location.href=..../jeju/facilities/islandballroom'">
+                            	<img src="../../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
+                                <a href="../jeju/facilities/islandballroom">연회장</a>
+                                <a href="../jeju/facilities/cswrite">연회/단체문의</a>
+                                <a href="../jeju/facilities/mintwedding">&nbsp;&nbsp;웨딩</a>
+                                <a href="../jeju/facilities/welcenter">&nbsp;&nbsp;편의</a>
+                                <a href="../jeju/facilities/shopping">&nbsp;&nbsp;쇼핑</a>
+								</ul>
+							</div>
+						</div>
+					</div>
                     </ul>
                     <div class="gnbmenu">
                         <ul class="gnb">
@@ -231,17 +290,17 @@ onclick="location.href='/resort/reservation/re_coupon'">
 				<div class="f_l">
 					<p class="">예약자정보</p>
 					<ul class="info_ul mt10">
-						<li class="caller" style="width:200px;"><span>예약자명 : </span> 김아름</li>
-						<li class="rsrv_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
-						<li class=" pt5 cs_email"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
+						<li class="caller" style="width:200px;"><span>예약자명 : </span> <%= re_user_id %></li>
+						<li class="rsrv_phone_no"><span>휴대전화 : </span> <%= re_user_contact %></li>
+						<li class=" pt5 cs_email"><span>이메일 : </span><%= re_user_email %></li>
 					</ul>
 				</div>
 				<div class="f_r">
 					<p class="">투숙자정보</p>
 					<ul class="info_ul mt10" style="">
-						<li class="guest_name" style="width:200px;"><span>예약자명 : </span> 김아름</li>
-						<li class="use_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
-						<li class="pt5 rs_email"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
+						<li class="guest_name" style="width:200px;"><span>예약자명 : </span> <%= re_user_id %></li>
+						<li class="use_phone_no"><span>휴대전화 : </span> <%= re_user_contact %></li>
+						<li class="pt5 rs_email"><span>이메일 : </span> <%= re_user_email %></li>
 					</ul>
 				</div>
 			</div>
