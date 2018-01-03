@@ -10,7 +10,7 @@ function goReser(p_number){
 	//package_number =0;
 	//package_number = $("btn_white").attr('id');
 	//p_number 값 받아와서 default 설정 가능!
-	packageList();
+	packageList(p_number);
 	//alert(package_number);
 	//alert("package_number "+package_number);
 	//location.href='../../resort/reservation/re_package.html?p_number';	
@@ -38,14 +38,17 @@ function reservation_chk(){
 // 패키지 선택 기본선택
 //휘닉스 스쿠버 선택시,6번이다
 //location.href='../../resort/reservation/re_package.html?p_number';
-/*temp = location.href.split("?");
-document.writｅ(name + " " + content);*/
-//$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
+var temp;
+temp = location.href.split("&");
+temp = temp[1].split("=");
+$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
 
-function packageList(){
-	location.href="main.package?db=all";
+function packageList(p_number){
+	location.href="main.package?db=all&p_num="+p_number;
 }
 
+//alert(p_number);
+//$('.rsu_package li ul li:eq(3)').trigger('click');
 
 //------------------------------------------
 //패키지 리스트 설정
