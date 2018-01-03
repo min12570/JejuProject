@@ -78,8 +78,3 @@ function packageListSet()
 		$('.rsu_package li ul li:eq(0)').trigger('click');
 
 }
-
-function goPackageReserve1(){
-	//아름 Servlet 경로 수정
-	location.href="../../../resort/reservation/main.login?db2=userall";
-}

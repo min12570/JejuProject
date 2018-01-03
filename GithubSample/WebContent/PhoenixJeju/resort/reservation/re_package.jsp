@@ -30,7 +30,6 @@
 			document.getElementById("costText").innerHTML = totalCost + '원';
 		}
 	}
-	
 
 	function update_people(people_num) {
 		var num = 0, preNum;
@@ -476,7 +475,6 @@
 							String re_user_email = userinfo1.getUser_email();
 							String re_user_contact = userinfo1.getUser_contact();
 			%>
-			
 
 							<p class="f_l font_b14 ml25 "
 								style="width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
@@ -794,34 +792,202 @@
 						</div>
 
 
-
-<!-- 현정 캘린더 시작 -->
-<div class="se_cal mt15">
+						<div class="se_cal mt15">
 							<div class="check f_l">
 								<div class="in_out">
 									<p class="tit" style="border-right: 1px solid #777;">체크인</p>
 
-									<!--달력-->									
+									<!--달력-->
+									<div class="re_cal reservation_in" style="">
+										<div class="date">
+											<p class="datePrev">
+												<a href="javascript:;"><img
+													src="../../_img/bbs/cal_prev.png" alt="" /></a>
+											</p>
+											<p class="dateNext">
+												<a href="javascript:;"><img
+													src="../../_img/bbs/cal_next.png" alt="" /></a>
+											</p>
+											<p class="dateNow">2015년 8월</p>
+										</div>
+										<table class="re_cal">
+											<colgroup>
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th>sun</th>
+													<th>mon</th>
+													<th>tue</th>
+													<th>wed</th>
+													<th>thu</th>
+													<th>fri</th>
+													<th>sat</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 									<!--//달력-->
-									
-									<!--현정, 캘린더 start-->
-								<jsp:include page="cal_index.html" />
-<%-- 								<jsp:include page="cal_index.html" /> --%>
-								<!--현정, 캘린더 end-->
 
 								</div>
 								<div class="in_out" style="width: 359px;">
 									<p class="tit" style="">체크아웃</p>
-									<!--달력-->									
+									<!--달력-->
+									<div class="re_cal reservation_out" style="">
+										<div class="date">
+											<p class="datePrev">
+												<a href="javascript:;"><img
+													src="../../_img/bbs/cal_prev.png" alt="" /></a>
+											</p>
+											<p class="dateNext">
+												<a href="javascript:;"><img
+													src="../../_img/bbs/cal_next.png" alt="" /></a>
+											</p>
+											<p class="dateNow">2015년 9월</p>
+										</div>
+										<table class="re_cal">
+											<colgroup>
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+												<col width="40px" />
+											</colgroup>
+											<thead>
+												<tr>
+													<th>sun</th>
+													<th>mon</th>
+													<th>tue</th>
+													<th>wed</th>
+													<th>thu</th>
+													<th>fri</th>
+													<th>sat</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+												<tr>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+													<td class="no"></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 									<!--//달력-->
 								</div>
-
-<!-- 현정 캘린더 끝 -->
-
-
-
-
-						
 								<div class="color_box">
 									<img src="../../_img/cont/sel_img.jpg" alt="" />
 									예약가능&nbsp;&nbsp;&nbsp;&nbsp; <img
@@ -943,8 +1109,7 @@
 							String p_middle = re_user_contact.substring(4, 8);
 							String p_last = re_user_contact.substring(9,13);
 							
-							String e_first = re_user_email.substring(0,5);
-							String e_last = re_user_email.substring(6,15);
+							String e_first = re_user_email.substring(0,4);
 							%>
 										<input type="text" name="phone0" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span> - </span> <input
@@ -957,9 +1122,9 @@
 									<p class="mt5">
 										<span class="pr30">이메일</span>&nbsp; <input type="text"
 											class="co_date" name="mail0"
-											style="width: 100px; margin-left: -1px;" value= "<%= e_first %>"><span>
+											style="width: 100px; margin-left: -1px;" <%= e_first %>><span>
 											@ </span><input type="text" name="mail1" class="co_date"
-											style="width: 100px;" value= "<%= e_last %>"> <select name="mail2"
+											style="width: 100px;"> <select name="mail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'mail1');">
 											<option value="">직접입력</option>
@@ -977,29 +1142,12 @@
 									</p>
 								</div>
 							</div>
-							<script type="text/javascript">
-
-							$('#re_same').change(function() {
-								if (this.checked == true) {
-									alert("체크박스 체크");
-								}
-							});
-						
-			// 정민 수정 예약자 정보와 투숙자 정보 같을  때 체크
-			function caller_copy() {
-				alert("체크박스 체크");
-				var checkbox = document.getElementById('re_same');
-				if(checkbox.checked == true)
-					document.getElementById('guest_name').value = '<%= re_user_id%>';
-				}
-			}
-			</script>
 							<div class="">
 								<p class="tit">투숙자정보</p>
 								<div class="info_cont" style="">
 									<p class="pb5">
-										<input type="checkbox" name="re_same" class="co_date caller-copy"
-											onclick="caller_copy()">&nbsp;&nbsp;<span>예약자와
+										<input type="checkbox" class="co_date caller-copy"
+											onchange="caller_copy()">&nbsp;&nbsp;<span>예약자와
 											동일</span>
 									</p>
 									<p>
