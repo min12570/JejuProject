@@ -2,6 +2,7 @@
 	pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
 <%@ page import="packageInfo.PackageInfoVO"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="user.UserVO" %>
 <!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
 
 <!DOCTYPE html>
@@ -410,13 +411,17 @@
 								</select> <span class="" style="width: 220px; -ms-user-select: none;"></span>
 							</div>
 							<%
-			String userid = (String)session.getAttribute("userid");
+			UserVO userinfo1 = (UserVO)session.getAttribute("userinfo");
+							String re_user_id = userinfo1.getUser_id();
+							String re_user_pw = userinfo1.getUser_pw();
+							String re_user_email = userinfo1.getUser_email();
+							String re_user_contact = userinfo1.getUser_contact();
 			%>
 
 							<p class="f_l font_b14 ml25 "
 								style="width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
 								회원정보 :<span class="font_n14"> <span id="MainContent_knm1"
-									style="vertical-align: baseline;"><%= userid %></span>님
+									style="vertical-align: baseline;"><%= re_user_id %></span>님
 								</span>
 							</p>
 							<p class="f_r  font_n13 ml10">
@@ -1024,14 +1029,14 @@
 								</p>
 							</div>
 						</div>
-
 						<div class="re_info mt20">
 							<div class="">
 								<p class="re_info_tit">예약자정보</p>
 								<div class="info_cont">
 									<p>
+									
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="caller" style="width: 100px" value="<%=session.getAttribute("userid")%>">
+											type="text" name="caller" style="width: 100px" value="<%= re_user_id %>">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
@@ -1041,18 +1046,25 @@
 								<option value="017">017</option>
 								<option value="019">019</option>
 							</select> -->
+							<%
+							String p_first = re_user_contact.substring(0, 3);
+							String p_middle = re_user_contact.substring(4, 8);
+							String p_last = re_user_contact.substring(9,13);
+							
+							String e_first = re_user_email.substring(0,4);
+							%>
 										<input type="text" name="phone0" class="co_date"
-											style="width: 90px;" maxlength="4"><span> - </span> <input
+											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span> - </span> <input
 											type="text" name="phone1" class="co_date"
-											style="width: 90px;" maxlength="4"><span> - </span><input
+											style="width: 90px;" maxlength="4" value="<%= p_middle %>"><span> - </span><input
 											type="text" name="phone2" class="co_date"
-											style="width: 90px;" maxlength="4">
+											style="width: 90px;" maxlength="4" value="<%= p_last %>">
 										<!-- <a href="javascript:;" class="btn_g">인증</a> -->
 									</p>
 									<p class="mt5">
 										<span class="pr30">이메일</span>&nbsp; <input type="text"
 											class="co_date" name="mail0"
-											style="width: 100px; margin-left: -1px;"><span>
+											style="width: 100px; margin-left: -1px;" <%= e_first %>><span>
 											@ </span><input type="text" name="mail1" class="co_date"
 											style="width: 100px;"> <select name="mail2"
 											class="w140" style="width: 120px"

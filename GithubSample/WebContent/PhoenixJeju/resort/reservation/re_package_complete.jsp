@@ -2,6 +2,7 @@
 	pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
 <%@ page import="packageInfo.PackageInfoVO"%>
 <%@ page import="java.util.ArrayList"%>
+<%@ page import="user.UserVO" %>
 
 
 <!DOCTYPE html>
@@ -219,6 +220,13 @@ onclick="location.href='/resort/reservation/re_coupon'">
 						</div>
 				</div>
 			</div>
+			<%
+			UserVO userinfo1 = (UserVO)session.getAttribute("userinfo");
+							String re_user_id = userinfo1.getUser_id();
+							String re_user_pw = userinfo1.getUser_pw();
+							String re_user_email = userinfo1.getUser_email();
+							String re_user_contact = userinfo1.getUser_contact();
+			%>
 			<div class="re_info_fini mb40">
 				<div class="f_l">
 					<p class="">예약자정보</p>
