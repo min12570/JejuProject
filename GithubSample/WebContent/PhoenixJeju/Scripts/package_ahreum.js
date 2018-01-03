@@ -27,7 +27,8 @@ $('.rsu_package li ul li').unbind("click").bind("click",function(){
 
 function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
-	if (payHow = "계좌이체") {
+	//alert(payHow);
+	if (payHow == "계좌이체") {
 		location.href='../../resort/reservation/re_package_complete.jsp';
 	}else{
 		alert("지원하지 않는 기능입니다");
