@@ -954,7 +954,8 @@
 							String p_middle = re_user_contact.substring(4, 8);
 							String p_last = re_user_contact.substring(9,13);
 							
-							String e_first = re_user_email.substring(0,4);
+							String e_first = re_user_email.substring(0,5);
+							String e_last = re_user_email.substring(6,11);
 							%>
 										<input type="text" name="phone0" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span>
@@ -967,9 +968,9 @@
 									<p class="mt5">
 										<span class="pr30">이메일</span>&nbsp; <input type="text"
 											class="co_date" name="mail0"
-											style="width: 100px; margin-left: -1px;" <%= e_first %>><span>
+											style="width: 100px; margin-left: -1px;" value="<%= e_first %>"><span>
 											@ </span><input type="text" name="mail1" class="co_date"
-											style="width: 100px;"> <select name="mail2"
+											style="width: 100px;" value="<%= e_last %>"> <select name="mail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'mail1');">
 											<option value="">직접입력</option>
