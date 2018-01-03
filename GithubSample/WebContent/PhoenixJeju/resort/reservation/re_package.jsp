@@ -412,7 +412,7 @@
 							<p class="f_l font_b14 ml25 "
 								style="width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
 								회원정보 :<span class="font_n14"> <span id="MainContent_knm1"
-									style="vertical-align: baseline;">정지윤</span>님
+									style="vertical-align: baseline;">조인스</span>님
 								</span>
 							</p>
 							<p class="f_r  font_n13 ml10">
