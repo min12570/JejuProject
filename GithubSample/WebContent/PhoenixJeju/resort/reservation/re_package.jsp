@@ -30,6 +30,7 @@
 			document.getElementById("costText").innerHTML = totalCost + '원';
 		}
 	}
+	
 
 	function update_people(people_num) {
 		var num = 0, preNum;
@@ -417,6 +418,7 @@
 							String re_user_email = userinfo1.getUser_email();
 							String re_user_contact = userinfo1.getUser_contact();
 			%>
+			
 
 							<p class="f_l font_b14 ml25 "
 								style="width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
@@ -1051,7 +1053,8 @@
 							String p_middle = re_user_contact.substring(4, 8);
 							String p_last = re_user_contact.substring(9,13);
 							
-							String e_first = re_user_email.substring(0,4);
+							String e_first = re_user_email.substring(0,5);
+							String e_last = re_user_email.substring(6,15);
 							%>
 										<input type="text" name="phone0" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span> - </span> <input
@@ -1064,9 +1067,9 @@
 									<p class="mt5">
 										<span class="pr30">이메일</span>&nbsp; <input type="text"
 											class="co_date" name="mail0"
-											style="width: 100px; margin-left: -1px;" <%= e_first %>><span>
+											style="width: 100px; margin-left: -1px;" value= "<%= e_first %>"><span>
 											@ </span><input type="text" name="mail1" class="co_date"
-											style="width: 100px;"> <select name="mail2"
+											style="width: 100px;" value= "<%= e_last %>"> <select name="mail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'mail1');">
 											<option value="">직접입력</option>
@@ -1084,12 +1087,29 @@
 									</p>
 								</div>
 							</div>
+							<script type="text/javascript">
+
+							$('#re_same').change(function() {
+								if (this.checked == true) {
+									alert("체크박스 체크");
+								}
+							});
+						
+			// 정민 수정 예약자 정보와 투숙자 정보 같을  때 체크
+			function caller_copy() {
+				alert("체크박스 체크");
+				var checkbox = document.getElementById('re_same');
+				if(checkbox.checked == true)
+					document.getElementById('guest_name').value = '<%= re_user_id%>';
+				}
+			}
+			</script>
 							<div class="">
 								<p class="tit">투숙자정보</p>
 								<div class="info_cont" style="">
 									<p class="pb5">
-										<input type="checkbox" class="co_date caller-copy"
-											onchange="caller_copy()">&nbsp;&nbsp;<span>예약자와
+										<input type="checkbox" name="re_same" class="co_date caller-copy"
+											onclick="caller_copy()">&nbsp;&nbsp;<span>예약자와
 											동일</span>
 									</p>
 									<p>
