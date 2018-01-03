@@ -15,3 +15,71 @@ font-weight: bold;
 .chk_notice{
 	color: red;
 }
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+	font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+        min-width: 1275px;
+        top: 40px;
+}
+}
+
+.dropdown-content .header {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 15%;
+    padding: 10px;
+    background-color: white;
+    height: 255px;
+    padding-top: 5px;
+}
+
+.column a {
+    float: none;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding-left: 10px;
+}
+
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+
+ul.sitemenu li {
+    border-right: 0px;
+}
+.depth01{
+    text-align: center;
+    padding-top: 5px;
+  cursor: pointer;
+}
