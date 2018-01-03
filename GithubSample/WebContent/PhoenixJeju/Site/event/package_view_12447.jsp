@@ -144,7 +144,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                                 <a href="/jeju/activities/kongkong">엔터테인먼트</a>
 								</ul>
 								<ul class="column">
-								<div class="depth01" onclick="location.href=../jeju/facilities/islandballroom'">
+								<div class="depth01" onclick="location.href=..../jeju/facilities/islandballroom'">
                             	<img src="../../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
                                 <a href="../jeju/facilities/islandballroom">연회장</a>
                                 <a href="../jeju/facilities/cswrite">연회/단체문의</a>
