@@ -794,202 +794,34 @@
 						</div>
 
 
-						<div class="se_cal mt15">
+
+<!-- 현정 캘린더 시작 -->
+<div class="se_cal mt15">
 							<div class="check f_l">
 								<div class="in_out">
 									<p class="tit" style="border-right: 1px solid #777;">체크인</p>
 
-									<!--달력-->
-									<div class="re_cal reservation_in" style="">
-										<div class="date">
-											<p class="datePrev">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_prev.png" alt="" /></a>
-											</p>
-											<p class="dateNext">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_next.png" alt="" /></a>
-											</p>
-											<p class="dateNow">2015년 8월</p>
-										</div>
-										<table class="re_cal">
-											<colgroup>
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th>sun</th>
-													<th>mon</th>
-													<th>tue</th>
-													<th>wed</th>
-													<th>thu</th>
-													<th>fri</th>
-													<th>sat</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+									<!--달력-->									
 									<!--//달력-->
+									
+									<!--현정, 캘린더 start-->
+								<jsp:include page="cal_index.html" />
+<%-- 								<jsp:include page="cal_index.html" /> --%>
+								<!--현정, 캘린더 end-->
 
 								</div>
 								<div class="in_out" style="width: 359px;">
 									<p class="tit" style="">체크아웃</p>
-									<!--달력-->
-									<div class="re_cal reservation_out" style="">
-										<div class="date">
-											<p class="datePrev">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_prev.png" alt="" /></a>
-											</p>
-											<p class="dateNext">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_next.png" alt="" /></a>
-											</p>
-											<p class="dateNow">2015년 9월</p>
-										</div>
-										<table class="re_cal">
-											<colgroup>
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th>sun</th>
-													<th>mon</th>
-													<th>tue</th>
-													<th>wed</th>
-													<th>thu</th>
-													<th>fri</th>
-													<th>sat</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
+									<!--달력-->									
 									<!--//달력-->
 								</div>
+
+<!-- 현정 캘린더 끝 -->
+
+
+
+
+						
 								<div class="color_box">
 									<img src="../../_img/cont/sel_img.jpg" alt="" />
 									예약가능&nbsp;&nbsp;&nbsp;&nbsp; <img
