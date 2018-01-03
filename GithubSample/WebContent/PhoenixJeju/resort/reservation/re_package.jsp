@@ -1031,7 +1031,7 @@
 								<div class="info_cont">
 									<p>
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="caller" style="width: 100px">
+											type="text" name="caller" style="width: 100px" value="<%=session.getAttribute("userid")%>">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
