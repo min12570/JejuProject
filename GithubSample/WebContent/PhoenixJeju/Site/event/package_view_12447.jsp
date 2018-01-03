@@ -90,11 +90,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                 <div id="gnb_area">
                     <ul class="sitemenu">
                         <li><a href="/resort/intro">
-                            <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
+                            <img src="../../pyeongchang/_img/gnb/phoenixresort_off.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
                         <li><a href="../../jeju/index">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
+                            <img src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
                     </ul>
                     <div class="gnbmenu">
                         <ul class="gnb">
