@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
-<%@ page import="packageInfo.PackageInfoVO" %>
-<%@ page import="java.util.ArrayList" %>
+	pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
+<%@ page import="packageInfo.PackageInfoVO"%>
+<%@ page import="java.util.ArrayList"%>
 <!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
 
 <!DOCTYPE html>
@@ -14,117 +14,135 @@
 
 <!-- 지윤 체크박스 데이터에 따라 값 변경 -->
 <script language="javascript">
-var week_type, people_num;
-var totalCost;
-function update_week(week_type){
-	if(week_type=='weekend'){
-		totalCost = document.getElementById("costId").value;
-		totalCost += 85000;
-		document.getElementById("costId").value = totalCost;
-		document.getElementById("costText").innerHTML = totalCost+'원';
-	}else if(week_type=='weekday'){
-		totalCost = document.getElementById("costId").value;
-		totalCost -= 85000;
-		document.getElementById("costId").value = totalCost;
-		document.getElementById("costText").innerHTML = totalCost+'원';
+	var week_type, people_num;
+	var totalCost;
+	function update_week(week_type) {
+		if (week_type == 'weekend') {
+			totalCost = document.getElementById("costId").value;
+			totalCost += 85000;
+			document.getElementById("costId").value = totalCost;
+			document.getElementById("costText").innerHTML = totalCost + '원';
+		} else if (week_type == 'weekday') {
+			totalCost = document.getElementById("costId").value;
+			totalCost -= 85000;
+			document.getElementById("costId").value = totalCost;
+			document.getElementById("costText").innerHTML = totalCost + '원';
+		}
 	}
-}
 
-function update_people(people_num){
-	var num=0, preNum;
-	preNum = document.getElementById("peopleNumId").value;
-	if((people_num - preNum)>0){//인원수 늘어나면 
-		totalCost = document.getElementById("costId").value;//현재 요금 가져옴
-		num = (people_num - document.getElementById("peopleNumId").value);//인원 차이 구함
-		totalCost = totalCost + (66000*num);//인원 수 만큼 더해 줌
-		 //b는 id = 'b'
-	}else if((people_num - document.getElementById("peopleNumId").value)<0){//인원수 줄어들면
-		alert("minus");
-		totalCost = document.getElementById("costId").value;//현재 요금 가져옴
-		num = (document.getElementById("peopleNumId").value - people_num );//인원 차이 구함
-		totalCost = totalCost - (66000*num);//인원 수 만큼 빼줌
+	function update_people(people_num) {
+		var num = 0, preNum;
+		preNum = document.getElementById("peopleNumId").value;
+		if ((people_num - preNum) > 0) {//인원수 늘어나면 
+			totalCost = document.getElementById("costId").value;//현재 요금 가져옴
+			num = (people_num - document.getElementById("peopleNumId").value);//인원 차이 구함
+			totalCost = totalCost + (66000 * num);//인원 수 만큼 더해 줌
+			//b는 id = 'b'
+		} else if ((people_num - document.getElementById("peopleNumId").value) < 0) {//인원수 줄어들면
+			alert("minus");
+			totalCost = document.getElementById("costId").value;//현재 요금 가져옴
+			num = (document.getElementById("peopleNumId").value - people_num);//인원 차이 구함
+			totalCost = totalCost - (66000 * num);//인원 수 만큼 빼줌
+		}
+		document.getElementById("peopleNumId").value = people_num;//인원 수정
+		document.getElementById("peopleText").innerHTML = people_num + '명';
+
+		document.getElementById("costId").value = totalCost;//요금 수정
+		document.getElementById("costText").innerHTML = totalCost + '원';
 	}
-	document.getElementById("peopleNumId").value = people_num;//인원 수정
-	document.getElementById("peopleText").innerHTML = people_num+'명';
-	
-	document.getElementById("costId").value = totalCost;//요금 수정
-	document.getElementById("costText").innerHTML = totalCost+'원';
-}
+	//객실타입, 숙박일수에 따른 패키지 금액
+	var stayDay = 2, roomTypeCost, lastCost;
+	function totalCostOp() {
+		//지윤이 부분
+		//roomTypeCost = document.getElementById("roomType").value;
+		//roomTypeCost = document.getElementById("costId").value + (roomTypeCost*10000) ;
+		//아름 추가
+		var roomName = document.getElementById("roomType").value;
+		if (roomName.indexOf("스위트") != -1) {
+			roomTypeCost = 10;
+		} else {
+			roomTypeCost = 0;
+		}
+		roomTypeCost = document.getElementById("costId").value + (roomTypeCost * 10000);
+		lastCost = roomTypeCost * stayDay;
+		document.getElementById("totalPackageCost").innerHTML = lastCost + '원';
+	}
 </script>
 
 <!-- 정민 수정 제이쿼리 레이어팝업 시도 -->
 <style>
 /* 마스크 뛰우기 */
-#mask {  
-    position:absolute;  
-    z-index:9000;  
-    background-color:#000;  
-    display:none;  
-    left:0;
-    top:0;
-} 
-/* 팝업으로 뜨는 윈도우 css  */ 
-.window_jm{
-    display: none;
-    position:absolute;  
-    left:50%;
-    top:50px;
-    margin-left: -500px;
-    width:1000px;
-    height:500px;
-    background-color:#FFF;
-    z-index:10000;   
- }
+#mask {
+	position: absolute;
+	z-index: 9000;
+	background-color: #000;
+	display: none;
+	left: 0;
+	top: 0;
+}
+/* 팝업으로 뜨는 윈도우 css  */
+.window_jm {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	margin-left: -500px;
+	width: 1000px;
+	height: 500px;
+	background-color: #FFF;
+	z-index: 10000;
+}
 </style>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
-var path = window.location.pathname;
-function goToJejuIndex() {
-	location.href="../../jeju/index.html";
-}
-function wrapWindowByMask() {
-	
-	//화면의 높이와 너비를 구한다.
-    var maskHeight = $(document).height();  
-    var maskWidth = $(window).width();  
+	var path = window.location.pathname;
+	function goToJejuIndex() {
+		location.href = "../../jeju/index.html";
+	}
+	function wrapWindowByMask() {
 
-    //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
-    $("#mask").css({"width":maskWidth,"height":maskHeight});  
+		//화면의 높이와 너비를 구한다.
+		var maskHeight = $(document).height();
+		var maskWidth = $(window).width();
 
-    //애니메이션 효과 - 일단 0초동안 까맣게 됐다가 60% 불투명도로 간다.
+		//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+		$("#mask").css({
+			"width" : maskWidth,
+			"height" : maskHeight
+		});
 
-    $("#mask").fadeIn(0);      
-    $("#mask").fadeTo("slow",0.6);    
+		//애니메이션 효과 - 일단 0초동안 까맣게 됐다가 60% 불투명도로 간다.
 
-    //윈도우 같은 거 띄운다.
-    $(".window_jm").show();
+		$("#mask").fadeIn(0);
+		$("#mask").fadeTo("slow", 0.6);
 
-}
+		//윈도우 같은 거 띄운다.
+		$(".window_jm").show();
 
-$(document).ready(function(){
-    //검은 막 띄우기
-    $(".openMask").click(function(e){
-        e.preventDefault();
-        wrapWindowByMask();
-    });
+	}
 
-    //닫기 버튼을 눌렀을 때
-    $(".window_jm .close").click(function (e) {  
-        //링크 기본동작은 작동하지 않도록 한다.
-        e.preventDefault();  
-        $("#mask, .window_jm").hide();  
-    });       
+	$(document).ready(function() {
+		//검은 막 띄우기
+		$(".openMask").click(function(e) {
+			e.preventDefault();
+			wrapWindowByMask();
+		});
 
-    //검은 막을 눌렀을 때
-    $("#mask").click(function () {  
-        $(this).hide();  
-        $(".window_jm").hide();  
+		//닫기 버튼을 눌렀을 때
+		$(".window_jm .close").click(function(e) {
+			//링크 기본동작은 작동하지 않도록 한다.
+			e.preventDefault();
+			$("#mask, .window_jm").hide();
+		});
 
-    });      
+		//검은 막을 눌렀을 때
+		$("#mask").click(function() {
+			$(this).hide();
+			$(".window_jm").hide();
 
-});
+		});
 
-
+	});
 </script>
 <meta name="keywords"
 	content="PHOENIX, PHOENIX PYEONGCHANG, PHOENIX SNOWPARK, PHOENIX HOTELS &amp; RESORTS, PHOENIX JEJU, PHOENIX CC, 휘닉스, 휘닉스 호텔앤드리조트, 휘닉스평창, 휘닉스 평창, 휘닉스 스노파크, 휘닉스 스노우파크, 휘닉스 제주 섭지코지, 휘닉스 제주, 유민미술관, 평창 동계올림픽, 휘닉스 블루캐니언, 휘닉스 CC, 휘닉스 컨트리클럽" />
@@ -162,8 +180,8 @@ $(document).ready(function(){
 			}
 			//]]>
 		</script>
-		
-		
+
+
 
 
 		<script
@@ -241,7 +259,7 @@ $(document).ready(function(){
 					</div>
 				</div>
 
-			<!-- 지윤수정	<div id="header">
+				<!-- 지윤수정	<div id="header">
 					<h1>
 						<a href="/resort/intro"> <img
 							src="../../resort/_img/comn/logo.gif" alt="휘닉스 호텔&리조트 로고" /></a>
@@ -251,7 +269,8 @@ $(document).ready(function(){
 
 			<section class="content-wrapper main-content clear-fix">
 				<!-- 정민 수정 css복구 -->
-				<link href="../../resort/_css/cont.css" type="text/css" rel="stylesheet">
+				<link href="../../resort/_css/cont.css" type="text/css"
+					rel="stylesheet">
 				<script type="text/javascript" charset="utf-8">
 					// Internet Explorer 버전 체크
 					var IEVersionCheck = function() {
@@ -289,21 +308,19 @@ $(document).ready(function(){
 						}
 					};
 
-					IEVersionCheck();				
-					
-					
-					//토글기능 v1.0
-					$(document).ready(function(){
-					    $("#py_list").click(function(){
-					        $("#py_ul").slideToggle("slow");
-					    });
-					    
-					     $("#jeju_list").click(function(){
-					        $("#jeju_ul").slideToggle("slow");
-					        
-					    });
-					});
+					IEVersionCheck();
 
+					//토글기능 v1.0
+					$(document).ready(function() {
+						$("#py_list").click(function() {
+							$("#py_ul").slideToggle("slow");
+						});
+
+						$("#jeju_list").click(function() {
+							$("#jeju_ul").slideToggle("slow");
+
+						});
+					});
 				</script>
 				<script type="text/javascript" src="../_js/pop_layer.js"></script>
 				<script type="text/javascript" src="../_js/reservation_package.js"></script>
@@ -321,7 +338,7 @@ $(document).ready(function(){
 
 					<div id="container">
 						<div class="customer_top">
-						<!--	<h2 class="cus_title">
+							<!--	<h2 class="cus_title">
 								<img src="../../resort/img/bbs/reservation.png" alt="통합예약" />
 							</h2>-->
 							<p class="cus_sub">고객님들의 예약을 빠르게 처리해 드리겠습니다.</p>
@@ -406,20 +423,21 @@ $(document).ready(function(){
 							<div class="sel_box">
 								<p class="form_tit">패키지 선택</p>
 								<ul class="sel_list rsu_package">
-									<li class="on" id="py_list"><a href="javascript:;" class="top_none">휘닉스
-											평창</a>
-									<ul class="list" id="py_ul">
+									<li class="on" id="py_list"><a href="javascript:;"
+										class="top_none">휘닉스 평창</a>
+										<ul class="list" id="py_ul">
 											<li class="off"><a href="javascript:;" code="0-0">-
 													(스파)블루캐니언</a></li>
-											
+
 											<li class="off"><a href="javascript:;" code="0-1">-
 													스키</a></li>
-											
+
 											<li class="off"><a href="javascript:;" code="0-2">-
 													스키PLUS</a></li>
 										</ul></li>
-									<li class="on" id="jeju_list"><a href="javascript:;" class="">휘닉스 제주</a>
-									<ul class="list" id="jeju_ul">
+									<li class="on" id="jeju_list"><a href="javascript:;"
+										class="">휘닉스 제주</a>
+										<ul class="list" id="jeju_ul">
 											<li class="off"><a href="javascript:;" code="1-0">-
 													맛있는 해랑</a></li>
 											<li class="off"><a href="javascript:;" code="1-1">-
@@ -428,7 +446,7 @@ $(document).ready(function(){
 													릴렉싱테라피</a></li>
 											<li class="on"><a href="javascript:;" code="1-3">-
 													휘닉스 스쿠버</a></li>
-											<li class="off"> <a href="javascript:;" code="1-4">-
+											<li class="off"><a href="javascript:;" code="1-4">-
 													수영장사우나패키지</a></li>
 											<li class="off"><a href="javascript:;" code="1-5">-
 													민트하우스그릴패키지</a></li>
@@ -443,147 +461,269 @@ $(document).ready(function(){
 										<form>
 											<fieldset>
 												<label> 주중 <input type=radio name=week_type
-													value='weekday' id=weekday onclick="update_week('weekday');" checked/>
-												</label> <label for="id">주말</label> <input type=radio
-													name=week_type value='weekend' id =weekend onclick="update_week('weekend');"/>
+													value='weekday' id=weekday
+													onclick="update_week('weekday');" checked />
+												</label> <label for="id">주말</label> <input type=radio name=week_type
+													value='weekend' id=weekend
+													onclick="update_week('weekend');" />
 											</fieldset>
-										</form>
-									</li>
+										</form></li>
 									<li class="on"><a class="top_none">인원 선택</a>
 										<form>
 											<fieldset>
 												<label> 2명 <input type=radio name='people_num'
-													value='2' onclick="update_people(2);" checked/>
-												</label> 
-												<label for="id">3명</label> <input type=radio
-													name='people_num' value='3' id=id onclick="update_people(3);"/>
-												<label> 4명 </label><input type=radio name='people_num'
-													value='4' onclick="update_people(4);"/>
-												
+													value='2' onclick="update_people(2);" checked />
+												</label> <label for="id">3명</label> <input type=radio
+													name='people_num' value='3' id=id
+													onclick="update_people(3);" /> <label> 4명 </label><input
+													type=radio name='people_num' value='4'
+													onclick="update_people(4);" />
+
 											</fieldset>
-										</form>
-									</li>
+										</form></li>
 								</ul>
 							</div>
 							<%
-								ArrayList<PackageInfoVO> list = (ArrayList)request.getAttribute("packList");
+								ArrayList<PackageInfoVO> list = (ArrayList) request.getAttribute("packList");
 								//Object obj = request.getAttribute("packList2");
 								//if(obj != null) {
 								//	PackageInfoVO pi = (PackageInfoVO)request.getAttribute("packList2");
 								//	out.println(pi.getP_name());
 								//}
 							%>
-							
-							
+
+
 							<div class="result_box">
 								<p class="re_tit">선택 정보</p>
 								<div class="img_box rsu_choiceContent">
-								<div>
-									<!-- <p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px;" href="javascript:;">상세보기</a></p> -->
+									<div>
+										<!-- <p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px;" href="javascript:;">상세보기</a></p> -->
 
-									<p class="f_l" style="width: 230px; height: 170px;">
-										<img src="../../resort/_img/comn/scuba_image.jpg"
-											style="width: 100%;" class="pkgImg">
-											
-									</p>
-									<% if(list.size() != 0) {
-											PackageInfoVO data = null;
-											for (int i = 0; i < list.size(); i++) {
-												data = (PackageInfoVO)list.get(i);
-									%>
-									
-									<!-- 정민 수정 JSON 객체 생성 -->
-									
-									<script>
-										$(function() {
-											$("#clickPackage").click(function() {
-												var packageArray = new Array();
-												var packageInfo = new Object();
-				
-												packageInfo.p_name = <%= data.getP_name() %>
-												packageInfo.p_personCnt = "2";
-												
-									
-												
-											})
-										})
-									</script>
+										<p class="f_l" style="width: 230px; height: 170px;">
+											<img src="../../resort/_img/comn/scuba_image.jpg"
+												style="width: 100%;" class="pkgImg">
 
-									<!-- 정민 수정// db로 패키지 목록 불러오기  -->
-									<ul class="re_info" style="width: 265px;">
-										<li class="title"><%=  data.getP_name() %></li>
-										<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
-										<li id='peopleNumId' value = '2' ><span>인원 : </span><span id = 'peopleText'>2인</span></li>
-										<li id='costId' value = '302000' ><span>요금 : </span><span id = 'costText'>302,000원</span></li>
-										<li><span>투숙기간 : </span>1박</li>
+										</p>
+										<%
+											if (list.size() != 0) {
+												PackageInfoVO data = null;
+												for (int i = 0; i < list.size(); i++) {
+													data = (PackageInfoVO) list.get(i);
+										%>
+
+										<!-- 정민 수정 JSON 객체 생성 -->
+
+										<script>
+											$(
+													function() {
+														$("#clickPackage")
+																.click(
+																		function() {
+																			var packageArray = new Array();
+																			var packageInfo = new Object();
+
+																			packageInfo.p_name =
+										<%=data.getP_name()%>
+											packageInfo.p_personCnt = "2";
+																		})
+													})
+										</script>
+
+										<!-- 정민 수정// db로 패키지 목록 불러오기  -->
+										<ul class="re_info" style="width: 265px;">
+											<li class="title"><%=data.getP_name()%></li>
+											<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
+											<li id='peopleNumId' value='2'><span>인원 : </span><span
+												id='peopleText'>2인</span></li>
+											<li id='costId' value='302000'><span>요금 : </span><span
+												id='costText'>302,000원</span></li>
+											<li><span>투숙기간 : </span>1박</li>
 
 
-										<!-- 정민 수정 패키지 정보 보여주는 값 수정 <li class="title mt10" style="width: 265px;">[성수기] 주중
+											<!-- 정민 수정 패키지 정보 보여주는 값 수정 <li class="title mt10" style="width: 265px;">[성수기] 주중
 											2인(조식+양떼목장)</li>
 										<li><span>구성 : </span>주중객실+조식+케이블카(양떼)</li>
 										<li><span>안내1 : </span>케이블카는 현장상황에따라 운휴될수있습니다.(월요일 휴무)</li>
 										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>-->
-						
-									</ul>
-								
-			
-								</div>
+
+										</ul>
+
+
+									</div>
 								</div>
 								<!-- 정민 수정 // 레이어 팝업 시도 -->
 								<div id="wrap_jm">
 									<div i치d="container_jm">
-										<div id ="mask"  ></div>
-											<div class="window_jm" style="overflow:scroll;">
-											
-												<span><center><br><br><%= data.getP_name() %></center></span>
-								
-												<div style="width:100%">
-												<img src="../../resort/_img/comn/scuba_detail.jpg" style="width: 100%;vertical-align:middle;" >
-												</div>
-												<div style="width:100%">
-												
-												<br><br><br><br><br>
-												<table style="width: 100%; text-align: center; color: rgb(102, 102, 102); line-height: 20px; font-family: Malgun Gothic, Dotum, Arial, verdana, Helvetica; font-size: 13px; font-style: normal; font-variant: normal; border-top-color: rgb(149, 149, 149); border-top-width: 2px; border-top-style: solid; border-collapse: collapse; font-size-adjust: none; font-stretch: normal;"><thead><tr style="border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;"><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;" rowspan="2">기간</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;" rowspan="2">객실타입</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;" colspan="3">주중(일 ~ 목)</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;" colspan="3">주말(금 ~ 토)</th></tr><tr style="border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;"><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">2인용</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">3인용</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">4인용</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">2인용</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">3인용</th><th style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">4인용</th></tr></thead><tbody><tr style="border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;"><th style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;" rowspan="2">17/12/01(수) ~ 18/02/28(수)</th><th style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">로얄</th><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">302,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">368,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">434,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">387,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">453,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">519,000</td></tr><tr style="border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;"><th style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">로얄스위트</th><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">402,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">468,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">534,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">487,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">553,000</td><td style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">619,000</td></tr></tbody></table>
-												</div>
-												<br><br><br>
-												<h3 style="color: rgb(132, 108, 74);">상품 세부안내</h3>
-												<ul class="font_nw13 pl10"> <li><b>실내풀 스쿠버&nbsp;/ 조식쿠폰 수령장소 : 오렌지동 프론트데스크</b></li><li> 객실 정원 외 인원 추가시 인원 추가비용은 인당 25,000원 입니다.(최대 2인 추가 가능)</li><li><b> 조식 인원 추가시 특별요금 적용</b></li><p> 대인 19,000원(14세 이상), 소인 13,000원(8세~13세 이하), 미취학 7,000원(만 3세 ~ 7세 이하), 유아 무료(만 3세미만)</p><li><b>&nbsp;실내풀 스쿠버 이용안내</b></li><p>- 위치 : 블루동 1층 064-731-7706</p><p>- 시간 : 09:00 ~ 18:00&nbsp;</p><p>- 실스쿠버 다이빙의 실제적인 체험 프로그램으로 물 속에서 자기 자신의 호흡으로 물 위로 뜨지도 않고 가라 앉지도 않는 우주 공간에 떠있는 듯한 중성 부력을 느껴보는 스쿠버 다이빙 입문의 1단계 (초등학교 고학년 이상, 추후 2,3단계 후 자격증 취득 가능)&nbsp;</p><li><b>실내풀 스쿠버 체험은 사전예약 후 이용가능합니다.</b></li><li><font color="#ff0000"><strong>매월 1,3주 수요일 수영장&amp;사우나 휴장으로 1,3주 수요일 투숙 패키지 이용 시 목요일에 스쿠버교육을 이용하셔야 합니다.</strong><br style="clear: both;"></font></li></ul>
-												<p>&nbsp;</p>
-												<h3 style="color: rgb(132, 108, 74);">이용절차</h3>
-												<h3 style="color: rgb(132, 108, 74);"><img src="http://www.phoenixpark.co.kr/File/Resort/Package/img_jeju_package(1).jpg"></h3>
-												<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
-												<h3 style="color: rgb(132, 108, 74);">예약안내</h3>
-												<ul class="font_n13 pl10"> <li>인터넷 예약시 온라인 카드 결제 또는 현금 입금 가능합니다.</li><p> * 계좌안내 : 우리은행 1005-801-081715 예금주 (주)보광제주</p><p> * 입금시 투숙자명과 동일한 이름으로 송금해 주십시오.</p><li> 상기 요금에는 세금 및 봉사료가 포함되어 있습니다.</li><li><b> 패키지 예약 문의 :  </b> 1577-0069(ARS 객실예약 1번)</li></ul>
-												<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
-												<h3 style="color: rgb(132, 108, 74);">취소/변경 수수료 안내</h3>
+										<div id="mask"></div>
+										<div class="window_jm" style="overflow: scroll;">
 
-												<ul class="font_n13 pl10"> <li>도착일 기준 7일전까지 위약금 없이 취소/변경 가능합니다. (도착일 6일전 ~ 미도착 : 10~50 취소/변경 수수료 발생)</li><li> 패키지 상품 세부 구성에 대한 부분 환불은 불가능합니다.</li></ul><br><br>
-												<p style="text-align:center; background:#ffffff; padding:20px;"><a href="#" class="close"><img src="../../resort/_img/comn/close.png" style="width:5%;vertical-align:middle;" ></a></p>
-										
+											<span><center>
+													<br> <br><%=data.getP_name()%></center></span>
+
+											<div style="width: 100%">
+												<img src="../../resort/_img/comn/scuba_detail.jpg"
+													style="width: 100%; vertical-align: middle;">
 											</div>
-								 			<table border="0" cellpadding="0" cellspacing="0" width="100%">
-												<tr>
-								 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-												 </tr>
-								  				<tr>
+											<div style="width: 100%">
 
-								  				
-													<td>
+												<br> <br> <br> <br> <br>
+												<table
+													style="width: 100%; text-align: center; color: rgb(102, 102, 102); line-height: 20px; font-family: Malgun Gothic, Dotum, Arial, verdana, Helvetica; font-size: 13px; font-style: normal; font-variant: normal; border-top-color: rgb(149, 149, 149); border-top-width: 2px; border-top-style: solid; border-collapse: collapse; font-size-adjust: none; font-stretch: normal;">
+													<thead>
+														<tr
+															style="border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;">
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;"
+																rowspan="2">기간</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid;"
+																rowspan="2">객실타입</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;"
+																colspan="3">주중(일 ~ 목)</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-right-width: 1px; border-right-style: solid;"
+																colspan="3">주말(금 ~ 토)</th>
+														</tr>
+														<tr
+															style="border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;">
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">2인용</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">3인용</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">4인용</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">2인용</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">3인용</th>
+															<th
+																style="background: rgb(238, 238, 238); padding: 8px 0px; border-right-color: rgb(204, 204, 204); border-bottom-color: rgb(187, 187, 187); border-right-width: 1px; border-right-style: solid;">4인용</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr
+															style="border-bottom-color: rgb(221, 221, 221); border-bottom-width: 1px; border-bottom-style: solid;">
+															<th
+																style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;"
+																rowspan="2">17/12/01(수) ~ 18/02/28(수)</th>
+															<th
+																style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">로얄</th>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">302,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">368,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">434,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">387,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">453,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">519,000</td>
+														</tr>
+														<tr
+															style="border-bottom-color: rgb(187, 187, 187); border-bottom-width: 1px; border-bottom-style: solid;">
+															<th
+																style="background: rgb(244, 244, 244); padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">로얄스위트</th>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">402,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">468,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">534,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">487,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">553,000</td>
+															<td
+																style="padding: 10px 0px; border-right-color: rgb(221, 221, 221); border-right-width: 1px; border-right-style: solid;">619,000</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<br> <br> <br>
+											<h3 style="color: rgb(132, 108, 74);">상품 세부안내</h3>
+											<ul class="font_nw13 pl10">
+												<li><b>실내풀 스쿠버&nbsp;/ 조식쿠폰 수령장소 : 오렌지동 프론트데스크</b></li>
+												<li>객실 정원 외 인원 추가시 인원 추가비용은 인당 25,000원 입니다.(최대 2인 추가
+													가능)</li>
+												<li><b> 조식 인원 추가시 특별요금 적용</b></li>
+												<p>대인 19,000원(14세 이상), 소인 13,000원(8세~13세 이하), 미취학
+													7,000원(만 3세 ~ 7세 이하), 유아 무료(만 3세미만)</p>
+												<li><b>&nbsp;실내풀 스쿠버 이용안내</b></li>
+												<p>- 위치 : 블루동 1층 064-731-7706</p>
+												<p>- 시간 : 09:00 ~ 18:00&nbsp;</p>
+												<p>- 실스쿠버 다이빙의 실제적인 체험 프로그램으로 물 속에서 자기 자신의 호흡으로 물 위로 뜨지도
+													않고 가라 앉지도 않는 우주 공간에 떠있는 듯한 중성 부력을 느껴보는 스쿠버 다이빙 입문의 1단계
+													(초등학교 고학년 이상, 추후 2,3단계 후 자격증 취득 가능)&nbsp;</p>
+												<li><b>실내풀 스쿠버 체험은 사전예약 후 이용가능합니다.</b></li>
+												<li><font color="#ff0000"><strong>매월
+															1,3주 수요일 수영장&amp;사우나 휴장으로 1,3주 수요일 투숙 패키지 이용 시 목요일에
+															스쿠버교육을 이용하셔야 합니다.</strong><br style="clear: both;"></font></li>
+											</ul>
+											<p>&nbsp;</p>
+											<h3 style="color: rgb(132, 108, 74);">이용절차</h3>
+											<h3 style="color: rgb(132, 108, 74);">
+												<img
+													src="http://www.phoenixpark.co.kr/File/Resort/Package/img_jeju_package(1).jpg">
+											</h3>
+											<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
+											<h3 style="color: rgb(132, 108, 74);">예약안내</h3>
+											<ul class="font_n13 pl10">
+												<li>인터넷 예약시 온라인 카드 결제 또는 현금 입금 가능합니다.</li>
+												<p>* 계좌안내 : 우리은행 1005-801-081715 예금주 (주)보광제주</p>
+												<p>* 입금시 투숙자명과 동일한 이름으로 송금해 주십시오.</p>
+												<li>상기 요금에는 세금 및 봉사료가 포함되어 있습니다.</li>
+												<li><b> 패키지 예약 문의 : </b> 1577-0069(ARS 객실예약 1번)</li>
+											</ul>
+											<h3 style="color: rgb(132, 108, 74);">&nbsp;</h3>
+											<h3 style="color: rgb(132, 108, 74);">취소/변경 수수료 안내</h3>
+
+											<ul class="font_n13 pl10">
+												<li>도착일 기준 7일전까지 위약금 없이 취소/변경 가능합니다. (도착일 6일전 ~ 미도착 :
+													10~50 취소/변경 수수료 발생)</li>
+												<li>패키지 상품 세부 구성에 대한 부분 환불은 불가능합니다.</li>
+											</ul>
+											<br> <br>
+											<p
+												style="text-align: center; background: #ffffff; padding: 20px;">
+												<a href="#" class="close"><img
+													src="../../resort/_img/comn/close.png"
+													style="width: 5%; vertical-align: middle;"></a>
+											</p>
+
+										</div>
+										<table border="0" cellpadding="0" cellspacing="0" width="100%">
+											<tr>
+												<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+											</tr>
+											<tr>
+
+
+												<td>
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   					   				<a href="#" class="openMask"><img src="../../resort/_img/comn/search.png" style="width:3%;vertical-align:middle;" >&nbsp;<span style="color:#474747;font-weight:bold">자세히 보기</span></a>
-                    								</td>
-              					  				</tr>  
-								 			</table>
+													<a href="#" class="openMask"><img
+														src="../../resort/_img/comn/search.png"
+														style="width: 3%; vertical-align: middle;">&nbsp;<span
+														style="color: #474747; font-weight: bold">자세히 보기</span></a>
+												</td>
+											</tr>
+										</table>
 									</div>
 								</div>
-								<%	}
-									} else { %>
-									<td> 데이터가 없음</td>
-										
-									<% }%>
+								<%
+									}
+									} else {
+								%>
+								<td>데이터가 없음</td>
+
+								<%
+									}
+								%>
 							</div>
 						</div>
-							
+
 
 						<div class="se_cal mt15">
 							<div class="check f_l">
@@ -831,12 +971,22 @@ $(document).ready(function(){
 									<div class="updown">
 										<p class="text">시설구분</p>
 										<select name="buld_cd" class="w140 ml30" style="width: 130px"
-											onchange="buldChange()"></select>
+											onchange="buldChange()">콘도
+										</select>
 									</div>
 									<div class="updown">
 										<p class="text">객실타입</p>
-										<select name="roomType" class="w140 ml30" style="width: 130px"
-											onchange="roomTypeChangeReflesh()"></select>
+										<select id="roomType" name="roomType" class="w140 ml30"
+											style="width: 130px" onchange="totalCostOp();">
+											<!-- 지윤 - totalCostOp(투숙기간) -->
+											<option selected>로얄더블온돌</option>
+											<option>로얄더블트윈</option>
+											<option>로얄트윈온돌</option>
+											<option>로얄오션온돌</option>
+											<option>로얄스위트A</option>
+											<option>로얄스위트B</option>
+											<option>로얄스위트O</option>
+										</select>
 									</div>
 
 									<!--div class="updown" >
@@ -865,7 +1015,8 @@ $(document).ready(function(){
 							<div class="money01">
 								<p class="tit" style="">결제금액</p>
 								<p class="pt25 pl20 font_b15">
-									패키지 금액 <span class="font_b16_r ml20 room_total_price_display">0원</span>
+									패키지 금액 <span id='totalPackageCost'
+										class="font_b16_r ml20 room_total_price_display">302000원</span>
 								</p>
 							</div>
 						</div>
@@ -988,8 +1139,9 @@ $(document).ready(function(){
 								<p class="f_l">
 									<span>결제방법</span>
 								</p>
-								<select class="w140 f_l ml10" name="payment"
-									style="width: 170px;"></select>
+								<select id="payHow" class="w140 f_l ml10" name="payment"
+									style="width: 170px;">
+									<option selected="selected" mcode="">계좌이체</option></select>
 								<p class="f_l ">
 									&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="co_date"
 										name="payAgreeChk"> 위약규정 사항을 확인하고
@@ -1002,7 +1154,7 @@ $(document).ready(function(){
 						<div class="c mt30">
 							<!-- <a class="btn_g_w130" href="javascript:;">취소</a>  -->
 							<a class="btn_w130 btn_reservation" href="javascript:;"
-								onclick="reservation();">예약하기</a>
+								onclick="reservation_chk();">예약하기</a>
 							<!-- /resort/reservation/re_package_complete -->
 							<img src="../../resort/_img/comn/loading.gif" alt="로딩중입니다."
 								id="roomprice_loading" style="display: none;">
