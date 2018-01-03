@@ -154,9 +154,10 @@ INSERT INTO `package` (`p_id`, `p_name`, `p_weekdaycost`, `p_weekendcost`, `p_pe
 -- 
 
 -- 1월 예약 데이터 삽입
+--ahreum data 수정!
 INSERT INTO `jan_res` (`jan_day`, `d_ondol`, `d_twin`, `t_ondol`, `o_ondol`, `suite_a`, `suite_b`, `suite_o`) VALUES
-	(1, 2, 2, 2, 2, 2, 2, 2),
-	(2, 2, 2, 2, 2, 2, 2, 2),
+	(1, 1, 1, 2, 2, 2, 2, 2),
+	(2, 2, 2, 0, 0, 0, 0, 0),
 	(3, 2, 2, 2, 2, 2, 2, 2),
 	(4, 2, 2, 2, 2, 2, 2, 2),
 	(5, 2, 2, 2, 2, 2, 2, 2),

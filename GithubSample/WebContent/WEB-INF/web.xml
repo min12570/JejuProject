@@ -17,4 +17,12 @@
     <servlet-name>Package</servlet-name>
     <url-pattern>*.package</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>Jan_res</servlet-name>
+    <servlet-class>reservationInfo.Jan_resServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Jan_res</servlet-name>
+    <url-pattern>*.jan_res</url-pattern>
+  </servlet-mapping>
 </web-app>
