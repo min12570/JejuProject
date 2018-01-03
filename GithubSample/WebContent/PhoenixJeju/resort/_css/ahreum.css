@@ -83,3 +83,8 @@ ul.sitemenu li {
     padding-top: 5px;
   cursor: pointer;
 }
+.fff_img{
+    width: 230px;
+    height: 170px;
+    float: left;
+}

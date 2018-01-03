@@ -3,33 +3,7 @@
  * package select --> blue
  * reservation_package.js를 참고함
  */
-
-
-var package_number;
-function goReser(p_number){
-	//package_number =0;
-	//package_number = $("btn_white").attr('id');
-	//p_number 값 받아와서 default 설정 가능!
-	packageList(p_number);
-	//alert(package_number);
-	//alert("package_number "+package_number);
-	//location.href='../../resort/reservation/re_package.html?p_number';	
-}
-
-//클릭이벤트 설정
-$('.rsu_package li ul li').unbind("click").bind("click",function(){
-	$('.rsu_package li ul li').removeClass('on').addClass('off');
-	$(this).removeClass('off').addClass('on');
-	alert("왔다");
-	showPackages(temp[1]);
-	//var selkey = $('a',this).attr('code');
-	//alert(selkey);
-	//packDetailSet(selkey);
-});
-$( document ).ready(function() {
-    readPackageJSON();
-});
-
+readPackageJSON();
 var pNum = [];
 var pImg = [];
 function readPackageJSON(){
@@ -41,13 +15,37 @@ function readPackageJSON(){
 	});
 }
 
+var package_number;
+function goReser(p_number){
+	//package_number =0;
+	//package_number = $("btn_white").attr('id');
+	//p_number 값 받아와서 default 설정 가능!
+	//alert(p_number);
+	packageList(p_number);
+	//alert(package_number);
+	//alert("package_number "+package_number);
+	//location.href='../../resort/reservation/re_package.html?p_number';	
+}
+
+//클릭이벤트 설정
+$('.rsu_package li ul li').unbind("click").bind("click",function(){
+	$('.rsu_package li ul li').removeClass('on').addClass('off');
+	$(this).removeClass('off').addClass('on');
+	var id = $(this).attr('id');
+	alert(id);
+	showPackages(id);
+	//var selkey = $('a',this).attr('code');
+	//alert(selkey);
+	//packDetailSet(selkey);
+});
+
 function showPackages(Pid){
 	var Name = pNum[Pid];
 	var img = pImg[Pid];
 	var Name = pNum[Pid];
-	var imgURL = "<img src="+img+" style='width: 100%;' class='pkgImg'>";
-	$('.re_info .title').html(Name);
-	$('.img_box rsu_choiceContent div .f_l').html(imgURL);
+	var imgURL = "<img src='"+img+"' style='width: 100%;' class='pkgImg'>";
+	$('.title').html(Name);
+	$('.fff_img').html(imgURL);
 }
 
 /*
@@ -94,7 +92,7 @@ function reservation_chk(){
 var temp;
 temp = location.href.split("&");
 temp = temp[1].split("=");
-$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
+$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');	
 
 function packageList(p_number){
 	readPackageJSON();

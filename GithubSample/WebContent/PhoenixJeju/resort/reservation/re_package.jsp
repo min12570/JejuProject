@@ -11,8 +11,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>휘닉스 호텔앤드리조트 | PHOENIX HOTELS &amp; RESORTS</title>
-<script src="../../Scripts/package_ahreum.js"></script>
-<script src="../../Scripts/package_ahreum2.js"></script>
 <!-- 지윤 체크박스 데이터에 따라 값 변경 -->
 <script language="javascript">
 	var week_type, people_num;
@@ -519,25 +517,25 @@
 									<li class="on" id="py_list"><a href="javascript:;"
 										class="top_none">휘닉스 평창</a>
 										<ul class="list" id="py_ul">
-											<li class="off"><a href="javascript:;" code="0-0">-
+											<li class="off"id=0><a href="javascript:;" code="0-0">-
 													(스파)블루캐니언</a></li>
 
-											<li class="off"><a href="javascript:;" code="0-1">-
+											<li class="off" id=1><a href="javascript:;" code="0-1">-
 													스키</a></li>
 
-											<li class="off"><a href="javascript:;" code="0-2">-
+											<li class="off" id=2><a href="javascript:;" code="0-2">-
 													스키PLUS</a></li>
 										</ul></li>
 									<li class="on" id="jeju_list"><a href="javascript:;"
 										class="">휘닉스 제주</a>
 										<ul class="list" id="jeju_ul">
-											<li class="off"><a href="javascript:;" code="1-0">-
+											<li class="off" id=3><a href="javascript:;" code="1-0">-
 													맛있는 해랑</a></li>
-											<li class="off"><a href="javascript:;" code="1-1">-
+											<li class="off" id=4><a href="javascript:;" code="1-1">-
 													유민미술관패키지</a></li>
-											<li class="off"><a href="javascript:;" code="1-2">-
+											<li class="off" id=5><a href="javascript:;" code="1-2">-
 													릴렉싱테라피</a></li>
-											<li class="on"><a href="javascript:;" code="1-3">-
+											<li class="on" id=6><a href="javascript:;" code="1-3">-
 													휘닉스 스쿠버</a></li>
 											<li class="off"><a href="javascript:;" code="1-4">-
 													수영장사우나패키지</a></li>
@@ -589,14 +587,13 @@
 							<div class="result_box">
 								<p class="re_tit">선택 정보</p>
 								<div class="img_box rsu_choiceContent">
-									<div>
-										<!-- <p class="f_l"><img src="../_img/bbs/package01_img.gif" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px;" href="javascript:;">상세보기</a></p> -->
-
-										<p class="f_l" style="width: 230px; height: 170px;">
+									<div class="p_img">
+									<p class="fff_img"></p>
+										<!--<p class="f_l" style="width: 230px; height: 170px;">
 											<img src="../../resort/_img/comn/scuba_image.jpg"
 												style="width: 100%;" class="pkgImg">
 
-										</p>
+										</p>-->
 										<%
 											if (list.size() != 0) {
 												PackageInfoVO data = null;
@@ -607,37 +604,24 @@
 										<!-- 정민 수정 JSON 객체 생성 -->
 
 										<script>
-											$(
-													function() {
-														$("#clickPackage")
-																.click(
-																		function() {
-																			var packageArray = new Array();
-																			var packageInfo = new Object();
-
-																			packageInfo.p_name =
-										<%=data.getP_name()%>
-											packageInfo.p_personCnt = "2";
-																		})
-													})
+											$(function() {
+											$("#clickPackage").click(function() {
+											var packageArray = new Array();
+											var packageInfo = new Object();
+										packageInfo.p_name =<%=data.getP_name()%>
+											packageInfo.p_personCnt = "2";})});
 										</script>
 
 										<!-- 정민 수정// db로 패키지 목록 불러오기  -->
+										<!-- 아름 수정 JSON 이용 -->
 										<ul class="re_info" style="width: 265px;">
-											<li class="title"><%=data.getP_name()%></li>
+											<li class="title"></li>
 											<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
 											<li id='peopleNumId' value='2'><span>인원 : </span><span
 												id='peopleText'>2인</span></li>
 											<li id='costId' value='302000'><span>요금 : </span><span
 												id='costText'>302,000원</span></li>
 											<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
-
-
-											<!-- 정민 수정 패키지 정보 보여주는 값 수정 <li class="title mt10" style="width: 265px;">[성수기] 주중
-											2인(조식+양떼목장)</li>
-										<li><span>구성 : </span>주중객실+조식+케이블카(양떼)</li>
-										<li><span>안내1 : </span>케이블카는 현장상황에따라 운휴될수있습니다.(월요일 휴무)</li>
-										<li><span>안내2 : </span>쿠폰 체크인시프론트에서제공합니다.</li>-->
 
 										</ul>
 
@@ -1270,4 +1254,6 @@
 
 	});
 </script>
+
+<script src="../../Scripts/package_ahreum.js"></script>
 </html>
