@@ -35,6 +35,7 @@
 										userData = (UserVO)userInfo.get(0);
 										session.setAttribute("userinfo", userData);
 										//세션 값 설정
+								 
 							%>
 													
     <div id="wrap">
@@ -89,7 +90,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 90, 'ctl00');
 //]]>
 </script>
-<link href="../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
+<link href="../../PhoenixJeju/resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
         <div id="wrap">
             <div id="top">
                 <div id="gnb_area">

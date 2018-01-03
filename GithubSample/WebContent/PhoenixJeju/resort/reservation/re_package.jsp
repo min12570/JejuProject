@@ -469,7 +469,7 @@
 								</select> <span class="" style="width: 220px; -ms-user-select: none;"></span>
 							</div>
 							<%
-			UserVO userinfo1 = (UserVO)session.getAttribute("userinfo");
+							UserVO userinfo1 = (UserVO)session.getAttribute("userinfo");
 							String re_user_id = userinfo1.getUser_id();
 							String re_user_pw = userinfo1.getUser_pw();
 							String re_user_email = userinfo1.getUser_email();

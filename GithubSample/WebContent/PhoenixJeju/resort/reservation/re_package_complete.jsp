@@ -75,7 +75,13 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 90, 'ctl00');
 //]]>
 </script>
+<script>
+function goPackageReserve1(){
+	//아름 Servlet 경로 수정
+	location.href="../../../resort/reservation/main.login?db2=userall";
+}
 
+</script>
         <div id="wrap">
             <div id="top">
                 <div id="gnb_area">
@@ -85,8 +91,8 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                         <li><a href="/pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
                         <div class="dropdown">
-                        <li class="dropbtn"><a href="../jeju/index.html">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
+                        <li class="dropbtn"><a href="../../jeju/index.html">
+                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
 						<div class="dropdown-content">
 							<div class="row">
 								<ul class="column">
@@ -104,7 +110,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 								<img src="../../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
 								<a href="../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
                                 <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
-                                <a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
+                                <a href="javascript:;" onclick="goPackageReserve1();">패키지예약</a>
                                 <a href="../jeju/accommodation/hillius">힐리우스(별장)</a>
 								</ul>
 								<ul class="column">
@@ -134,7 +140,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 								</ul>
 								<ul class="column">
 								<div class="depth01" onclick="location.href=..../jeju/facilities/islandballroom'">
-                            	<img src="../../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
+                            	<img src="../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
                                 <a href="../jeju/facilities/islandballroom">연회장</a>
                                 <a href="../jeju/facilities/cswrite">연회/단체문의</a>
                                 <a href="../jeju/facilities/mintwedding">&nbsp;&nbsp;웨딩</a>
@@ -427,4 +433,5 @@ onclick="location.href='/resort/reservation/re_coupon'">
 
     });
 </script>
+ <script src="../../Scripts/user_jm.js"></script>
 </html>
