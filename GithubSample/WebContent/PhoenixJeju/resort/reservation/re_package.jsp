@@ -59,7 +59,6 @@
 		//아름 추가
 		var roomName = document.getElementById("roomType").value;
 		if (roomName.indexOf("스위트") != -1) {
-			alert("스위트");
 			roomTypeCost = 10;
 		} else {
 			roomTypeCost = 0;
@@ -980,13 +979,13 @@
 										<select id="roomType" name="roomType" class="w140 ml30"
 											style="width: 130px" onchange="totalCostOp();">
 											<!-- 지윤 - totalCostOp(투숙기간) -->
-											<option value=0 selected>로얄더블온돌</option>
-											<option value=0>로얄더블트윈</option>
-											<option value=0>로얄트윈온돌</option>
-											<option value=0>로얄오션온돌</option>
-											<option value=10>로얄스위트A</option>
-											<option value=10>로얄스위트B</option>
-											<option value=10>로얄스위트O</option>
+											<option selected>로얄더블온돌</option>
+											<option>로얄더블트윈</option>
+											<option>로얄트윈온돌</option>
+											<option>로얄오션온돌</option>
+											<option>로얄스위트A</option>
+											<option>로얄스위트B</option>
+											<option>로얄스위트O</option>
 										</select>
 									</div>
 
