@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8" %>
-<%@ page import="java.util.ArrayList"%>
+<%@ page import="java.util.ArrayList" %>
 <%@ page import="user.UserVO" %>
 <!DOCTYPE html>
 <html lang="ko">
@@ -25,6 +25,20 @@
     </script>
 </head>
 <body>
+<!--  정민 수정 사용자 정보 가져오기 및 세션값 설정 -->
+<%
+								ArrayList<UserVO> userInfo = (ArrayList)request.getAttribute("userInfo");
+								
+								 if(userInfo.size() != 0) {
+									UserVO userData = null;
+		
+										userData = (UserVO)userInfo.get(0);
+										session.setAttribute("userid", userData.getUser_id());
+										//세션 값 설정
+							%>
+							
+    <div id="wrap">
+
     <form method="post" action="./package?bsns=PI_PACKAGE" id="ctl01">
 <div class="aspNetHidden">
 <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
@@ -33,6 +47,9 @@
 </div>
 
 <script type="text/javascript">
+function goToJejuIndex() {
+	location.href="../../jeju/index.html";
+}
 //<![CDATA[
 var theForm = document.forms['ctl01'];
 if (!theForm) {
@@ -78,15 +95,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
                 <div id="gnb_area">
                     <ul class="sitemenu">
                         <li><a href="/resort/intro">
-                            <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
+                            <img src="../../PhoenixJeju/pyeongchang/_img/gnb/phoenixresort_off.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
-                            <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
-                        <li><a href="../../jeju/index">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
+                            <img src="../../PhoenixJeju/pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
+                        <li><a href="javascript:;" onclick="goToJejuIndex();">
+                            <img src="../../PhoenixJeju/pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
                     </ul>
                     <div class="gnbmenu">
                         <ul class="gnb">
-                            <li><a href="../../resort/reservation/re_remain">통합예약</a></li>
+                            <li><a href="../../PhoenixJeju/resort/reservation/re_remain">통합예약</a></li>
                             <!--<li><a href="/Site/event/package">패키지</a></li>
                             <li><a href="/Site/event/event">이벤트</a></li>
                              -->
@@ -118,7 +135,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
             
             <section class="content-wrapper main-content clear-fix">
                  
-<link href="../../resort/_css/cont.css" type="text/css" rel="stylesheet">
+<link href="../../PhoenixJeju/resort/_css/cont.css" type="text/css" rel="stylesheet">
 
     <div id="wrap">
 		<!-- 지윤이수정<div class="nav">
@@ -130,7 +147,11 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 		</div>-->
 
 		<div id="container">
-			
+			<h1><%= userData.getUser_id() %> 님 환영합니다.</h1>
+								<%	 }else { %>
+									<td> 데이터가 없음</td>
+										
+									<% }%>
 			<div class="customer_top">
               <p class="ev_sub">고객님들께 더 나은 서비스를 제공하기 위해 각종 패키지와 이벤트 행사를 진행하고 있습니다.</p>
 			</div>
@@ -138,15 +159,15 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
             <ul class="event_tab">
 			
 				<li style="width:331px" class="custab_on" onclick="location.href='../../Site/event/package'">  
-					<p class="cus_icon01"><img src="../../resort/_img/cont/package_img_on.png" alt="패키지" /></p>
+					<p class="cus_icon01"><img src="../../PhoenixJeju/resort/_img/cont/package_img_on.png" alt="패키지" /></p>
 					<p class="cus_text01 on">패키지</p>
 				</li>
 				<li class="custab_off" onMouseOver="this.className='custab_over'" onMouseOut="this.className='custab_off'" onclick="location.href='/Site/event/event'">
-					<p class="cus_icon"><img src="../../resort/_img/cont/event_img.png" alt="이벤트/행사" /></p>
+					<p class="cus_icon"><img src="../../PhoenixJeju/resort/_img/cont/event_img.png" alt="이벤트/행사" /></p>
 					<p class="cus_text01">이벤트/행사</p>
 				</li>
 				<li class="custab_off" onMouseOver="this.className='custab_over'" onMouseOut="this.className='custab_off'" onclick="location.href='/Site/event/PhotoEvent'"> 
-					<p class="cus_icon"><img src="../../resort/_img/cont/eventwin_img.png" alt="포토이벤트" /></p>
+					<p class="cus_icon"><img src="../../PhoenixJeju/resort/_img/cont/eventwin_img.png" alt="포토이벤트" /></p>
 					<p class="cus_text01">포토이벤트</p>
 				</li>
 			</ul>
@@ -155,13 +176,13 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 
 				<ul class="f_r sitetap mt30">
                      <li>
-                        <input type="image" name="ctl00$MainContent$btnAll" id="MainContent_btnAll" onmouseover="../../resort/_img/comn/sitetap_all_on.gif" onmouseout="../../resort/_img/comn/sitetap_all.gif" src="../../resort/_img/comn/sitetap_all.gif" />
+                        <input type="image" name="ctl00$MainContent$btnAll" id="MainContent_btnAll" onMouseOver="../../PhoenixJeju/resort/_img/comn/sitetap_all_on.gif" onMouseOut="../../PhoenixJeju/resort/_img/comn/sitetap_all.gif" src="../../PhoenixJeju/resort/_img/comn/sitetap_all.gif" />
                     </li>                   
                     <li>
-                        <input type="image" name="ctl00$MainContent$btnpp" id="MainContent_btnpp" onmouseover="../../resort/_img/comn/sitetap_park.gif" onmouseout="../../resort/_img/comn/sitetap_park_on.gif" src="../../resort/_img/comn/sitetap_park_on.gif" />
+                        <input type="image" name="ctl00$MainContent$btnpp" id="MainContent_btnpp" onMouseOver="../../PhoenixJeju/resort/_img/comn/sitetap_park.gif" onMouseOut="../../PhoenixJeju/resort/_img/comn/sitetap_park_on.gif" src="../../PhoenixJeju/resort/_img/comn/sitetap_park_on.gif" />
                     </li>
                      <li>
-                        <input type="image" name="ctl00$MainContent$btnpi" id="MainContent_btnpi" onmouseover="../../resort/_img/comn/sitetap_island.gif" onmouseout="../../resort/_img/comn/sitetap_island.gif" src="../../resort/_img/comn/sitetap_island.gif" />
+                        <input type="image" name="ctl00$MainContent$btnpi" id="MainContent_btnpi" onMouseOver="../../PhoenixJeju/resort/_img/comn/sitetap_island.gif" onMouseOut="../../PhoenixJeju/resort/_img/comn/sitetap_island.gif" src="../../PhoenixJeju/resort/_img/comn/sitetap_island.gif" />
                     </li>
 				</ul>
 			</div>
@@ -184,24 +205,24 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
             
                     <ul class="gallery03">
                 
-                        <span id="MainContent_Repeater1_Label1_0"><li class='gallery'><p><a href='package_view?seq=13198'><img src='../../file/resort/Package/upload_20170704d4bcae66.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=13198'>[제주] 유민미술관 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=13198' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_0"><li class='gallery'><p><a href='package_view?seq=13198'><img src='../../PhoenixJeju/file/resort/Package/upload_20170704d4bcae66.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=13198'>[제주] 유민미술관 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=13198' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
-                        <span id="MainContent_Repeater1_Label1_1"><li class='gallery'><p><a href='../../Site/event/package_view_12447.jsp'><img src='../../file/resort/Package/upload_201611162efae3cb.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='../../Site/event/package_view_12447.jsp'>[제주] 휘닉스 스쿠버 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='../../Site/event/package_view_12447.jsp' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_1"><li class='gallery'><p><a href='../../PhoenixJeju/Site/event/package_view_12447.jsp'><img src='../../PhoenixJeju/file/resort/Package/upload_201611162efae3cb.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='../../PhoenixJeju/Site/event/package_view_12447.jsp'>[제주] 휘닉스 스쿠버 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='../../PhoenixJeju/Site/event/package_view_12447.jsp' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
-                        <span id="MainContent_Repeater1_Label1_2"><li class='gallery'><p><a href='package_view?seq=12446'><img src='../../file/resort/Package/upload_20161116d39457c7.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12446'>[제주] 맛있는 해랑[근고기모듬] 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 01월 15일(월)</p><p class='mt15'><a href='package_view?seq=12446' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_2"><li class='gallery'><p><a href='package_view?seq=12446'><img src='../../PhoenixJeju/file/resort/Package/upload_20161116d39457c7.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12446'>[제주] 맛있는 해랑[근고기모듬] 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 01월 15일(월)</p><p class='mt15'><a href='package_view?seq=12446' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
-                        <span id="MainContent_Repeater1_Label1_3"><li class='gallery'><p><a href='package_view?seq=12445'><img src='../../file/resort/Package/upload_20161116640742d4.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12445'>[제주] 민트 하우스 그릴 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12445' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_3"><li class='gallery'><p><a href='package_view?seq=12445'><img src='../../PhoenixJeju/file/resort/Package/upload_20161116640742d4.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12445'>[제주] 민트 하우스 그릴 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12445' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
-                        <span id="MainContent_Repeater1_Label1_4"><li class='gallery'><p><a href='package_view?seq=12444'><img src='../../file/resort/Package/upload_20161116f89407b5.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12444'>[제주] 릴렉싱 테라피 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12444' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_4"><li class='gallery'><p><a href='package_view?seq=12444'><img src='../../PhoenixJeju/file/resort/Package/upload_20161116f89407b5.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12444'>[제주] 릴렉싱 테라피 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12444' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
-                        <span id="MainContent_Repeater1_Label1_5"><li class='gallery'><p><a href='package_view?seq=12443'><img src='../../file/resort/Package/upload_20161116d6b463d0.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12443'>[제주] 수영장 사우나 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12443' class='btn_line_w140'>자세히 보기</a></p></li></span>
+                        <span id="MainContent_Repeater1_Label1_5"><li class='gallery'><p><a href='package_view?seq=12443'><img src='../../PhoenixJeju/file/resort/Package/upload_20161116d6b463d0.jpg' style='width:320px;height:185px;' class=pi></a></p><h4><a href='package_view?seq=12443'>[제주] 수영장 사우나 패키지</a></h4><p class='t02'>2017년 11월 01일(수)~2018년 02월 28일(수)</p><p class='mt15'><a href='package_view?seq=12443' class='btn_line_w140'>자세히 보기</a></p></li></span>
                 
                     </ul>
                 
         <input type="hidden" name="ctl00$MainContent$colCount" id="MainContent_colCount" />        
         <p>
             <center>
-            <span id="MainContent_lblPage"><table class='btn_page mt30 c' >	<tr><td><a href='#'><img src='../../resort/_img/bbs/fisrt.png'></a></td><td></td><td><a href='#'><img src='../../resort/_img/bbs/back.png'></a></td><td></td><td class='btn_pageon'><a href='/site/event/package?bsns=PI_PACKAGE&type=&content=&page=1'>1</a></td><td width='10'></td><td><a href='#'><img src='../../resort/_img/bbs/next.png'></a></td><td><a href='#'><img src='../../resort/_img/bbs/last.png'></a></td>	</tr></table></span>
+            <span id="MainContent_lblPage"><table class='btn_page mt30 c' >	<tr><td><a href='#'><img src='../../PhoenixJeju/resort/_img/bbs/fisrt.png'></a></td><td></td><td><a href='#'><img src='../../PhoenixJeju/resort/_img/bbs/back.png'></a></td><td></td><td class='btn_pageon'><a href='/site/event/package?bsns=PI_PACKAGE&type=&content=&page=1'>1</a></td><td width='10'></td><td><a href='#'><img src='../../PhoenixJeju/resort/_img/bbs/next.png'></a></td><td><a href='#'><img src='../../PhoenixJeju/resort/_img/bbs/last.png'></a></td>	</tr></table></span>
                 </center>
         </p>
             
@@ -213,7 +234,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
             <div id="footer">
                 <div class="footer">
                     <p class="f_logo">
-                        <img src="../../resort/_img/comn/footer_logo.png" alt="" /></p>
+                        <img src="../../PhoenixJeju/resort/_img/comn/footer_logo.png" alt="" /></p>
                     <div class="copyright">
                         <script type="text/javascript">
                             function Anne() {
@@ -323,4 +344,5 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 
     });
 </script>
+<script src="../../Scripts/user_jm.js"></script>
 </html>
