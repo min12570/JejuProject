@@ -124,6 +124,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
             <section class="content-wrapper main-content clear-fix">
                 
   				<link href="../../resort/_css/cont.css" type="text/css" rel="stylesheet">
+  				<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet">
 		<script type="text/javascript" src="../_js/reservation_package_complete.js"></script>
     <div id="wrap">		
     		<div id="container">
@@ -175,15 +176,15 @@ onclick="location.href='/resort/reservation/re_coupon'">
 					<div class="img_box" >
 						<p class="f_l"><img src="../../resort/_img/comn/scuba_image.jpg" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
 						<ul class="re_info" style="width:265px;">
-							<li class="title"></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li></li>
-							<li class="title mt10" style="width:265px;"></li>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li class="title">(릴렉싱테라피)주중</li>
+							<li><span>타입 : </span>콘도</li>
+							<li><span>인원 : </span>2인</li>
+							<li><span>요금 : </span>252,000원</li>
+							<li><span>투숙기간 : </span>2017년 11월 01일 ~ 2018년 03월 31일</li>
+							<li class="title mt10" style="width:265px;">[11/1~3/31]테라피(주중2인)</li>
+							<li><span>구성 : </span>객실+조식+두피케어</li>
+							<li><span>안내1 : </span>- 오션뷰 요청시 3만원 추가 됩니다.</li>
+							<li><span>안내2 : </span>- 쿠폰은 체크인 시 프론트에서 제공합니다.</li>
 						</ul>
 					</div>
 				</div>
@@ -192,26 +193,38 @@ onclick="location.href='/resort/reservation/re_coupon'">
 					<p class="re_tit">결제정보</p>
 					<p class="font_b16_3 pt15 pl20 pb15 rsv_date" style="border-bottom:1px solid #ddd; width:100%;">일정 : 2015.07.01 ~ 2015.07.02<br/>숙박일수 : 1일</p>
 
-					<ul class="re_info mt10" >
-						<li class="w_120 rooms"></li>
+					<ul class="re_info mt10">
+						<li class="w_120 rooms"><span>객실수 :</span> 1실</li>
 						<!-- <li class="w_155"><span>조식이용권 :</span> 매</li> -->
-						<li class="w_155 option_rate"></li>
+						<li class="w_155 option_rate"><span>옵션 :</span> 0원</li>
 						<!-- <li class="w_120"><span>인원 :</span> 명</li> -->
-						<li class="w_155 dp_gubun"></li>
-						<li class="w_155 room_rate"></li>
+						<li class="w_155 dp_gubun"><span>결제방법 :</span> 계좌이체</li>
+						<li class="w_155 room_rate"><span>객실료 :</span> 252,000원</li>
 					</ul>
 
-					<p class="red_text total_price"></p>
+					<p class="red_text total_price">총금액 : 252,000원</p>
+					<p class="re_tit">결제방법 안내</p>
+					<div class="chk_info">
+						<span>입금 은행 :</span> 우리은행 1005-801-081715<br>
+						<span>예금주 : </span> (주) 휘닉스중앙제주<br>
+						<span>입금일자: </span> 20180103<br>
+						<span class="chk_notice">*이용자명으로 입금 바라며, 입금 후 확인바랍니다</span>
+						<hr>
+						<div class="question"><span>[문의]</span><br>
+						 예약센터 ☏1577-0069<br>
+						 고객센터 ☏064-731-7000<br>
+						 콘도 프론트 ☏064-731-7001
+						</div>
+						</div>
 				</div>
 			</div>
-
 			<div class="re_info_fini mb40">
 				<div class="f_l">
 					<p class="">예약자정보</p>
 					<ul class="info_ul mt10">
 						<li class="caller" style="width:200px;"><span>예약자명 : </span> 김아름</li>
 						<li class="rsrv_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
-						<li class=" pt5 cs_email" style="width:200px;"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
+						<li class=" pt5 cs_email"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
 					</ul>
 				</div>
 				<div class="f_r">
@@ -219,7 +232,7 @@ onclick="location.href='/resort/reservation/re_coupon'">
 					<ul class="info_ul mt10" style="">
 						<li class="guest_name" style="width:200px;"><span>예약자명 : </span> 김아름</li>
 						<li class="use_phone_no"><span>휴대전화 : </span> 010-5057-1164</li>
-						<li class="pt5 rs_email" style="width:200px;"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
+						<li class="pt5 rs_email"><span>이메일 : </span> rladkfmaet7@hanmail.net</li>
 					</ul>
 				</div>
 			</div>

@@ -1,0 +1,17 @@
+.chk_info{
+    font: normal 13px/20px "Malgun Gothic" , "Dotum" , "Arial" , "verdana" , "Helvetica";
+    color: #666;
+    line-height: 23px;
+	padding: 10px 0 0 20px;
+}
+.chk_info span{
+font-weight: bold;	
+}
+.question{
+	width:100%;
+	padding-top: 10px;
+	
+}
+.chk_notice{
+	color: red;
+}
