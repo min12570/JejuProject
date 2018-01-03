@@ -2,7 +2,7 @@
 	pageEncoding="utf-8" import="java.util.*, packageInfo.*"%>
 <%@ page import="packageInfo.PackageInfoVO"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ page import="user.UserVO" %>
+<%@ page import="user.UserVO"%>
 <!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
 
 <!DOCTYPE html>
@@ -217,7 +217,8 @@
 					[], [], [], 90, 'ctl00');
 			//]]>
 		</script>
-<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
+		<link href="../../resort/_css/ahreum.css" type="text/css"
+			rel="stylesheet" />
 		<div id="wrap">
 			<div id="top">
 				<div id="gnb_area">
@@ -228,65 +229,90 @@
 						<li><a href="/pyeongchang/index"> <img
 								src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
 						<div class="dropdown">
-                        <li class="dropbtn"><a href="../jeju/index.html">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
-						<div class="dropdown-content">
-							<div class="row">
-								<ul class="column">
-								<div class="depth01" onclick="location.href=../../jeju/intro/info'">
-                            	<img src="../../jeju/_img/comn/tmn01.gif" ov_src="../jeju/_img/comn/tmn01_on.gif" _src="../jeju/_img/comn/tmn01.gif" alt="Intro" /></div>                         
-                                <a href="../jeju/intro/info">리조트소개</a>
-                                <a href="../jeju/intro/resortmap">단지안내도</a>
-                                <a href="../Site/event/event">이벤트</a></li>
-                                <a href="../jeju/intro/news_letter">NEWS LETTER</a>
-                                <a href="../jeju/intro/sketch">현장스케치</a>
-                                <a href="../jeju/intro/golf">가이드</a>                           
-								</ul>
-								<ul class="column">
-								<div class="depth01" onclick="location.href=../jeju/accommodation/velraterrace'">
-								<img src="../../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
-								<a href="../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
-                                <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
-                                <a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
-                                <a href="../../jeju/accommodation/hillius">힐리우스(별장)</a>
-								</ul>
-								<ul class="column">
-									<div class="depth01" onclick="location.href=../jeju/dining/mint'">
-                            		<img src="../../jeju/_img/comn/tmn03.gif" ov_src="../../jeju/_img/comn/tmn03_on.gif" _src="../jeju/_img/comn/tmn03.gif" alt="DINING" /></div>
-									<a href="/jeju/dining/mint">민트</a>
-									<a href="/jeju/dining/haerang">해랑</a>
-									<a href="/jeju/dining/seobji">섭지</a>
-									<a href="/jeju/dining/cozy">코지</a>
-									<a href="/jeju/dining/bbq">불턱BBQ</a>
-									<a href="/jeju/dining/moonlight">문라이트</a>
-									<a href="/jeju/dining/cozysnack">코지스넥</a>
-									<a href="/jeju/dining/blue">아일랜드블루</a>
-								</ul>
-								<ul class="column">
-								<div class="depth01" onclick="location.href=../jeju/architecture/index'">
-                            	<img src="../../jeju/_img/comn/tmn06.gif" ov_src="../jeju/_img/comn/tmn06_on.gif" _src="../jeju/_img/comn/tmn06.gif" alt="ARCHITECTURE" /></div>
-								<a href="/jeju/architecture/yumin">유민미술관</a>
-                                <a href="/jeju/architecture/glasshouse">글라스하우스</a>
-                                <a href="/jeju/architecture/agora">아고라</a>
-								</ul>
-								<ul class="column">
-								<div class="depth01" onclick="location.href=../jeju/activities/seopjireports'">
-                           		<img src="../../jeju/_img/comn/tmn04.gif" ov_src="../jeju/_img/comn/tmn04_on.gif" _src="../jeju/_img/comn/tmn04.gif" alt="ACTIVITIES" /></div>
-                                <a href="/jeju/activities/seopjireports">레저</a>
-                                <a href="/jeju/activities/kongkong">엔터테인먼트</a>
-								</ul>
-								<ul class="column">
-								<div class="depth01" onclick="location.href=..../jeju/facilities/islandballroom'">
-                            	<img src="../../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
-                                <a href="../jeju/facilities/islandballroom">연회장</a>
-                                <a href="../jeju/facilities/cswrite">연회/단체문의</a>
-                                <a href="../jeju/facilities/mintwedding">&nbsp;&nbsp;웨딩</a>
-                                <a href="../jeju/facilities/welcenter">&nbsp;&nbsp;편의</a>
-                                <a href="../jeju/facilities/shopping">&nbsp;&nbsp;쇼핑</a>
-								</ul>
+							<li class="dropbtn"><a href="../jeju/index.html"> <img
+									src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
+							<div class="dropdown-content">
+								<div class="row">
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=../../jeju/intro/info'">
+											<img src="../../jeju/_img/comn/tmn01.gif"
+												ov_src="../jeju/_img/comn/tmn01_on.gif"
+												_src="../jeju/_img/comn/tmn01.gif" alt="Intro" />
+										</div>
+										<a href="../jeju/intro/info">리조트소개</a>
+										<a href="../jeju/intro/resortmap">단지안내도</a>
+										<a href="../Site/event/event">이벤트</a>
+										</li>
+										<a href="../jeju/intro/news_letter">NEWS LETTER</a>
+										<a href="../jeju/intro/sketch">현장스케치</a>
+										<a href="../jeju/intro/golf">가이드</a>
+									</ul>
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=../jeju/accommodation/velraterrace'">
+											<img src="../../jeju/_img/comn/tmn02.gif"
+												ov_src="../jeju/_img/comn/tmn02_on.gif"
+												_src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" />
+										</div>
+										<a href="../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
+										<!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
+										<a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
+										<a href="../../jeju/accommodation/hillius">힐리우스(별장)</a>
+									</ul>
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=../jeju/dining/mint'">
+											<img src="../../jeju/_img/comn/tmn03.gif"
+												ov_src="../../jeju/_img/comn/tmn03_on.gif"
+												_src="../jeju/_img/comn/tmn03.gif" alt="DINING" />
+										</div>
+										<a href="/jeju/dining/mint">민트</a>
+										<a href="/jeju/dining/haerang">해랑</a>
+										<a href="/jeju/dining/seobji">섭지</a>
+										<a href="/jeju/dining/cozy">코지</a>
+										<a href="/jeju/dining/bbq">불턱BBQ</a>
+										<a href="/jeju/dining/moonlight">문라이트</a>
+										<a href="/jeju/dining/cozysnack">코지스넥</a>
+										<a href="/jeju/dining/blue">아일랜드블루</a>
+									</ul>
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=../jeju/architecture/index'">
+											<img src="../../jeju/_img/comn/tmn06.gif"
+												ov_src="../jeju/_img/comn/tmn06_on.gif"
+												_src="../jeju/_img/comn/tmn06.gif" alt="ARCHITECTURE" />
+										</div>
+										<a href="/jeju/architecture/yumin">유민미술관</a>
+										<a href="/jeju/architecture/glasshouse">글라스하우스</a>
+										<a href="/jeju/architecture/agora">아고라</a>
+									</ul>
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=../jeju/activities/seopjireports'">
+											<img src="../../jeju/_img/comn/tmn04.gif"
+												ov_src="../jeju/_img/comn/tmn04_on.gif"
+												_src="../jeju/_img/comn/tmn04.gif" alt="ACTIVITIES" />
+										</div>
+										<a href="/jeju/activities/seopjireports">레저</a>
+										<a href="/jeju/activities/kongkong">엔터테인먼트</a>
+									</ul>
+									<ul class="column">
+										<div class="depth01"
+											onclick="location.href=..../jeju/facilities/islandballroom'">
+											<img src="../../jeju/_img/comn/tmn05.gif"
+												ov_src="../jeju/_img/comn/tmn05_on.gif"
+												_src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" />
+										</div>
+										<a href="../jeju/facilities/islandballroom">연회장</a>
+										<a href="../jeju/facilities/cswrite">연회/단체문의</a>
+										<a href="../jeju/facilities/mintwedding">&nbsp;&nbsp;웨딩</a>
+										<a href="../jeju/facilities/welcenter">&nbsp;&nbsp;편의</a>
+										<a href="../jeju/facilities/shopping">&nbsp;&nbsp;쇼핑</a>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
 					</ul>
 					<div class="gnbmenu">
 						<ul class="gnb">
@@ -796,198 +822,16 @@
 							<div class="check f_l">
 								<div class="in_out">
 									<p class="tit" style="border-right: 1px solid #777;">체크인</p>
-
-									<!--달력-->
-									<div class="re_cal reservation_in" style="">
-										<div class="date">
-											<p class="datePrev">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_prev.png" alt="" /></a>
-											</p>
-											<p class="dateNext">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_next.png" alt="" /></a>
-											</p>
-											<p class="dateNow">2015년 8월</p>
-										</div>
-										<table class="re_cal">
-											<colgroup>
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th>sun</th>
-													<th>mon</th>
-													<th>tue</th>
-													<th>wed</th>
-													<th>thu</th>
-													<th>fri</th>
-													<th>sat</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<!--//달력-->
-
+									<!--기존 달력 체크인 달력-->
 								</div>
 								<div class="in_out" style="width: 359px;">
 									<p class="tit" style="">체크아웃</p>
-									<!--달력-->
-									<div class="re_cal reservation_out" style="">
-										<div class="date">
-											<p class="datePrev">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_prev.png" alt="" /></a>
-											</p>
-											<p class="dateNext">
-												<a href="javascript:;"><img
-													src="../../_img/bbs/cal_next.png" alt="" /></a>
-											</p>
-											<p class="dateNow">2015년 9월</p>
-										</div>
-										<table class="re_cal">
-											<colgroup>
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-												<col width="40px" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th>sun</th>
-													<th>mon</th>
-													<th>tue</th>
-													<th>wed</th>
-													<th>thu</th>
-													<th>fri</th>
-													<th>sat</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-												<tr>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-													<td class="no"></td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<!--//달력-->
+									<!--기존 체크아웃 달력-->
 								</div>
+								<!--현정, 캘린더 start-->
+								<jsp:include page="cal_index.html" />
+								<!--현정, 캘린더 end-->
+								
 								<div class="color_box">
 									<img src="../../_img/cont/sel_img.jpg" alt="" />
 									예약가능&nbsp;&nbsp;&nbsp;&nbsp; <img
@@ -1092,9 +936,10 @@
 								<p class="re_info_tit">예약자정보</p>
 								<div class="info_cont">
 									<p>
-									
+
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="caller" style="width: 100px" value="<%= re_user_id %>">
+											type="text" name="caller" style="width: 100px"
+											value="<%= re_user_id %>">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
@@ -1104,7 +949,7 @@
 								<option value="017">017</option>
 								<option value="019">019</option>
 							</select> -->
-							<%
+										<%
 							String p_first = re_user_contact.substring(0, 3);
 							String p_middle = re_user_contact.substring(4, 8);
 							String p_last = re_user_contact.substring(9,13);
@@ -1112,10 +957,10 @@
 							String e_first = re_user_email.substring(0,4);
 							%>
 										<input type="text" name="phone0" class="co_date"
-											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span> - </span> <input
-											type="text" name="phone1" class="co_date"
-											style="width: 90px;" maxlength="4" value="<%= p_middle %>"><span> - </span><input
-											type="text" name="phone2" class="co_date"
+											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span>
+											- </span> <input type="text" name="phone1" class="co_date"
+											style="width: 90px;" maxlength="4" value="<%= p_middle %>"><span>
+											- </span><input type="text" name="phone2" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_last %>">
 										<!-- <a href="javascript:;" class="btn_g">인증</a> -->
 									</p>
@@ -1216,7 +1061,8 @@
 								<select id="payHow" class="w140 f_l ml10" name="payment"
 									style="width: 170px;">
 									<option selected="selected" mcode="">계좌이체</option>
-									<option mcode="">카드결제</option></select>
+									<option mcode="">카드결제</option>
+								</select>
 								<p class="f_l ">
 									&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="co_date"
 										name="payAgreeChk"> 위약규정 사항을 확인하고
