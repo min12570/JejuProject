@@ -33,7 +33,7 @@
 									UserVO userData = null;
 		
 										userData = (UserVO)userInfo.get(0);
-										session.setAttribute("userid", userData.getUser_id());
+										session.setAttribute("userinfo", userData);
 										//세션 값 설정
 							%>
 							

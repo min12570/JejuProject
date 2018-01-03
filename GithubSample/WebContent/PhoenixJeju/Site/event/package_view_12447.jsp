@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-]
+<%@ page import="user.UserVO"  %>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta charset="utf-8" /><title>
@@ -220,9 +221,9 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 			
 			<div class="customer_top">
 			<%
-			String userid = (String)session.getAttribute("userid");
+			UserVO userinfo = (UserVO)session.getAttribute("userinfo");
 			%>
-			<h1><%= userid %>님 환영합니다.</h1>
+			<h1><%= userinfo.getUser_id() %>님 환영합니다.</h1>
 				<!-- 지윤 삭제 이벤트 제목<h2 class="event_title"><img src="../../resort/_img/bbs/package_event.png"alt="패키지&이벤트" /></h2>-->
 				<p class="ev_sub">고객님들께 더 나은 서비스를 제공하기 위해 각종 패키지와 이벤트 행사를 진행하고 있습니다.</p>
 			</div>
