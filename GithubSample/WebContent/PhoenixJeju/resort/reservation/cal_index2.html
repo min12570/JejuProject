@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <style type="text/css">
 .date-picker {
 	width: 170px;
@@ -80,7 +81,8 @@
 	cursor: default;
 	position: absolute;
 	left: 150px;
-	top: 50px;
+	top : 50px;
+
 	_overflow: hidden;
 }
 
@@ -1162,11 +1164,8 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 		}
 
 
-		//날짜 선택
 		function dayClicked(day)
 		{
-			
-		
 			if (day.hasClass('invalid')) return;
 			var time = day.attr('time');
 			day.addClass('checked');
@@ -1178,7 +1177,6 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 					changeTime("start", opt.start);
 				}
 			}
-			
 			else if  (opt.batchMode === 'week')
 			{
 				if (opt.startOfWeek === 'monday') {
@@ -1248,8 +1246,6 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 			showSelectedInfo();
 			showSelectedDays();
 			autoclose();
-			
-			
 		}
 
 		function weekNumberClicked(weekNumberDom)
@@ -1489,36 +1485,20 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 				}
 			}
 		}
-		
 
 		function showSelectedInfo(forceValid,silent)
 		{
-			
-	
 			box.find('.start-day').html('...');
 			box.find('.end-day').html('...');
 			box.find('.selected-days').hide();
 			if (opt.start)
 			{
 				box.find('.start-day').html(getDateString(new Date(parseInt(opt.start))));
-				
 			}
 			if (opt.end)
 			{
-				
-				box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));			
-			
-				//체크인, 체크아웃 날짜 변수값에 담기
-				var check_inGo = getDateString(new Date(parseInt(opt.start)));
-				var check_outGo = getDateString(new Date(parseInt(opt.end)));
-		
-			    //체크인, 체크아웃 날짜 alert
-				//alert((check_inGo) + " to " + getDateString(check_outGo));
-				
-				//체크인, 체크아웃 날짜 Jan_reSevlet.java로 보내기
-				location.href="main.jan_res?check_inGo="+check_inGo + "&check_outGo=" + check_outGo;
+				box.find('.end-day').html(getDateString(new Date(parseInt(opt.end))));
 			}
-			
 
 			if (opt.start && opt.singleDate)
 			{
@@ -1564,10 +1544,7 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 		function countDays(start,end)
 		{
 			return Math.abs( daysFrom1970(start) - daysFrom1970(end) ) + 1;
-			
 		}
-		
-	
 
 		function setDateRange(date1,date2,silent)
 		{
@@ -1831,7 +1808,6 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 				{
 					html += '<div class="normal-top">\
 							<span style="color:#333">'+lang('selected')+' </span> <b class="start-day">...</b>';
-							
 					if ( ! opt.singleDate ) {
 						html += ' <span class="separator-day">'+opt.separator+'</span> <b class="end-day">...</b> <i class="selected-days">(<span class="selected-days-num">3</span> '+lang('days')+')</i>'
 					}
