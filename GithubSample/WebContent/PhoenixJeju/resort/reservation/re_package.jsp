@@ -595,10 +595,20 @@
 
 										</p>-->
 										<%
-											if (list.size() != 0) {
-												PackageInfoVO data = null;
-												for (int i = 0; i < list.size(); i++) {
-													data = (PackageInfoVO) list.get(i);
+										int p_number = (int)request.getAttribute("p_number");
+										
+										
+										if (list.size() != 0) {
+											PackageInfoVO data = null;
+											if (p_number == 3) { //넘어 오는 값이 해랑이면
+												System.out.println("p_number = " + p_number);
+											
+												data = (PackageInfoVO)list.get(1);
+											}
+											else if (p_number == 6) { //넘어 오는 값이 스쿠버이면
+												System.out.println("p_number = " + p_number);
+												data = (PackageInfoVO)list.get(0);
+											}
 										%>
 
 										<!-- 정민 수정// db로 패키지 목록 불러오기  -->
@@ -623,7 +633,7 @@
 
 											<span><center>
 													<br> <br><%=data.getP_name()%></center></span>
-
+<% } %>
 											<div style="width: 100%">
 												<img src="../../resort/_img/comn/scuba_detail.jpg"
 													style="width: 100%; vertical-align: middle;">
@@ -776,15 +786,9 @@
 										</table>
 									</div>
 								</div>
-								<%
-									}
-									} else {
-								%>
-								<td>데이터가 없음</td>
+						
 
-								<%
-									}
-								%>
+							<!--  데이터없음 있었음 -->
 							</div>
 						</div>
 

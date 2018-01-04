@@ -6,6 +6,10 @@
  */
 var pName = [];
 var pImg = [];
+var pack_D1 = [];
+var pack_D2 = [];
+var pack_D3 = [];
+var pack_D4 = [];
 var package_number;
 function goReser(p_number){
 	packageList(p_number);
@@ -26,7 +30,11 @@ $('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
 function showPackages(Pid){
 	var img = pImg[Pid];
 	var Name = pName[Pid];
-	var imgURL = "<img src='"+img+"' style='width: 100%;' class='pkgImg'>";
+	var packD1 = pack_D1[Pid];
+	var packD2 = pack_D2[Pid];
+	var packD3 = pack_D3[Pid];
+	var packD4 = pack_D4[Pid];
+	var imgURL = "<img src='../../resort/_img/comn/" +pack_D1+"' style='width: 100%;' class='pkgImg'>";
 	$('.title').html(Name);
 	$('.fff_img').html(imgURL);
 }
@@ -52,6 +60,10 @@ function readPackageJSON(){
 		for (var j = 0; j < data.length; j++) {
 			pName.push(data[j].name);
 			pImg.push(data[j].img);
+			pack_D1.push(data[j].packD1);
+			pack_D2.push(data[j].packD2);
+			pack_D3.push(data[j].packD3);
+			pack_D4.push(data[j].packD4);
 	    }
 	});
 	alert(pName[3]);
