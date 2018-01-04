@@ -14,13 +14,14 @@ var package_number;
 function readPackageJSON(){
 	$.getJSON('../../package.json?v=1', function (data) {
 		for (var j = 0; j < data.length; j++) {
-			pName.push(data[j].name);
+			pName.push(data[j].name);  
 			pImg.push(data[j].img);
 			pack_D1.push(data[j].packD1);
 			pack_D2.push(data[j].packD2);
 			pack_D3.push(data[j].packD3);
 			pack_D4.push(data[j].packD4);
 	    }
+		
 		start();
 	});
 }
@@ -46,13 +47,15 @@ function goReser(p_number){
 function showPackages(Pid){
 	var img = pImg[Pid];
 	var Name = pName[Pid];
-	var packD1 = pack_D1[Pid];
+	var packD1 = pack_D1[Pid]; 
 	var packD2 = pack_D2[Pid];
 	var packD3 = pack_D3[Pid];
-	var packD4 = pack_D4[Pid];
+	var packD4 = pack_D4[Pid];  
 	var imgURL = "<img src='" +img+"' style='width: 100%;' class='pkgImg'>";
+	var imgUrlForHaerang = "<img src='../../resort/_img/comn/" + packD1 + "' style='width: 100%;' class='pkgImg'>";
 	$('.title').html(Name);
 	$('.fff_img').html(imgURL);
+	$('.img_haerang_detail').html(imgUrlForHaerang);
 }
 
 function reservation_chk(){

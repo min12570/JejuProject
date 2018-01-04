@@ -395,6 +395,7 @@
 
 					//토글기능 v1.0
 					$(document).ready(function() {
+						onestart();
 						$("#py_list").click(function() {
 							$("#py_ul").slideToggle("slow");
 						});
@@ -404,6 +405,9 @@
 
 						});
 					});
+					function onestart(){
+						$("#py_ul").slideToggle("slow");
+					}
 				</script>
 				<script type="text/javascript" src="../_js/pop_layer.js"></script>
 				<script type="text/javascript" src="../_js/reservation_package.js"></script>
