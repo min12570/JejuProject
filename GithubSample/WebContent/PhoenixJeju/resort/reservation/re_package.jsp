@@ -857,7 +857,7 @@
 									<div class="updown">
 										<p class="text">시설구분</p>
 										<select name="buld_cd" class="w140 ml30" style="width: 130px"
-											onchange="buldChange()">콘도
+											onchange="buldChange()"><option selected>콘도</option>
 										</select>
 									</div>
 									<div class="updown">
@@ -865,13 +865,60 @@
 										<select id="roomType" name="roomType" class="w140 ml30"
 											style="width: 130px" onchange="totalCostOp();">
 											<!-- 지윤 - totalCostOp(투숙기간) -->
-											<option selected>로얄더블온돌</option>
-											<option>로얄더블트윈</option>
-											<option>로얄트윈온돌</option>
-											<option>로얄오션온돌</option>
-											<option>로얄스위트A</option>
-											<option>로얄스위트B</option>
-											<option>로얄스위트O</option>
+											<%@page import="javax.sql.*"%>
+											<%@page import="javax.naming.*"%>
+											<%@page import="java.sql.*"%>
+											<%@page import="biz.Biz"%>
+											<% int checkIn=20180102;
+												Biz biz = new Biz();
+
+												Connection conn = null;
+												//미리 만들어 놓은 테이블의 데이터를 불러오자.
+												String sql;
+												int checkOut = 20180103;
+												int[] Empty = { 1, 1, 1, 1, 1, 1, 1 };
+												sql = "	 SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 0\r\n" + "	ELSE 1 END 	 AS D_ONDOL	 		\r\n"
+														+ "    , CASE D_TWIN WHEN D_TWIN > 0 THEN 0\r\n" + "    ELSE 1 END      AS D_TWIN\r\n"
+														+ "    , CASE T_ONDOL WHEN T_ONDOL > 0 THEN 0\r\n" + "    ELSE 1 END     AS T_ONDOL\r\n"
+														+ "    , CASE O_ONDOL WHEN O_ONDOL > 0 THEN 0\r\n" + "    ELSE 1 END     AS O_ONDOL\r\n"
+														+ "    , CASE SUITE_A WHEN SUITE_A > 0 THEN 0\r\n" + "    ELSE 1 END     AS SUITE_A\r\n"
+														+ "    , CASE SUITE_B WHEN SUITE_B > 0 THEN 0\r\n" + "    ELSE 1 END     AS SUITE_B\r\n"
+														+ "    , CASE SUITE_O WHEN SUITE_O > 0 THEN 0\r\n" + "    ELSE 1 END     AS SUITE_O\r\n"
+														+ "    FROM JAN_RES\r\n" + "    WHERE jan_day BETWEEN " + checkIn + " AND " + checkOut + "; ";
+												Context init = new InitialContext();
+												conn = (Connection) biz.getConnection();
+												conn.setAutoCommit(false);
+												try {
+
+													Statement st = (Statement) conn.createStatement();
+													ResultSet rs = null;
+													// PreparedStatement pstmt = conn.prepareStatement(sql);
+													rs = st.executeQuery(sql);
+													while (rs.next()) {
+														if (rs.getInt("D_ONDOL") == 0) Empty[0] = 0;
+														if (rs.getInt("D_TWIN") == 0) Empty[1] = 0;
+														if (rs.getInt("T_ONDOL") == 0) Empty[2] = 0;
+														if (rs.getInt("O_ONDOL") == 0) Empty[3] = 0;
+														if (rs.getInt("SUITE_A") == 0) Empty[4] = 0;
+														if (rs.getInt("SUITE_B") == 0) Empty[5] = 0;
+														if (rs.getInt("SUITE_O") == 0) Empty[6] = 0;
+													}
+													rs.close(); // 사용객체 반환
+
+												} catch (Exception e) {
+													e.printStackTrace();
+
+												}
+												String[] arr = null;
+												if (Empty[0] == 1) out.println("<option>더블온돌</option>");
+												if (Empty[1] == 1) out.println("<option>더블트윈</option>");
+												if (Empty[2] == 1) out.println("<option>트윈온돌</option>");
+												if (Empty[3] == 1) out.println("<option>오션온돌</option>");
+												if (Empty[4] == 1) out.println("<option>스위트A</option>");
+												if (Empty[5] == 1) out.println("<option>스위트B</option>");
+												if (Empty[6] == 1) out.println("<option>스위트O</option>");
+												biz.close(conn);
+											%>
 										</select>
 									</div>
 
