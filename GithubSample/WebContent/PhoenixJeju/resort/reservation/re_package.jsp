@@ -898,17 +898,34 @@
 									</p>
 								</div>
 							</div>
+					
+				
+							<script type="text/javascript">
+							function caller_copy() {
+								if (document.check_5.checkbox1.checked == true) {
+							
+									document.getElementById("text_1").value="<%=re_user_id%>";
+									document.getElementById("text_2").value="<%=p_first%>";
+									document.getElementById("text_3").value="<%=p_middle%>";
+									document.getElementById("text_4").value="<%=p_last%>";
+									document.getElementById("text_5").value="<%=e_first%>";
+									document.getElementById("text_6").value="<%=e_last%>";
+								}
+							}
+							</script>
 							<div class="">
-								<p class="tit">투숙자정보</p>
-								<div class="info_cont" style="">
-									<p class="pb5">
-										<input type="checkbox" class="co_date caller-copy"
-											onchange="caller_copy()">&nbsp;&nbsp;<span>예약자와
+							<!--  정민 수정 체크박스 선택 시 value값 지정 -->
+								<p class="tit" name="check_1">투숙자정보</p>
+								<form name="check_5">
+								<div class="info_cont" name="check_2">
+									<p class="pb5" name="check_3">
+										<input type="checkbox" name="checkbox1" class="co_date caller-copy"
+											onclick="caller_copy()" href="javascript:;">&nbsp;&nbsp;<span>예약자와
 											동일</span>
 									</p>
 									<p>
 										<span class="pr25">예약자명</span><input class="co_date"
-											type="text" name="guest_name" style="width: 100px">
+											type="text" id="text_1" name="guest_name" style="width: 100px">
 									</p>
 									<p class="mt5">
 										<span class="pr25">휴대전화</span>
@@ -918,19 +935,19 @@
 								<option value="017">017</option>
 								<option value="019">019</option>
 							</select> -->
-										<input type="text" name="gphone0" class="co_date"
+										<input type="text" name="gphone0" id="text_2" class="co_date"
 											style="width: 90px;" maxlength="4"><span> - </span> <input
-											type="text" name="gphone1" class="co_date"
+											type="text" name="gphone1" id="text_3" class="co_date"
 											style="width: 90px;" maxlength="4"><span> - </span><input
-											type="text" name="gphone2" class="co_date"
+											type="text" name="gphone2"  id="text_4"class="co_date"
 											style="width: 90px;" maxlength="4">
 										<!-- <a href="javascript:;" class="btn_g">인증</a> -->
 									</p>
 									<p class="mt5">
 										<span class="pr30">이메일</span>&nbsp; <input type="text"
-											class="co_date" name="gmail0"
+											class="co_date" name="gmail0" id="text_5"
 											style="width: 100px; margin-left: -1px;"><span>
-											@ </span><input type="text" name="gmail1" class="co_date"
+											@ </span><input type="text" id="text_6" name="gmail1" class="co_date"
 											style="width: 100px;"> <select name="gmail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'gmail1');">
@@ -942,6 +959,7 @@
 										</select>
 									</p>
 								</div>
+								</form>
 							</div>
 						</div>
 
