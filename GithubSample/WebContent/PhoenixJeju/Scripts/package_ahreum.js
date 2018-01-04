@@ -44,14 +44,17 @@ function goReser(p_number){
 	packageList(p_number);
 }
 
+var Name;
+var img;
+var imgURL;
 function showPackages(Pid){
-	var img = pImg[Pid];
-	var Name = pName[Pid];
+	img = pImg[Pid];
+	Name = pName[Pid];
 	var packD1 = pack_D1[Pid]; 
 	var packD2 = pack_D2[Pid];
 	var packD3 = pack_D3[Pid];
 	var packD4 = pack_D4[Pid];  
-	var imgURL = "<img src='" +img+"' style='width: 100%;' class='pkgImg'>";
+	imgURL = "<img src='" +img+"' style='width: 100%;' class='pkgImg' />";
 	var imgUrlForDetail = "<img src='../../resort/_img/comn/" + packD1 + "' style='width: 100%;' class='pkgImg'><br>" +
 			"<img src='../../resort/_img/comn/" + packD2 + "' style='width: 100%;' class='pkgImg'><br>" +
 					"<img src='../../resort/_img/comn/" + packD3 + "' style='width: 100%;' class='pkgImg'><br>" +
@@ -67,10 +70,11 @@ function reservation_chk(){
 	//alert(payHow);
 	if (payHow == "계좌이체") {
 		location.href='../../resort/reservation/re_package_complete.jsp';
+		$('.title').html(Name);
 	}else{
-		alert("지원하지 않는 기능입니다");
-		
+		alert("지원하지 않는 기능입니다");		
 	}
+	
 }	
 
 function packageList(p_number){

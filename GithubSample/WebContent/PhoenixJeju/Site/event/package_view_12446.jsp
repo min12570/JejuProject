@@ -21,9 +21,6 @@
         ga('create', 'UA-87590871-1', 'auto');
         ga('send', 'pageview');
     </script>
-    <script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
-<script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
-<script src="../../Scripts/package_ahreum.js" type="text/javascript"></script>
 <script src="../../Scripts/user_jm.js" type="text/javascript"></script>
 </head>
 <body>
@@ -74,13 +71,20 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 90, 'ctl00');
 //]]>
 </script>
+<script>
+function goPackageReserve1(){
+	//아름 Servlet 경로 수정
+	location.href="../../../resort/reservation/main.login?db2=userall";
+}
+
+</script>
 <link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
         <div id="wrap">
             <div id="top">
                 <div id="gnb_area">
                     <ul class="sitemenu">
                         <li><a href="/resort/intro">
-                            <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&amp;리조트"></a></li>
+                            <img src="../../pyeongchang/_img/gnb/phoenixresort_off.gif" alt="휘닉스 호텔&amp;리조트"></a></li>
                         <li><a href="../../pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창"></a></li>
                        <div class="dropdown">
@@ -103,7 +107,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 								<img src="../../jeju/_img/comn/tmn02.gif" ov_src="../jeju/_img/comn/tmn02_on.gif" _src="../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
 								<a href="../../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
                                 <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
-                                <a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
+                                <a href="javascript:;" onclick="goPackageReserve1();">패키지예약</a>
                                 <a href="../../jeju/accommodation/hillius">힐리우스(별장)</a>
 								</ul>
 								<ul class="column">
