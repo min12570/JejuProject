@@ -50,7 +50,7 @@ function showPackages(Pid){
 	var packD2 = pack_D2[Pid];
 	var packD3 = pack_D3[Pid];
 	var packD4 = pack_D4[Pid];
-	var imgURL = "<img src='../../resort/_img/comn/" +img+"' style='width: 100%;' class='pkgImg'>";
+	var imgURL = "<img src='" +img+"' style='width: 100%;' class='pkgImg'>";
 	$('.title').html(Name);
 	$('.fff_img').html(imgURL);
 }
