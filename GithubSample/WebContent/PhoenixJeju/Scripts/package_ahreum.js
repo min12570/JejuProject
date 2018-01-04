@@ -4,12 +4,12 @@
  * reservation_package.js를 참고함
  * 18/01/03 Json add
  */
-
+var pName = [];
+var pImg = [];
 var package_number;
 function goReser(p_number){
 	packageList(p_number);
 }
-
 //클릭이벤트 설정
 $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	$('.rsu_package li ul li').removeClass('on').addClass('off');
@@ -18,10 +18,14 @@ $('.rsu_package li ul li').unbind("click").bind("click",function(){
 	showPackages(id);
 });
 
+var temp;
+temp = location.href.split("&");
+temp = temp[1].split("=");
+$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
+
 function showPackages(Pid){
-	var Name = pNum[Pid];
 	var img = pImg[Pid];
-	var Name = pNum[Pid];
+	var Name = pName[Pid];
 	var imgURL = "<img src='"+img+"' style='width: 100%;' class='pkgImg'>";
 	$('.title').html(Name);
 	$('.fff_img').html(imgURL);
@@ -42,30 +46,13 @@ function packageList(p_number){
 	location.href="main.package?db=all&p_num="+p_number;
 }
 
-var pNum = [];
-var pImg = [];
 function readPackageJSON(){
-	$.getJSON('../../package.json', function (data) {
+	alert("readJSON");
+	$.getJSON('../../package.json?v=1', function (data) {
 		for (var j = 0; j < data.length; j++) {
-			pNum.push(data[j].name);
+			pName.push(data[j].name);
 			pImg.push(data[j].img);
 	    }
 	});
-	start();
-}
-
-function start(){
-	alert("왔다");
-	alert(temp);
-	//클릭이벤트 설정
-	$('.rsu_package li ul li').unbind("click").bind("click",function(){
-		$('.rsu_package li ul li').removeClass('on').addClass('off');
-		$(this).removeClass('off').addClass('on');
-		var id = $(this).attr('id');
-		showPackages(id);
-	});
-	var temp;
-	temp = location.href.split("&");
-	temp = temp[1].split("=");
-	$('.rsu_package li ul li:eq('+temp[1]+')').trigger('click');
+	alert(pName[3]);
 }
