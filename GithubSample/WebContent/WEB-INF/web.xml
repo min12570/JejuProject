@@ -25,12 +25,20 @@
     <servlet-name>Jan_res</servlet-name>
     <url-pattern>*.jan_res</url-pattern>
   </servlet-mapping>
-    <servlet>
-  	<servlet-name>User</servlet-name>
-  	<servlet-class>user.UserServlet</servlet-class>
+  <servlet>
+    <servlet-name>User</servlet-name>
+    <servlet-class>user.UserServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>User</servlet-name>
     <url-pattern>*.login</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>Reservation</servlet-name>
+    <servlet-class>reservationInfo.ReservationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Reservation</servlet-name>
+    <url-pattern>*.reservation</url-pattern>
   </servlet-mapping>
 </web-app>

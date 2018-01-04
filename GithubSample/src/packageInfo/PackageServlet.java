@@ -116,8 +116,6 @@ public class PackageServlet extends HttpServlet {
 		//정민 아 이 부분이얌!!
 		
 		next = "/PhoenixJeju/resort/reservation/re_package.jsp?p_number";
-		System.out.println(next);
-		System.out.println("디비에서 넘어온 패키지 이름" + list.get(0).getP_name());
 		RequestDispatcher rd = request.getRequestDispatcher(next);
 		rd.forward(request, response);
 	}

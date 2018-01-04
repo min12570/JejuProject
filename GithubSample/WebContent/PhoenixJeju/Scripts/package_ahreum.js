@@ -69,8 +69,7 @@ function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
 	//alert(payHow);
 	if (payHow == "계좌이체") {
-		location.href='../../resort/reservation/re_package_complete.jsp';
-		$('.title').html(Name);
+		location.href='../../resort/reservation/main.reservation?title='+Name+'&img='+img;
 	}else{
 		alert("지원하지 않는 기능입니다");		
 	}
@@ -79,4 +78,10 @@ function reservation_chk(){
 
 function packageList(p_number){
 	location.href="main.package?db=all&p_num="+p_number;
+}
+function showpackage(){
+	var temp;
+	temp = location.href.split("?");
+	temp = temp[1].split("=");
+	$('#detail_img').attr("src",temp[2]);
 }

@@ -237,11 +237,10 @@ onclick="location.href='/resort/reservation/re_coupon'">
 			<div class="last_form last_bg01 mt20">
 				<div class="result_box02">
 					<p class="re_tit" style="border-right:1px solid #777;">패키지정보</p>
-
 					<div class="img_box" >
-						<p class="f_l"><img src="../../resort/_img/comn/scuba_image.jpg" width="203px" height="120px"> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
+						<p class="f_l"><img id="detail_img" src="#" width="203px" height="120px"/> <br/> <a class="btn_g mt10" style="width:75px" href="#">상세보기</a></p>
 						<ul class="re_info" style="width:265px;">
-							<li class="title">(휘닉스 스쿠버)주중</li>
+							<li class="title" id="p_title">${title}</li>
 							<li><span>타입 : </span>콘도</li>
 							<li><span>인원 : </span>2인</li>
 							<li><span>요금 : </span>272,000원</li>
@@ -429,4 +428,7 @@ onclick="location.href='/resort/reservation/re_coupon'">
 </script>
 <script src="../../Scripts/package_ahreum.js"></script>
  <script src="../../Scripts/user_jm.js"></script>
+ <script>
+ showpackage();
+ </script>
 </html>
