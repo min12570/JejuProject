@@ -633,27 +633,25 @@
 									<div id="container_jm">
 										<div id="mask"></div>
 										<div class="window_jm" style="overflow: scroll;">
-										<ul>
-
-											<span><center>
-											
-													<br> <br><li class="title"></li></center></span>
-												
-													</ul>
+								
+										<div class="view_top">
+				<h4 class="view_hd"><li class="title"></li></h4>
+				<p class="view_hd2">
+					<span>기간</span>
+					<span class="hd_2 view_date">2017.11.01 ~ 2018.03.31</span>
+					<span class="hd_1 "> 조회수 </span>
+					<span class="hd_2 view_viewno">4,782</span>
+				</p>
+			</div>
 <% } %>
-											<div style="width: 100%">
+											<div style="width: 80%">
 												<p class="img_for_detail"></p>
 									
 											</div>
 										
 									
-											<br> <br>
-											<p
-												style="text-align: center; background: #ffffff; padding: 20px;">
-												<a href="#" class="close"><img
-													src="../../resort/_img/comn/close.png"
-													style="width: 5%; vertical-align: middle;"></a>
-											</p>
+											<br> <br> <br>
+										
 
 										</div>
 										<table border="0" cellpadding="0" cellspacing="0" width="100%">
