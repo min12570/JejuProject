@@ -77,7 +77,7 @@ function reservation_chk(){
 }	
 
 function packageList(p_number){
-	location.href="main.package?db=all&p_num="+p_number;
+	location.href="../../resort/reservation/main.package?db=all&p_num="+p_number;
 }
 function showpackage(){
 	var temp;
