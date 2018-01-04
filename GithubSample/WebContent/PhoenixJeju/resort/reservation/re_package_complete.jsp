@@ -246,11 +246,6 @@ onclick="location.href='/resort/reservation/re_coupon'">
 							<li><span>인원 : </span>2인</li>
 							<li><span>요금 : </span>272,000원</li>
 							<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
-
-							<li class="title mt10" style="width:265px;">[12/1~3/31]얼리버드_스쿠버(주중2인)</li>
-							<li><span>구성 : </span>객실+조식+실내풀스쿠버체험(50~60분)</li>
-							<li><span>안내1 : </span>- 오션뷰 요청시 3만원 추가 됩니다.</li>
-							<li><span>안내2 : </span>- 쿠폰은 체크인 시 프론트에서 제공합니다</li>
 						</ul>
 					</div>
 				</div>
