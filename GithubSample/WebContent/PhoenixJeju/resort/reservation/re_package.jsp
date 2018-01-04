@@ -150,6 +150,9 @@
 <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="../../resort/_css/datePicker.css" type="text/css" rel="stylesheet" />
+<script src="../../Scripts/jquery-1.11.2.min.js"></script>
+<script src="../../Scripts/datePicker.js"></script>
 </head>
 <body>
 		<script type="text/javascript">
@@ -680,7 +683,13 @@
 									<!--기존 체크아웃 달력-->
 								</div>
 								<!--현정, 캘린더 start-->
-								<jsp:include page="cal_index.html" />
+								<!--<jsp:include page="cal_index.html" />-->
+									<div id="wrapper">
+		<div class="demo"  style="margin: 0px;">
+			<input id="date-range12" size="40" value="">
+			<div id="date-range12-container" style="width: 456px;"></div>
+		</div>
+	</div>
 								<!--현정, 캘린더 end-->
 								
 								<div class="color_box">
@@ -730,7 +739,7 @@
 							<div class="option" style="height: 290px;">
 								<p class="tit" style="">옵션선택</p>
 								<div class="op_cont">
-								<jsp:include page = "./test.jsp"/>
+								<!--<jsp:include page = "./test.jsp"/>-->
 									<!-- <<div class="updown">
 										<p class="text">시설구분</p>
 										<select name="buld_cd" class="w140 ml30" style="width: 130px"
