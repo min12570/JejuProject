@@ -38,7 +38,6 @@
 			totalCost = totalCost + (66000 * num);//인원 수 만큼 더해 줌
 			//b는 id = 'b'
 		} else if ((people_num - document.getElementById("peopleNumId").value) < 0) {//인원수 줄어들면
-			alert("minus");
 			totalCost = document.getElementById("costId").value;//현재 요금 가져옴
 			num = (document.getElementById("peopleNumId").value - people_num);//인원 차이 구함
 			totalCost = totalCost - (66000 * num);//인원 수 만큼 빼줌
@@ -151,6 +150,8 @@
 <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <meta name="viewport" content="width=device-width" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link href="../../resort/_css/datePicker.css" type="text/css" rel="stylesheet" />
+<script src="../../Scripts/jquery-1.11.2.min.js"></script>
 </head>
 <body>
 		<script type="text/javascript">
@@ -420,13 +421,13 @@
 							<p class="cus_sub">고객님들의 예약을 빠르게 처리해 드리겠습니다.</p>
 
 							<input type="hidden" name="ctl00$MainContent$cyberId"
-								id="MainContent_cyberId" value="wlwl8469" /> <input
+								id="MainContent_cyberId" /> <input
 								type="hidden" name="ctl00$MainContent$cust_no"
-								id="MainContent_cust_no" value="01178615" /> <input
+								id="MainContent_cust_no"/> <input
 								type="hidden" name="ctl00$MainContent$email"
-								id="MainContent_email" value="wlwl8469@naver.com" /> <input
+								id="MainContent_email" /> <input
 								type="hidden" name="ctl00$MainContent$mobile"
-								id="MainContent_mobile" value="01091298469" />
+								id="MainContent_mobile"  />
 						</div>
 
 						<ul class="re_tab">
@@ -681,7 +682,12 @@
 									<!--기존 체크아웃 달력-->
 								</div>
 								<!--현정, 캘린더 start-->
-								<jsp:include page="cal_index.html" />
+									<div id="wrapper">
+		<div class="demo"  style="margin: 0px;">
+			<input id="date-range12" size="40" value="">
+			<div id="date-range12-container" style="width: 456px;"></div>
+		</div>
+	</div>
 								<!--현정, 캘린더 end-->
 								
 								<div class="color_box">
@@ -731,7 +737,6 @@
 							<div class="option" style="height: 290px;">
 								<p class="tit" style="">옵션선택</p>
 								<div class="op_cont">
-								<jsp:include page = "./test.jsp"/>
 									<!-- <<div class="updown">
 										<p class="text">시설구분</p>
 										<select name="buld_cd" class="w140 ml30" style="width: 130px"
@@ -855,7 +860,7 @@
 							String p_last = re_user_contact.substring(9,13);
 							
 							String e_first = re_user_email.substring(0,5);
-							String e_last = re_user_email.substring(6,11);
+							String e_last = re_user_email.substring(6,15);
 							%>
 										<input type="text" name="phone0" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span>
@@ -934,10 +939,12 @@
 										<!-- <a href="javascript:;" class="btn_g">인증</a> -->
 									</p>
 									<p class="mt5">
-										<span class="pr30">이메일</span>&nbsp; <input type="text"
-											class="co_date" name="gmail0" id="text_5"
+										<span class="pr30">이메일</span>&nbsp; 
+										<input type="text" class="co_date"
+											 name="gmail0" id="text_5"
 											style="width: 100px; margin-left: -1px;"><span>
-											@ </span><input type="text" id="text_6" name="gmail1" class="co_date"
+											@ </span>
+											<input type="text"  class="co_date" id="text_6" name="gmail1" 
 											style="width: 100px;"> <select name="gmail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'gmail1');">
@@ -1169,7 +1176,7 @@
 				$(this).hide();
 			});
 		});
-
+  
 	});
 	$(document).ready(function() {
 		$("#subDepth4").mouseover(function() {
@@ -1189,6 +1196,7 @@
 </script>
 
 <script src="../../Scripts/package_ahreum.js"></script>
+<script src="../../Scripts/datePicker.js"></script>
 <script>
 readPackageJSON();
 </script>

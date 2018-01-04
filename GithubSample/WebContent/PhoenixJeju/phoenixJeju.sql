@@ -131,7 +131,7 @@ select * from package;
 
 -- User 데이터 삽입
 INSERT INTO `users` (`user_id`, `user_pw`, `user_email`, `user_contact`) VALUES
-	('조인스', '1234', 'joins@emai.com', '010-1111-2222'),
+	('조인스', '1234', 'joins@email.com', '010-1111-2222'),
 	('김아름', '1234', 'kar@email.com', '010-3333-4444'),
 	('김정민', '1234', 'kjm@email.com', '010-4444-5555'),
 	('정지윤', '1234', 'jjy@email.com', '010-2222-4444'),
