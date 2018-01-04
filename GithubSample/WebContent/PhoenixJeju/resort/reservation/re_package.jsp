@@ -514,8 +514,7 @@
 							<div class="sel_box">
 								<p class="form_tit">패키지 선택</p>
 								<ul class="sel_list rsu_package">
-									<li class="on" id="py_list"><a href="javascript:;"
-										class="top_none">휘닉스 평창</a>
+									<li class="on"><a href="javascript:;" id="py_list" class="top_none">휘닉스 평창</a>
 										<ul class="list" id="py_ul">
 											<li class="off"id=0><a href="javascript:;" code="0-0">-
 													(스파)블루캐니언</a></li>
@@ -526,7 +525,7 @@
 											<li class="off" id=2><a href="javascript:;" code="0-2">-
 													스키PLUS</a></li>
 										</ul></li>
-									<li class="on" id="jeju_list"><a href="javascript:;"
+									<li class="on"><a href="javascript:;" id="jeju_list"
 										class="">휘닉스 제주</a>
 										<ul class="list" id="jeju_ul">
 											<li class="off" id=3><a href="javascript:;" code="1-0">-
