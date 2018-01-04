@@ -12,7 +12,7 @@ var pack_D3 = [];
 var pack_D4 = [];
 var package_number;
 function readPackageJSON(){
-	$.getJSON('../../package.json?v=1', function (data) {
+	$.getJSON('../../package.json?v=2', function (data) {
 		for (var j = 0; j < data.length; j++) {
 			pName.push(data[j].name);  
 			pImg.push(data[j].img);

@@ -399,7 +399,7 @@
 						$("#py_list").click(function() {
 							$("#py_ul").slideToggle("slow");
 						});
-
+						
 						$("#jeju_list").click(function() {
 							$("#jeju_ul").slideToggle("slow");
 
