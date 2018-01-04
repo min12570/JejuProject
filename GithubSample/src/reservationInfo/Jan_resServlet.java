@@ -49,7 +49,6 @@ public class Jan_resServlet extends HttpServlet {
 		
 		String check_inGo = request.getParameter("check_inGo");
 		String check_outGo = request.getParameter("check_outGo");
-		String pv = request.getParameter("pv");
 		//location.href="main.jan_res?db3=selectNalja?check_inGo="+check_inGo + "&check_outGo=" + check_outGo;
 System.out.println(check_inGo+","+check_outGo);
 		// 2018-01-01에서 '-'값 제거 ex)20180101
@@ -58,7 +57,7 @@ System.out.println(check_inGo+","+check_outGo);
 
 		// 체크인 to 체크아웃 값 콘솔에서 확인
 		System.out.println(check_in + " to " + check_out);
-		if(db3.equals("selectNalja")&&pv.equals("T")) {
+		if(db3.equals("selectNalja")) {
 			System.out.println("jan_DB");
 			Connection con = (Connection) biz.getConnection();			
 			Statement st = null;
@@ -153,11 +152,11 @@ System.out.println(check_inGo+","+check_outGo);
 			//next = "./syncSelect.jsp";//resort/reservation/re_package.jsp";
 		}
 		//request.getRequestDispatcher(next);
-		if(pv.equals("T")) {
+
 		 ServletContext context =getServletContext();
         RequestDispatcher dispatcher = context.getRequestDispatcher("/PhoenixJeju/resort/reservation/syncSelect.jsp"); //넘길 페이지 주소
         dispatcher.forward(request, response);
-		}
+		
 	//	System.out.println(next);
 	//	RequestDispatcher rd = request.getRequestDispatcher(next);
 	//	rd.forward(request, response);
