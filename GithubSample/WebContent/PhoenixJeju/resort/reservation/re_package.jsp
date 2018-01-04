@@ -644,8 +644,10 @@
 				</p>
 			</div>
 <% } %>
-											<div style="width: 80%">
-												<p class="img_for_detail"></p>
+
+											<div style="width: 100%" align="center" >
+											<br><br>
+												<p align="center" class="img_for_detail"></p>
 									
 											</div>
 										

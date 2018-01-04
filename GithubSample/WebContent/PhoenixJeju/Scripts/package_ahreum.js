@@ -55,10 +55,10 @@ function showPackages(Pid){
 	var packD3 = pack_D3[Pid];
 	var packD4 = pack_D4[Pid];  
 	imgURL = "<img src='" +img+"' style='width: 100%;' class='pkgImg' />";
-	var imgUrlForDetail = "<img src='../../resort/_img/comn/" + packD1 + "' style='width: 100%;' class='pkgImg'><br>" +
-			"<img src='../../resort/_img/comn/" + packD2 + "' style='width: 100%;' class='pkgImg'><br>" +
-					"<img src='../../resort/_img/comn/" + packD3 + "' style='width: 100%;' class='pkgImg'><br>" +
-							"<img src='../../resort/_img/comn/" + packD4 + "' style='width: 100%;' class='pkgImg'><br>";
+	var imgUrlForDetail = "<img src='../../resort/_img/comn/" + packD1 + "' style='width: 90%;' class='pkgImg'><br>" +
+			"<img src='../../resort/_img/comn/" + packD2 + "' style='width: 90%;' class='pkgImg'><br>" +
+					"<img src='../../resort/_img/comn/" + packD3 + "' style='width: 90%;' class='pkgImg'><br>" +
+							"<img src='../../resort/_img/comn/" + packD4 + "' style='width: 90%;' class='pkgImg'><br>";
 	$('.title').html(Name);
 	$('.fff_img').html(imgURL);
 	$('.img_for_detail').html(imgUrlForDetail);
