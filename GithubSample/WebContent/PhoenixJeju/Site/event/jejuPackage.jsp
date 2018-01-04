@@ -80,6 +80,7 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 <script src="../../ScriptResource.axd?d=Ft0qnPitlPXzUEL4OBoLnVNtlvGq6bOBIHnwkGkYstea3LntMQf8VqDNNibttCmmwW7OPPOPWgXyk4FldDxiVCPI5gt8czKr0Z2UJkGWatHzMpwpMqS0LM1ixJ5JiIJkujCAcZtdghnQ3MQqC1IuBXTUvFSZ8uTbAQ8KrUfe38rWA4yz0&amp;t=3d6efc1f" type="text/javascript"></script>
 <script src="../../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
 <script src="../../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
+<script src="../../Scripts/package_ahreum.js"></script>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CBA2E6C2" />
@@ -119,7 +120,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ctl12', 'ctl01', [], [], [], 
 								<img src="../../PhoenixJeju/jeju/_img/comn/tmn02.gif" ov_src="../../jeju/_img/comn/tmn02_on.gif" _src="../../jeju/_img/comn/tmn02.gif" alt="ACCOMMODATION" /></div>
 								<a href="../../jeju/accommodation/velraterrace">벨라테라스(콘도)</a>
                                 <!-- <a id ="jejuPackageReserve()" href="javascript:;">패키지예약</a> -->
-                                <a href="javascript:;" onclick="goPackageReserve();">패키지예약</a>
+                                <a href="javascript:;" onclick="goPackageReserve1();">패키지예약</a>
                                 <a href="../jeju/accommodation/hillius">힐리우스(별장)</a>
 								</ul>
 								<ul class="column">

@@ -65,7 +65,6 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 클라이언트 �
 <script src="/ScriptResource.axd?d=Ft0qnPitlPXzUEL4OBoLnVNtlvGq6bOBIHnwkGkYstea3LntMQf8VqDNNibttCmmwW7OPPOPWgXyk4FldDxiVCPI5gt8czKr0Z2UJkGWatHzMpwpMqS0LM1ixJ5JiIJkujCAcZtdghnQ3MQqC1IuBXTUvFSZ8uTbAQ8KrUfe38rWA4yz0&amp;t=3d6efc1f" type="text/javascript"></script>
 <script src="../../Scripts/jquery-1.8.2.js" type="text/javascript"></script>
 <script src="../../Scripts/jquery-ui-1.8.24.js" type="text/javascript"></script>
-<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
 <div class="aspNetHidden">
 
 	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="466ED907" />
@@ -87,12 +86,12 @@ function goPackageReserve1(){
                 <div id="gnb_area">
                     <ul class="sitemenu">
                         <li><a href="/resort/intro">
-                            <img src="../../pyeongchang/_img/gnb/phoenixresort_on.gif" alt="휘닉스 호텔&리조트" /></a></li>
+                            <img src="../../pyeongchang/_img/gnb/phoenixresort_off.gif" alt="휘닉스 호텔&리조트" /></a></li>
                         <li><a href="/pyeongchang/index">
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
                         <div class="dropdown">
                         <li class="dropbtn"><a href="../../jeju/index.html">
-                            <img src="../../pyeongchang/_img/gnb/islandmenu_off.gif" alt="휘닉스 제주" /></a></li>
+                            <img id="jeju_img" src="../../pyeongchang/_img/gnb/islandmenu_on.gif"  onmouseover="this.src='../../pyeongchang/_img/gnb/islandmenu_on.gif'" onmouseout="this.src='../../pyeongchang/_img/gnb/islandmenu_off.gif'" alt="휘닉스 제주" /></a></li>
 						<div class="dropdown-content">
 							<div class="row">
 								<ul class="column">
@@ -139,7 +138,7 @@ function goPackageReserve1(){
                                 <a href="/jeju/activities/kongkong">엔터테인먼트</a>
 								</ul>
 								<ul class="column">
-								<div class="depth01" onclick="location.href=..../jeju/facilities/islandballroom'">
+								<div class="depth01" onclick="location.href=..././jeju/facilities/islandballroom'">
                             	<img src="../jeju/_img/comn/tmn05.gif" ov_src="../jeju/_img/comn/tmn05_on.gif" _src="../jeju/_img/comn/tmn05.gif" alt="FACILITIES" /></div>
                                 <a href="../jeju/facilities/islandballroom">연회장</a>
                                 <a href="../jeju/facilities/cswrite">연회/단체문의</a>
@@ -190,7 +189,7 @@ function goPackageReserve1(){
             <section class="content-wrapper main-content clear-fix">
                 
   				<link href="../../resort/_css/cont.css" type="text/css" rel="stylesheet">
-  				<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet">
+  				<link href="../../resort/_css/ahreum.css" type="text/css" rel="stylesheet"/>
 		<script type="text/javascript" src="../_js/reservation_package_complete.js"></script>
     <div id="wrap">		
     		<div id="container">
@@ -433,5 +432,6 @@ onclick="location.href='/resort/reservation/re_coupon'">
 
     });
 </script>
+<script src="../../Scripts/package_ahreum.js"></script>
  <script src="../../Scripts/user_jm.js"></script>
 </html>
