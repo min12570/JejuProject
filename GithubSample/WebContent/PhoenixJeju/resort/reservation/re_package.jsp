@@ -628,9 +628,13 @@
 									<div i치d="container_jm">
 										<div id="mask"></div>
 										<div class="window_jm" style="overflow: scroll;">
+										<ul>
 
 											<span><center>
-													<br> <br><%=data.getP_name()%></center></span>
+											
+													<br> <br><li class="title"></li></center></span>
+												
+													</ul>
 <% } %>
 											<div style="width: 100%">
 												<img src="../../resort/_img/comn/scuba_detail.jpg"
