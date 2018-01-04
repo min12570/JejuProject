@@ -38,7 +38,6 @@
 			totalCost = totalCost + (66000 * num);//인원 수 만큼 더해 줌
 			//b는 id = 'b'
 		} else if ((people_num - document.getElementById("peopleNumId").value) < 0) {//인원수 줄어들면
-			alert("minus");
 			totalCost = document.getElementById("costId").value;//현재 요금 가져옴
 			num = (document.getElementById("peopleNumId").value - people_num);//인원 차이 구함
 			totalCost = totalCost - (66000 * num);//인원 수 만큼 빼줌
