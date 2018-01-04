@@ -873,7 +873,7 @@
 												String sql;
 												int checkOut = 20180103;
 												int[] Empty = { 1, 1, 1, 1, 1, 1, 1 };
-												sql = "	SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 0\r\n" + "	ELSE 1 END 	 AS D_ONDOL	 		\r\n"
+												sql = "	 SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 0\r\n" + "	ELSE 1 END 	 AS D_ONDOL	 		\r\n"
 														+ "    , CASE D_TWIN WHEN D_TWIN > 0 THEN 0\r\n" + "    ELSE 1 END      AS D_TWIN\r\n"
 														+ "    , CASE T_ONDOL WHEN T_ONDOL > 0 THEN 0\r\n" + "    ELSE 1 END     AS T_ONDOL\r\n"
 														+ "    , CASE O_ONDOL WHEN O_ONDOL > 0 THEN 0\r\n" + "    ELSE 1 END     AS O_ONDOL\r\n"
