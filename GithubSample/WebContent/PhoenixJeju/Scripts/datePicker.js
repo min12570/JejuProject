@@ -20,7 +20,7 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 		factory(jQuery, moment);
 	}
 }(function ($, moment)
-{
+		{
 
 $.dateRangePickerLanguages =
 {
