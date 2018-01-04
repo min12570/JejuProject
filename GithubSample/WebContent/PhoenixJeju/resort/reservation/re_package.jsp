@@ -351,6 +351,7 @@
 			</div>
 
 			<section class="content-wrapper main-content clear-fix">
+			
 				<!-- 정민 수정 css복구 -->
 				<link href="../../resort/_css/cont.css" type="text/css"
 					rel="stylesheet">
@@ -498,7 +499,7 @@
 							String re_user_pw = userinfo1.getUser_pw();
 							String re_user_email = userinfo1.getUser_email();
 							String re_user_contact = userinfo1.getUser_contact();
-			%>
+							%>
 
 							<p class="f_l font_b14 ml25 "
 								style="width: 250px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
@@ -595,10 +596,22 @@
 
 										</p>-->
 										<%
+										int p_number = (int)request.getAttribute("p_number");
+										
+	
 											if (list.size() != 0) {
 												PackageInfoVO data = null;
-												for (int i = 0; i < list.size(); i++) {
-													data = (PackageInfoVO) list.get(i);
+												if (p_number == 3) { //넘어 오는 값이 해랑이면
+													System.out.println("p_number = " + p_number);
+												
+													data = (PackageInfoVO)list.get(1);
+												}
+												else if (p_number == 6) { //넘어 오는 값이 스쿠버이면
+													System.out.println("p_number = " + p_number);
+													data = (PackageInfoVO)list.get(0);
+												}
+												//for (int i = 0; i < list.size(); i++) {
+												//	data = (PackageInfoVO) list.get(i);
 										%>
 
 										<!-- 정민 수정 JSON 객체 생성 -->
@@ -613,9 +626,10 @@
 										</script>
 
 										<!-- 정민 수정// db로 패키지 목록 불러오기  -->
+										
 										<!-- 아름 수정 JSON 이용 -->
 										<ul class="re_info" style="width: 265px;">
-											<li class="title"></li>
+											<li class="title"><%= data.getP_name() %></li>
 											<li><span>타입 : </span>콘도, 호텔, 호스텔</li>
 											<li id='peopleNumId' value='2'><span>인원 : </span><span
 												id='peopleText'>2인</span></li>
@@ -628,9 +642,9 @@
 
 									</div>
 								</div>
-								<!-- 정민 수정 // 레이어 팝업 시도 -->
+								<!-- 정민 수정 // 레이어 팝업 자세히보기  -->
 								<div id="wrap_jm">
-									<div i치d="container_jm">
+									<div id="container_jm">
 										<div id="mask"></div>
 										<div class="window_jm" style="overflow: scroll;">
 
@@ -789,15 +803,7 @@
 										</table>
 									</div>
 								</div>
-								<%
-									}
-									} else {
-								%>
-								<td>데이터가 없음</td>
-
-								<%
-									}
-								%>
+							<%} %>
 							</div>
 						</div>
 
