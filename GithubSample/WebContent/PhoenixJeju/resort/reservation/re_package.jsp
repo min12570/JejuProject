@@ -153,17 +153,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
 <body>
-
-
-	<form method="post" action="./re_package" id="ctl01">
-		<div class="aspNetHidden">
-			<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
-			<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT"
-				value="" /> <input type="hidden" name="__VIEWSTATE"
-				id="__VIEWSTATE"
-				value="1d3dTk/vfMjc3e8GFjWal9aHaGv58Tvqhq4c3h6on5imNTqS3Dhsf4ir3Wz8EvS38Gjh7NEl4CyJ5w72jIOf0LZft9B1GvtcJqFlQ0sADpHEWoTT5dMX0/L7k9gxvbxwz/NBy2UUg+Tx+6N1acBWjPGBuvYfQAPgr4tsYnyPNg6DfekNFjaLeFxq/3i0hXm0UIIsURZJlKhHSLFLZycrU+ai/lzdDc3yieE61dRbG7PwSw+Rz30GcNGFqPqd8NR62nyXlzskN9lvOqN7NT5GpnMHO1iw+V86IkYzLjj0Usrh0wNYBF1jPDjMSgVC8PW+wiIbIhMpIwbZMCBTjw7qgUMYJy80oql7+8VxnKhcBulHxc4sD9c5cpqLGkbXfnnFtrAZGqQjfoyW9IdFunkUx+FAeqNhiMBrqgLPJmURK9tI94Z1Tiue48VPMWhmc6jlcpbb6NGQDAlICiGZte6HM4rdxCGT6J7ZOUYLe4CBdlyrAmaBlYyJmmQPm1wwHVZWAWEyxxnWJqIjF7F3g3SoyyjtSQFfR0ObChU1nDqIhE6w8s7ZDzxOz+xRyjw35fqVf6PFYmiBY5wQ/6lRwakFKwzyggb2pJCHe4YlFw==" />
-		</div>
-
 		<script type="text/javascript">
 			//<![CDATA[
 			var theForm = document.forms['ctl01'];
@@ -742,12 +731,13 @@
 							<div class="option" style="height: 290px;">
 								<p class="tit" style="">옵션선택</p>
 								<div class="op_cont">
-									<div class="updown">
+								<jsp:include page = "./test.jsp"/>
+									<!-- <<div class="updown">
 										<p class="text">시설구분</p>
 										<select name="buld_cd" class="w140 ml30" style="width: 130px"
 											onchange="buldChange()"><option selected>콘도</option>
 										</select>
-									</div>
+									</div> -->
 									<div class="updown">
 										<p class="text">객실타입</p>
 										<select id="roomType" name="roomType" class="w140 ml30"
@@ -1146,7 +1136,6 @@
 				</div>
 			</div>
 		</div>
-	</form>
 	<form name="custom">
 		<input type="hidden" name="folio">
 	</form>
