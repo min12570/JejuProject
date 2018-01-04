@@ -420,13 +420,13 @@
 							<p class="cus_sub">고객님들의 예약을 빠르게 처리해 드리겠습니다.</p>
 
 							<input type="hidden" name="ctl00$MainContent$cyberId"
-								id="MainContent_cyberId" value="wlwl8469" /> <input
+								id="MainContent_cyberId" /> <input
 								type="hidden" name="ctl00$MainContent$cust_no"
-								id="MainContent_cust_no" value="01178615" /> <input
+								id="MainContent_cust_no"/> <input
 								type="hidden" name="ctl00$MainContent$email"
-								id="MainContent_email" value="wlwl8469@naver.com" /> <input
+								id="MainContent_email" /> <input
 								type="hidden" name="ctl00$MainContent$mobile"
-								id="MainContent_mobile" value="01091298469" />
+								id="MainContent_mobile"  />
 						</div>
 
 						<ul class="re_tab">
@@ -855,7 +855,7 @@
 							String p_last = re_user_contact.substring(9,13);
 							
 							String e_first = re_user_email.substring(0,5);
-							String e_last = re_user_email.substring(6,11);
+							String e_last = re_user_email.substring(6,15);
 							%>
 										<input type="text" name="phone0" class="co_date"
 											style="width: 90px;" maxlength="4" value="<%= p_first %>"><span>
@@ -934,10 +934,12 @@
 										<!-- <a href="javascript:;" class="btn_g">인증</a> -->
 									</p>
 									<p class="mt5">
-										<span class="pr30">이메일</span>&nbsp; <input type="text"
-											class="co_date" name="gmail0" id="text_5"
+										<span class="pr30">이메일</span>&nbsp; 
+										<input type="text" class="co_date"
+											 name="gmail0" id="text_5"
 											style="width: 100px; margin-left: -1px;"><span>
-											@ </span><input type="text" id="text_6" name="gmail1" class="co_date"
+											@ </span>
+											<input type="text"  class="co_date" id="text_6" name="gmail1" 
 											style="width: 100px;"> <select name="gmail2"
 											class="w140" style="width: 120px"
 											onchange="valcopy(this.value,'gmail1');">
