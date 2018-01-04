@@ -1,9 +1,9 @@
 [{"id":0,"name":"(스파)블루캐니언","img":"http://www.phoenixpark.co.kr/file/resort/Package/594.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
 {"id":1,"name":"스키","img":"http://www.phoenixpark.co.kr/file/resort/Package/644.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
 {"id":2,"name":"스키PLUS","img":"http://www.phoenixpark.co.kr/file/resort/Package/649.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
-{"id":3,"name":"맛있는 해랑","img":"http://www.phoenixpark.co.kr/file/resort/Package/447.jpg","cost":230000,"packD1":"haerang_detail.jpg","packD2":"haerang_room_price.png","packD3":"haerang_detail_info.png","packD4":"res_information.jpg"},
+{"id":3,"name":"맛있는 해랑","img":"http://www.phoenixpark.co.kr/file/resort/Package/447.jpg","cost":230000,"packD1":"haerang_detail.jpg","packD2":"haerang_room_price.PNG","packD3":"haerang_detail_info.PNG","packD4":"res_information.PNG"},
 {"id":4,"name":"유민미술관패키지","img":"http://www.phoenixpark.co.kr/file/resort/Package/463.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
 {"id":5,"name":"릴렉싱테라피","img":"http://www.phoenixpark.co.kr/file/resort/Package/638.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
-{"id":6,"name":"휘닉스 스쿠버","img":"http://www.phoenixpark.co.kr/file/resort/Package/797.jpg","cost":302000,"packD1":"scuba_detail.jpg","packD2":"scuba_room_price.png","packD3":"scuba_detail_info.png","packD4":"res_information.jpg"},
+{"id":6,"name":"휘닉스 스쿠버","img":"http://www.phoenixpark.co.kr/file/resort/Package/797.jpg","cost":302000,"packD1":"scuba_detail.jpg","packD2":"scuba_room_price.PNG","packD3":"scuba_detail_info.PNG","packD4":"res_information.PNG"},
 {"id":7,"name":"수영장사우나패키지","img":"http://www.phoenixpark.co.kr/file/resort/Package/835.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
 {"id":8,"name":"민트하우스그릴패키지","img":"http://www.phoenixpark.co.kr/file/resort/Package/836.jpg","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"}]
