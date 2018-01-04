@@ -73,15 +73,13 @@
 }
 
 .date-picker-wrapper .month-wrapper {
-	border: 1px solid #bfbfbf;
-	border-radius: 3px;
-	background-color: #fff;
-	padding: 40px;
-	cursor: default;
-	position: absolute;
-	left: 100px;
-	top: 30px;
-	_overflow: hidden;
+    width: 650px;
+    left: 0px;
+    top: 0px;
+    height: 600px;
+    background-color: #fff;
+    cursor: default;
+    position: absolute;
 }
 
 .date-picker-wrapper .month-wrapper table {
@@ -379,7 +377,7 @@
 	display: none;
 	background-color: yellow;
 	padding: 0 6px;
-	border-radius: 2px;
+	border-radius: 50px;
 	font-size: 12px;
 	line-height: 16px;
 	-webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, .3));
@@ -416,6 +414,10 @@
 .date-picker-wrapper .week-number.week-number-selected {
 	color: #4499EE;
 	font-weight: bold;
+}
+.month-wrapper{
+width: 800px;
+    padding-left: 20px;
 }
 </style>
 
@@ -1052,7 +1054,8 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 			var w1 = box.find('.month1').width();
 			var w2 = box.find('.gap').width() + ( gapMargin ? gapMargin*2 : 0 );
 			var w3 = box.find('.month2').width();
-			box.find('.month-wrapper').width(w1 + w2 + w3);
+			//아름
+			box.find('.month-wrapper').width("750px");
 		}
 
 		function renderTime (name, date) {
@@ -1846,12 +1849,12 @@ Nd.preparse=Zb,Nd.postformat=Zb,Nd._relativeTime=Md,Nd.relativeTime=$b,Nd.pastFu
 
 			var _colspan = opt.showWeekNumbers ? 6 : 5;
 			html += '<div class="month-wrapper">'
-				+'<table class="month1" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:27px;"><span class="prev">&lt;</span></th><th colspan="'+_colspan+'" class="month-name"></th><th style="width:27px;">' + (opt.singleDate || !opt.stickyMonths ? '<span class="next">&gt;</span>': '') + '</th></tr><tr class="week-name">'+getWeekHead()+'</thead><tbody></tbody></table>';
+				+'<table class="month1" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:45px;"><span class="prev">&lt;</span></th><th colspan="'+_colspan+'" class="month-name"></th><th style="width:27px;">' + (opt.singleDate || !opt.stickyMonths ? '<span class="next">&gt;</span>': '') + '</th></tr><tr class="week-name">'+getWeekHead()+'</thead><tbody></tbody></table>';
 
 			if ( hasMonth2() )
 			{
 				html += '<div class="gap">'+getGapHTML()+'</div>'
-					+'<table class="month2" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:27px;">' + (!opt.stickyMonths ? '<span class="prev">&lt;</span>': '') + '</th><th colspan="'+_colspan+'" class="month-name"></th><th style="width:27px;"><span class="next">&gt;</span></th></tr><tr class="week-name">'+getWeekHead()+'</thead><tbody></tbody></table>'
+					+'<table class="month2" cellspacing="0" border="0" cellpadding="0"><thead><tr class="caption"><th style="width:45px;">' + (!opt.stickyMonths ? '<span class="prev">&lt;</span>': '') + '</th><th colspan="'+_colspan+'" class="month-name"></th><th style="width:27px;"><span class="next">&gt;</span></th></tr><tr class="week-name">'+getWeekHead()+'</thead><tbody></tbody></table>'
 			}
 				//+'</div>'
 			html +=	'<div style="clear:both;height:0;font-size:0;"></div>'
@@ -2280,12 +2283,61 @@ $(function()
 	background-color: #eee;
 	border-radius: 4px;
 }
+.date-picker-wrapper .month-wrapper {
+    width: 750px;
+}
+.date-picker-wrapper .month-wrapper table {
+    width: 300px;
+    height: 360px;
+    float: left;
+    table-layout: fixed;
+}
+.date-picker-wrapper .month-wrapper table th{
+
+}
+.date-picker-wrapper table .caption th{
+font-size: 15px;
+}
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid {
+	margin-left:9px;
+	color: #333;
+	cursor: pointer;
+}
+
+.date-picker-wrapper .month-wrapper table.month2{
+width: 300px;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.valid{
+    margin-left: 9px;
+    color: #333;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 20px;
+}
+    .date-picker-wrapper .first-date-selected{
+    border-radius: 50px;  
+    }
+    .date-picker-wrapper .month-wrapper table .day.toMonth.hovering{
+    border-radius: 50px;
+    }
+    .date-picker-wrapper .last-date-selected {
+    border-radius: 50px;
+}
+
+
+.date-picker-wrapper .month-wrapper table .day.real-today.checked,
+	.date-picker-wrapper .month-wrapper table .day.real-today.hovering {
+	   border-radius: 50px;
+	}
 </style>
 </head>
 <body>
 
 	<div id="wrapper">
-		<div class="demo">
+		<div class="demo"  style="margin: 0px;">
 			<input id="date-range12" size="40" value="">
 			<div id="date-range12-container" style="width: 456px;"></div>
 		</div>
