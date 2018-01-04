@@ -4,12 +4,12 @@
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="user.UserVO"%>
 <!-- <jsp:useBean id="packList2" scope="request" class="packageInfo.PackageServlet" /> -->
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
+
 <title>휘닉스 호텔앤드리조트 | PHOENIX HOTELS &amp; RESORTS</title>
 <!-- 지윤 체크박스 데이터에 따라 값 변경 -->
 <script language="javascript">
@@ -601,17 +601,6 @@
 													data = (PackageInfoVO) list.get(i);
 										%>
 
-										<!-- 정민 수정 JSON 객체 생성 -->
-
-										<script>
-											$(function() {
-											$("#clickPackage").click(function() {
-											var packageArray = new Array();
-											var packageInfo = new Object();
-										packageInfo.p_name =<%=data.getP_name()%>
-											packageInfo.p_personCnt = "2";})});
-										</script>
-
 										<!-- 정민 수정// db로 패키지 목록 불러오기  -->
 										<!-- 아름 수정 JSON 이용 -->
 										<ul class="re_info" style="width: 265px;">
@@ -624,8 +613,6 @@
 											<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
 
 										</ul>
-
-
 									</div>
 								</div>
 								<!-- 정민 수정 // 레이어 팝업 시도 -->
@@ -1303,4 +1290,7 @@
 </script>
 
 <script src="../../Scripts/package_ahreum.js"></script>
+<script>
+readPackageJSON();
+</script>
 </html>

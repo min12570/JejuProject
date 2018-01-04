@@ -1,7 +1,7 @@
-[{"id":0,"name":"not","img":"null","cost":0},
-{"id":1,"name":"not","img":"null","cost":0},
-{"id":2,"name":"not","img":"null","cost":0},
-{"id":3,"name":"맛있는 해랑","img":"http://www.phoenixpark.co.kr/file/resort/Package/447.jpg","cost":230000},
-{"id":4,"name":"not","img":"null","cost":0},
-{"id":5,"name":"not","img":"null","cost":0},
-{"id":6,"name":"휘닉스 스쿠버","img":"http://www.phoenixpark.co.kr/file/resort/Package/797.jpg","cost":302000}]
+[{"id":0,"name":"not","img":"null","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
+{"id":1,"name":"not","img":"null","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
+{"id":2,"name":"not","img":"null","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
+{"id":3,"name":"맛있는 해랑","img":"http://www.phoenixpark.co.kr/file/resort/Package/447.jpg","cost":230000,"packD1":"haerang_detail.jpg","packD2":"haerang_room_price.png","packD3":"haerang_detail_info.png","packD4":"res_information.jpg"},
+{"id":4,"name":"not","img":"null","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
+{"id":5,"name":"not","img":"null","cost":0,"packD1":"null","packD2":"null","packD3":"null","packD4":"null"},
+{"id":6,"name":"휘닉스 스쿠버","img":"http://www.phoenixpark.co.kr/file/resort/Package/797.jpg","cost":302000,"packD1":"scuba_detail.jpg","packD2":"scuba_room_price.png","packD3":"scuba_detail_info.png","packD4":"res_information.jpg"}]
