@@ -47,6 +47,7 @@
 		}
 		document.getElementById("peopleNumId").value = people_num;//인원 수정
 		document.getElementById("peopleText").innerHTML = people_num + '명';
+		
 
 		document.getElementById("costId").value = totalCost;//요금 수정
 		document.getElementById("costText").innerHTML = totalCost + '원';
@@ -742,7 +743,6 @@
 
 						<div class="option" style="height: 290px;">
 							<p class="tit" onclick="test();" style="">옵션선택</p>
-							<button id="btn">눌러</button>
 							<div id="op_cont" class="op_cont">
 								<div class="updown">
 									<p class="text">시설구분</p>
@@ -774,9 +774,9 @@
 							</p>
 						</div>
 							</div>
-							
-						</div>
 						
+						</div>
+							
 					</div>
 					<div class="re_info mt20">
 						<div class="">
@@ -906,7 +906,7 @@
 						<p class="tit">객실정보</p>
 						<div class="top">
 							<p>
-								<span class="bold">객실료</span><span
+								<span class="bold">객실료</span><span id = "roomCostTotal"
 									class="b_bold room_price_display">0원</span>
 							</p>
 							<p style="width: 300px;">
@@ -914,7 +914,7 @@
 									class="b_bold room_option_price_display">0원</span>
 							</p>
 							<p>
-								<span class="bold">총금액</span><span
+								<span class="bold">총금액</span><span  id = "totalCostPay"
 									class="r_bold room_total_price_display">0원</span>&nbsp;&nbsp;<a
 									class="btn_radius_r pt5" style="width: 118px;"
 									href="javascript:;"
@@ -1142,22 +1142,25 @@
 
 <script type="text/javascript">
 readPackageJSON();
-//세란선배님, 리로드 시키는 부분
-$(document).ready(function(){
-  $("#s").click(function(){
-  	 $("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_in_function() + "&check_outGo=" + check_out_function());
-  });
-});
-
+//세란선배님, 리로드 시키는  s 부분
+var count;
 function test(){
 	alert("test");
 	var check_inGo = check_in_function();
 	var check_outGo = check_out_function();
-	 $("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_inGo + "&check_outGo=" + check_outGo);
+	 
+	var check_in = check_inGo.substring(0, 4) + check_inGo.substring(5, 7) + check_inGo.substring(8, 10);
+	var check_out = check_outGo.substring(0, 4) + check_outGo.substring(5, 7) + check_outGo.substring(8, 10);
+
+	var day = (check_out-check_in)
+	var cost = document.getElementById("costId").value;
+	cost = cost*day;
+	document.getElementById("roomCostTotal").innerHTML = cost + '원 ';
+	document.getElementById("totalCostPay").innerHTML = cost + '원';
+	
+	$("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out);
 		alert(check_out);
 }
-
-
 
 </script>
 </html>

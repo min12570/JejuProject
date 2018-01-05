@@ -10,7 +10,7 @@
 <body>
 	<h2>값이 ondol, twin 등 5개 나와야 함</h2>
 	1월이다
-	<div onclick="goRoomStart(1);">날짜를 하나 받자 1</div>
+	<div onclick="goRoomStart(1);">날짜를 하sssss나 받자 1</div>
 	<div onclick="goRoomEnd(2);">2</div>
 	<script type="text/javascript">
 		var start_index = 0;

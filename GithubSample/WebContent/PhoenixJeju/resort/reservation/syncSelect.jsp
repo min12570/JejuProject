@@ -19,33 +19,34 @@
 			location.href = "main.jan_res?db=selectNalja";
 		}
 		
-			var stayDay=2, roomTypeCost, lastCost;
+			var stayDay, roomTypeCost, lastCost;
 			function totalCostOp(){
 				//지윤이 부분
 				//roomTypeCost = document.getElementById("roomType").value;
 				//roomTypeCost = document.getElementById("costId").value + (roomTypeCost*10000) ;
+				stayDay = ${stay};//document.getElementById("stayDay").value;
 				//아름 추가
 				var roomName = document.getElementById("roomType").value;
 				if(roomName.indexOf("스위트") != -1){
-					roomTypeCost = 10;
+					roomTypeCost = 100000;
 				}else{
 					roomTypeCost = 0;
 				}
-				roomTypeCost =302000 + (roomTypeCost*10000) ;
-				lastCost = roomTypeCost * stayDay;
-				document.getElementById("totalPackageCost").innerHTML = lastCost+'원';
+				var cost = ${cost};//document.getElementById("totalPackageCost").value;;
+				roomTypeCost =(cost+roomTypeCost)*stayDay;
+				document.getElementById("totalPackageCost").innerHTML = roomTypeCost+'원';
 			}
 	</script>
 
 	<div id="op_cont" class="op_cont">
 		<div class="updown">
-			<p class="text">시설d구분</p>
+			<p class="text">시설구분</p>
 			<select name="buld_cd" class="w140 ml30" style="width: 130px"
 				onchange="buldChange()"><option selected>콘도</option>
 			</select>
 		</div>
 		<div id="updown" class="updown">
-			<p class="text">객실d타입</p>
+			<p class="text">객실타입</p>
 			<select id="roomType" name="roomType" class="w140 ml30"
 				style="width: 130px" onchange="totalCostOp();">
 				<option>선택하세요</option>
@@ -56,10 +57,9 @@
 			<!-- 지윤 - totalCostOp(투숙기간) -->
 		</div>
 		<div class="money01">
-			<p class="tit" style="">결제금액</p>
+			<p id="stayDay"class="tit" value = "${stay}">결제금액</p>
 			<p class="pt25 pl20 font_b15">
-				패키지 금액 <span id='totalPackageCost' class="font_b16_r ml20 room_total_price_display">30200sss0원</span>
-					
+				패키지 금액 <span id='totalPackageCost' items = "${cost}" value = "${cost}" class="font_b16_r ml20 room_total_price_display">${cost}원</span>					
 			</p>
 		</div>
 	</div>
