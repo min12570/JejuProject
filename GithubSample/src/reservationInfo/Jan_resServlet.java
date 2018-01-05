@@ -59,7 +59,7 @@ System.out.println(check_inGo+","+check_outGo);
 		// 체크인 to 체크아웃 값 콘솔에서 확인
 		//System.out.println(check_in + " to " + check_out);
 		if(db3.equals("selectNalja")) {
-			System.out.println("jan_DB");
+			System.out.println("in Jan_resServlet");
 			Connection con = (Connection) biz.getConnection();			
 			Statement st = null;
 			
@@ -87,7 +87,6 @@ System.out.println(check_inGo+","+check_outGo);
 			 
 			 
 	   
-	        System.out.println(sql);
 	        try {
 				st = (Statement) con.createStatement();
 			} catch (SQLException e1) {
@@ -103,15 +102,12 @@ System.out.println(check_inGo+","+check_outGo);
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			System.out.println("오니?");
 	        String sqlRecipeProcess = "";
 	        boolean []Empty = {true,true,true,true,true,true,true};
 	        try {
 	        	while(rs.next()) {
-	        		System.out.println("오니?");
 	        		if(rs.getInt("D_ONDOL")==0)
 	        			Empty[0] = false;
-	        		else System.out.println("ㄹㄹ");
 	        		if(rs.getInt("D_TWIN")==0)
 	        			Empty[1] = false;
 	        		if(rs.getInt("T_ONDOL")==0)
@@ -126,7 +122,7 @@ System.out.println(check_inGo+","+check_outGo);
 	        			Empty[6] = false;
 	        	}
 	        	for(int i=0;i<7;i++) {
-	        		System.out.println(Empty[i]);
+	        		System.out.print(Empty[i]+ " ");
 	        	}
 	        	if(Empty[0])
 	        		jan_res.add("로얄더블온돌");
