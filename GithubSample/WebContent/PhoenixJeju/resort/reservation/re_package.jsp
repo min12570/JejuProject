@@ -51,7 +51,7 @@
 		
 
 		document.getElementById("costId").value = totalCost;//요금 수정
-		document.getElementById("totalPackageCost").innerHTML = totalCost + '원';
+		//document.getElementById("totalPackageCost").innerHTML = totalCost + '원';
 		document.getElementById("costText").innerHTML = totalCost + '원';
 	}
 	//객실타입, 숙박일수에 따른 패키지 금액
@@ -352,6 +352,14 @@
 			<!-- 정민 수정 css복구 -->
 			<link href="../../resort/_css/cont.css" type="text/css"
 				rel="stylesheet">
+				<style>
+.updown{
+    padding-top: 5px;
+}
+#op_cont1{
+padding:0px;
+}
+</style>
 			<script type="text/javascript" charset="utf-8">
 					// Internet Explorer 버전 체크
 					var IEVersionCheck = function() {
@@ -745,9 +753,9 @@
 
 						<div class="option" style="height: 290px;">
 							<p class="tit" onclick="test();" style="">옵션선택</p>
-							<div id="op_cont" class="op_cont">
-								<div class="updown">
-									<p class="text">시설구분</p>
+							<div id="op_cont1" class="op_cont">
+								<div class="updown" id="updown">
+									<p class="text">&nbsp;&nbsp;시설구분</p>
 									<select name="buld_cd" class="w140 ml30" style="width: 130px"
 										onchange="buldChange()"><option selected>콘도</option>
 									</select>
@@ -755,7 +763,7 @@
 								<div id="updown" class="updown">
 
 
-									<p class="text" >객실타입</p>
+									<p class="text" >&nbsp;&nbsp;객실타입</p>
 									<!-- 세란선배님, 셀렉트박스 클릭하면 리로드 되도록 -->
 									<select id="roomType" name="roomType"
 										class="w140 ml30" style="width: 130px"
@@ -772,7 +780,7 @@
 							<p class="tit" style="">결제금액</p>
 							<p class="pt25 pl20 font_b15">
 								패키지 금액 <span id="totalPackageCost"
-									class="font_b16_r ml20 room_total_price_display">302000원</span>
+									class="font_b16_r ml20 room_total_price_display">원</span>
 							</p>
 						</div>
 							</div>
@@ -1159,7 +1167,7 @@ function test(){
 	document.getElementById("roomCostTotal").innerHTML = cost + '원 ';
 	document.getElementById("totalCostPay").innerHTML = cost + '원';
 	
-	$("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out+"&cost="+cost);
+	$("#op_cont1").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out+"&cost="+cost);
 }
 
 </script>

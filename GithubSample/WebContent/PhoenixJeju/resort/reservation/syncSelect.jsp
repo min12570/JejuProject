@@ -13,6 +13,11 @@
 
 </head>
 <body>
+<style>
+.updown{
+    padding-top: 5px;
+}
+</style>
 
 	<script type="text/javascript">
 	function DBsearch() {
@@ -38,15 +43,15 @@
 			}
 	</script>
 
-	<div id="op_cont" class="op_cont">
-		<div class="updown">
-			<p class="text">시설구분</p>
+	<div id="op_cont1" class="op_cont">
+		<div class="updown" id="updown">
+			<p class="text">&nbsp;&nbsp;시설구분</p>
 			<select name="buld_cd" class="w140 ml30" style="width: 130px"
 				onchange="buldChange()"><option selected>콘도</option>
 			</select>
 		</div>
-		<div id="updown" class="updown">
-			<p class="text">객실타입</p>
+		<div class="updown">
+			<p class="text">&nbsp;&nbsp;객실타입</p>
 			<select id="roomType" name="roomType" class="w140 ml30"
 				style="width: 130px" onchange="totalCostOp();">
 				<option>선택하세요</option>
@@ -59,7 +64,7 @@
 		<div class="money01">
 			<p id="stayDay"class="tit" value = "${stay}">결제금액</p>
 			<p class="pt25 pl20 font_b15">
-				패키지 금액 <span id='totalPackageCost' items = "${intCost}" value = "${intCost}" class="font_b16_r ml20 room_total_price_display">${cost}원</span>					
+				패키지 금액 <span id='totalPackageCost' items = "${intCost}" value = "${intCost}" class="font_b16_r ml20 room_total_price_display">${cost} 원</span>					
 			</p>
 		</div>
 	</div>
