@@ -67,6 +67,8 @@ function showPackages(Pid){
 
 function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
+	var pay = Paydocument.getElementById("totalCostPay").value;
+	alert(pay);
 	//alert(payHow);
 	if (payHow == "계좌이체") {
 		location.href='../../resort/reservation/main.reservation?title='+Name+'&img='+img;
