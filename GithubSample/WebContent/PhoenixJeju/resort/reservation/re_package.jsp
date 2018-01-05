@@ -924,7 +924,7 @@ padding:0px;
 									class="b_bold room_option_price_display">0원</span>
 							</p>
 							<p>
-								<span class="bold">총금액</span><span  id = "totalCostPay"
+								<span class="bold">총금액</span><span id ="totalCostPay"
 									class="r_bold room_total_price_display">0원</span>&nbsp;&nbsp;<a
 									class="btn_radius_r pt5" style="width: 118px;"
 									href="javascript:;"
@@ -1154,19 +1154,23 @@ padding:0px;
 readPackageJSON();
 //세란선배님, 리로드 시키는  s 부분
 var count;
+var day;
 function test(){
 	var check_inGo = check_in_function();
 	var check_outGo = check_out_function();
 	
+	ahreum_nalGo(check_inGo,check_outGo);
+	
 	var check_in = check_inGo.substring(0, 4) + check_inGo.substring(5, 7) + check_inGo.substring(8, 10);
 	var check_out = check_outGo.substring(0, 4) + check_outGo.substring(5, 7) + check_outGo.substring(8, 10);
 
-	var day = (check_out-check_in)
+	day = (check_out-check_in);
 	var cost = document.getElementById("costId").value;
 	cost = cost*day;
+	setDay(day);
 	document.getElementById("roomCostTotal").innerHTML = cost + '원 ';
 	document.getElementById("totalCostPay").innerHTML = cost + '원';
-	
+	$('#totalCostPay').val(cost+'원');
 	$("#op_cont1").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out+"&cost="+cost);
 }
 

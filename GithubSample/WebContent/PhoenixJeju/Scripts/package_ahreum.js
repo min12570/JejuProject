@@ -64,19 +64,27 @@ function showPackages(Pid){
 	$('.img_for_detail').html(imgUrlForDetail);
 
 }
+var nalS;
+var nalE;
 
 function reservation_chk(){
 	var payHow = document.getElementById("payHow").value;
-	var pay = Paydocument.getElementById("totalCostPay").value;
-	alert(pay);
+	var pay = $('#totalCostPay').val(); 
 	//alert(payHow);
+	//alert("아름 날짜 확인!"+ nalS);
 	if (payHow == "계좌이체") {
-		location.href='../../resort/reservation/main.reservation?title='+Name+'&img='+img;
+		location.href='../../resort/reservation/main.reservation?title='+Name+'&img='+img+'&pay='+pay+'&nalS='+nalS+'&nalE='+nalE+'&day='+day;
 	}else{
 		alert("지원하지 않는 기능입니다");		
 	}
 	
 }	
+
+function ahreum_nalGo(nalSS,nalEE){
+	nalS = nalSS;
+	nalE = nalEE;
+	//alert("아름 날짜!"+ nalS);
+}
 
 function packageList(p_number){
 	location.href="../../resort/reservation/main.package?db=all&p_num="+p_number;
@@ -85,5 +93,10 @@ function showpackage(){
 	var temp;
 	temp = location.href.split("?");
 	temp = temp[1].split("=");
-	$('#detail_img').attr("src",temp[2]);
+	temp = temp[2].split("&");
+	$('#detail_img').attr("src",temp[0]);
+}
+var day;
+function setDay(dayday){
+	day = dayday;
 }

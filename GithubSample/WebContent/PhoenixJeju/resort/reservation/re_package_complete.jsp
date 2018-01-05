@@ -243,15 +243,15 @@ onclick="location.href='/resort/reservation/re_coupon'">
 							<li class="title" id="p_title">${title}</li>
 							<li><span>타입 : </span>콘도</li>
 							<li><span>인원 : </span>2인</li>
-							<li><span>요금 : </span>272,000원</li>
-							<li><span>투숙기간 : </span>2017.11.01 ~ 2018.03.31</li>
+							<li><span>요금 : </span>${pay}</li>
+							<li><span>투숙기간 : </span>${nalS} ~ ${nalE}</li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="" style="width:460px;">
 					<p class="re_tit">결제정보</p>
-					<p class="font_b16_3 pt15 pl20 pb15 rsv_date" style="border-bottom:1px solid #ddd; width:100%;">일정 : 2018.01.05 ~ 2018.01.06<br/>숙박일수 : 1일</p>
+					<p class="font_b16_3 pt15 pl20 pb15 rsv_date" style="border-bottom:1px solid #ddd; width:100%;">일정 : 2018.01.05 ~ 2018.01.06<br/>숙박일수 : ${day}일</p>
 
 					<ul class="re_info mt10">
 						<li class="w_120 rooms"><span>객실수 :</span> 1실</li>
@@ -259,10 +259,10 @@ onclick="location.href='/resort/reservation/re_coupon'">
 						<li class="w_155 option_rate"><span>옵션 :</span> 0원</li>
 						<!-- <li class="w_120"><span>인원 :</span> 명</li> -->
 						<li class="w_155 dp_gubun"><span>결제방법 :</span> 계좌이체</li>
-						<li class="w_155 room_rate"><span>객실료 :</span> 252,000원</li>
+						<li class="w_155 room_rate"><span>객실료 :</span>${pay}</li>
 					</ul>
 
-					<p class="red_text total_price">총금액 : 252,000원</p>
+					<p class="red_text total_price">총금액 : ${pay}</p>
 					<p class="re_tit">결제방법 안내</p>
 					<div class="chk_info">
 						<span>입금 은행 :</span> 우리은행 1005-801-081715<br>

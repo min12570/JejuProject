@@ -32,10 +32,17 @@ public class ReservationServlet extends HttpServlet {
 		 
 		String title = request.getParameter("title");
 		String img = request.getParameter("img");
+		String pay = request.getParameter("pay");
+		String nalS = request.getParameter("nalS");
+		String nalE = request.getParameter("nalE");
+		String day = request.getParameter("day");
 		
 		String next="";
-		
 		request.setAttribute("title", title);
+		request.setAttribute("pay", pay);
+		request.setAttribute("nalE", nalE);
+		request.setAttribute("nalS", nalS);
+		request.setAttribute("day", day);
        // request.setAttribute("img", img);
         
 		next = "/PhoenixJeju/resort/reservation/re_package_complete.jsp?"+img;
