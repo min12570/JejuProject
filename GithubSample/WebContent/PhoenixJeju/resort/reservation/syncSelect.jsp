@@ -17,7 +17,17 @@
 .updown{
     padding-top: 5px;
 }
+
+div.option p.tit {
+    border-left: 1px solid #777;
+    background: #878787;
+    padding: 11px 0 5px 20px;
+    font: bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
+    color: #fff;
+}
 </style>
+
+
 
 	<script type="text/javascript">
 	function DBsearch() {
@@ -26,18 +36,13 @@
 		
 			var stayDay, roomTypeCost, lastCost;
 			function totalCostOp(){
-				//지윤이 부분
-				//roomTypeCost = document.getElementById("roomType").value;
-				//roomTypeCost = document.getElementById("costId").value + (roomTypeCost*10000) ;
-				stayDay = ${stay};//document.getElementById("stayDay").value;
-				//아름 추가
 				var roomName = document.getElementById("roomType").value;
 				if(roomName.indexOf("스위트") != -1){
 					roomTypeCost = 100000;
 				}else{
 					roomTypeCost = 0;
 				}
-				var cost = ${intCost};//document.getElementById("totalPackageCost").value;;
+				var cost = ${intCost};
 				roomTypeCost =(cost+roomTypeCost);
 				document.getElementById("totalPackageCost").innerHTML = roomTypeCost+'원';
 			}

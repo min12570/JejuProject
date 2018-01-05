@@ -352,12 +352,13 @@
 			<!-- 정민 수정 css복구 -->
 			<link href="../../resort/_css/cont.css" type="text/css"
 				rel="stylesheet">
-				<style>
-.updown{
-    padding-top: 5px;
+			<style>
+.updown {
+	padding-top: 5px;
 }
-#op_cont1{
-padding:0px;
+
+#op_cont1 {
+	padding: 0px;
 }
 </style>
 			<script type="text/javascript" charset="utf-8">
@@ -651,8 +652,7 @@ padding:0px;
 										<% } %>
 
 										<div style="width: 100%" align="center">
-											<br>
-											<br>
+											<br> <br>
 											<p align="center" class="img_for_detail"></p>
 
 										</div>
@@ -746,26 +746,51 @@ padding:0px;
 									<option value="7">7</option>
 									<option value="8">8</option>
 									<option value="9">9</option>
-								</select> 
+								</select>
 								<p style="height: 12px;"></p>
 							</div>
 						</div>
 
 						<div class="option" style="height: 290px;">
-						<style> .btn_white{
-    display: inline-block;
-    padding: 5px 10px 10px 5px;
-    border: 1px solid #d5d5d5;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    font: bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
-    color: #555;
-    background: #fff;
-}
-.btn_white:hover			{padding: 5px 10px 10px 5px; border:1px solid #d5d5d5; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; font:bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; background:#f5f5f5;}
-						</style>
-							<p class="tit" style="">옵션선택 <button onclick="test();" class = "btn_white">조회하기</button></p>
+							<style>
+							.btn_white {
+								display: inline-block;
+								padding: 5px 10px 10px 5px;
+								border: 1px solid #d5d5d5;
+								border-radius: 3px;
+								-webkit-border-radius: 3px;
+								-moz-border-radius: 3px;
+								font: bold 13px/16px "Malgun Gothic", "Dotum", "Arial", "verdana",
+									"Helvetica";
+								color: #555;
+								background: #fff;
+							}
+							
+							.btn_white:hover {
+								padding: 5px 10px 10px 5px;
+								border: 1px solid #d5d5d5;
+								border-radius: 3px;
+								-webkit-border-radius: 3px;
+								-moz-border-radius: 3px;
+								font: bold 13px/16px "Malgun Gothic", "Dotum", "Arial", "verdana",
+									"Helvetica";
+								color: #555;
+								background: #f5f5f5;
+							}
+							
+							div.option p.tit {
+								border-left: 1px solid #777;
+								background: #878787;
+								padding: 11px 0 5px 20px;
+								font: bold 16px "Malgun Gothic", "Dotum", "Arial", "verdana",
+									"Helvetica";
+								color: #fff;
+							}
+							</style>
+							<p class="tit" style="">
+								옵션선택
+								<button onclick="test();" class="btn_white">조회하기</button>
+							</p>
 							<div id="op_cont1" class="op_cont">
 								<div class="updown" id="updown">
 									<p class="text">&nbsp;&nbsp;시설구분</p>
@@ -775,12 +800,10 @@ padding:0px;
 								</div>
 								<div id="updown" class="updown">
 
-
-									<p class="text" >&nbsp;&nbsp;객실타입</p>
+									<p class="text">&nbsp;&nbsp;객실타입</p>
 									<!-- 세란선배님, 셀렉트박스 클릭하면 리로드 되도록 -->
-									<select id="roomType" name="roomType"
-										class="w140 ml30" style="width: 130px"
-										onchange="totalCostOp();">
+									<select id="roomType" name="roomType" class="w140 ml30"
+										style="width: 130px" onchange="totalCostOp();">
 										<option>선택하세요</option>
 										<c:forEach var="jan_resName" items="${jan_resName}">
 											<option>${jan_resName}</option>
@@ -790,16 +813,16 @@ padding:0px;
 									<!-- 지윤 - totalCostOp(투숙기간) -->
 								</div>
 								<div class="money01">
-							<p class="tit" style="">결제금액</p>
-							<p class="pt25 pl20 font_b15">
-								패키지 금액 <span id="totalPackageCost"
-									class="font_b16_r ml20 room_total_price_display">원</span>
-							</p>
-						</div>
+									<p class="tit" style="">결제금액</p>
+									<p class="pt25 pl20 font_b15">
+										패키지 금액 <span id="totalPackageCost"
+											class="font_b16_r ml20 room_total_price_display">원</span>
+									</p>
+								</div>
 							</div>
-						
+
 						</div>
-							
+
 					</div>
 					<div class="re_info mt20">
 						<div class="">
@@ -929,7 +952,7 @@ padding:0px;
 						<p class="tit">객실정보</p>
 						<div class="top">
 							<p>
-								<span class="bold">객실료</span><span id = "roomCostTotal"
+								<span class="bold">객실료</span><span id="roomCostTotal"
 									class="b_bold room_price_display">0원</span>
 							</p>
 							<p style="width: 300px;">
@@ -937,7 +960,7 @@ padding:0px;
 									class="b_bold room_option_price_display">0원</span>
 							</p>
 							<p>
-								<span class="bold">총금액</span><span id ="totalCostPay"
+								<span class="bold">총금액</span><span id="totalCostPay"
 									class="r_bold room_total_price_display">0원</span>&nbsp;&nbsp;<a
 									class="btn_radius_r pt5" style="width: 118px;"
 									href="javascript:;"
