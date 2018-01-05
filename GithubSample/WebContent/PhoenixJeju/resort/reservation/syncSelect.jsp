@@ -32,8 +32,8 @@
 				}else{
 					roomTypeCost = 0;
 				}
-				var cost = ${cost};//document.getElementById("totalPackageCost").value;;
-				roomTypeCost =(cost+roomTypeCost)*stayDay;
+				var cost = ${intCost};//document.getElementById("totalPackageCost").value;;
+				roomTypeCost =(cost+roomTypeCost);
 				document.getElementById("totalPackageCost").innerHTML = roomTypeCost+'원';
 			}
 	</script>
@@ -59,7 +59,7 @@
 		<div class="money01">
 			<p id="stayDay"class="tit" value = "${stay}">결제금액</p>
 			<p class="pt25 pl20 font_b15">
-				패키지 금액 <span id='totalPackageCost' items = "${cost}" value = "${cost}" class="font_b16_r ml20 room_total_price_display">${cost}원</span>					
+				패키지 금액 <span id='totalPackageCost' items = "${intCost}" value = "${intCost}" class="font_b16_r ml20 room_total_price_display">${cost}원</span>					
 			</p>
 		</div>
 	</div>

@@ -28,6 +28,7 @@
 			totalCost = document.getElementById("costId").value;
 			totalCost -= 85000;
 			document.getElementById("costId").value = totalCost;
+			document.getElementById("totalPackageCost").innerHTML = totalCost + '원';
 			document.getElementById("costText").innerHTML = totalCost + '원';
 		}
 	}
@@ -50,6 +51,7 @@
 		
 
 		document.getElementById("costId").value = totalCost;//요금 수정
+		document.getElementById("totalPackageCost").innerHTML = totalCost + '원';
 		document.getElementById("costText").innerHTML = totalCost + '원';
 	}
 	//객실타입, 숙박일수에 따른 패키지 금액
@@ -769,7 +771,7 @@
 								<div class="money01">
 							<p class="tit" style="">결제금액</p>
 							<p class="pt25 pl20 font_b15">
-								패키지 금액 <span id='totalPackageCost'
+								패키지 금액 <span id="totalPackageCost"
 									class="font_b16_r ml20 room_total_price_display">302000원</span>
 							</p>
 						</div>
@@ -1145,7 +1147,6 @@ readPackageJSON();
 //세란선배님, 리로드 시키는  s 부분
 var count;
 function test(){
-	alert("test");
 	var check_inGo = check_in_function();
 	var check_outGo = check_out_function();
 	
@@ -1158,8 +1159,7 @@ function test(){
 	document.getElementById("roomCostTotal").innerHTML = cost + '원 ';
 	document.getElementById("totalCostPay").innerHTML = cost + '원';
 	
-	$("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out);
-		alert(check_out);
+	$("#op_cont").load("main.jan_res?db3=selectNalja&check_inGo="+check_in + "&check_outGo=" + check_out+"&cost="+cost);
 }
 
 </script>

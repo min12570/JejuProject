@@ -49,6 +49,7 @@ public class Jan_resServlet extends HttpServlet {
 		
 		String check_inGo = request.getParameter("check_inGo");
 		String check_outGo = request.getParameter("check_outGo");
+		String cost = request.getParameter("cost");
 		//location.href="main.jan_res?db3=selectNalja?check_inGo="+check_inGo + "&check_outGo=" + check_outGo;
 System.out.println(check_inGo+","+check_outGo);
 		// 2018-01-01에서 '-'값 제거 ex)20180101
@@ -66,6 +67,7 @@ System.out.println(check_inGo+","+check_outGo);
 			 String sql;
 			 int checkIn = Integer.parseInt(check_inGo); // 체크인 날짜값
 				int checkOut = Integer.parseInt(check_outGo); // 체크아웃 날짜값
+				int intCost = Integer.parseInt(cost);
 			 sql = "	SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 0\r\n" + 
 			 		"	ELSE 1 END 	 AS D_ONDOL	 		\r\n" + 
 			 		"    , CASE D_TWIN WHEN D_TWIN > 0 THEN 0\r\n" + 
@@ -147,10 +149,9 @@ System.out.println(check_inGo+","+check_outGo);
 			}
 	       int count = checkIn- checkOut;
 	        request.setAttribute("jan_resName", jan_res);
-	        int cost = 302000;
 	        int stay = checkOut - checkIn;
 	        request.setAttribute("stay", stay);
-	        request.setAttribute("cost", cost);
+	        request.setAttribute("intCost", intCost);
 			
 			//next = "./syncSelect.jsp";//resort/reservation/re_package.jsp";
 		}
