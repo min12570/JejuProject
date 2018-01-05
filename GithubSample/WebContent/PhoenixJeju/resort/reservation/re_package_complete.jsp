@@ -91,7 +91,7 @@ function goPackageReserve1(){
                             <img src="../../pyeongchang/_img/gnb/resortmenu_off.gif" alt="휘닉스 평창" /></a></li>
                         <div class="dropdown">
                         <li class="dropbtn"><a href="../../jeju/index.html">
-                            <img id="jeju_img" src="../../pyeongchang/_img/gnb/islandmenu_on.gif"  onmouseover="this.src='../../pyeongchang/_img/gnb/islandmenu_on.gif'" onmouseout="this.src='../../pyeongchang/_img/gnb/islandmenu_off.gif'" alt="휘닉스 제주" /></a></li>
+                            <img id="jeju_img" src="../../pyeongchang/_img/gnb/islandmenu_on.gif" alt="휘닉스 제주" /></a></li>
 						<div class="dropdown-content">
 							<div class="row">
 								<ul class="column">

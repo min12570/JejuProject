@@ -220,7 +220,7 @@ WHERE TABLE_NAME = 'jan_res' and (select * from jan_res where );
    ELSE 1 END     AS SUITE_B
    , CASE SUITE_O WHEN SUITE_O > 0 THEN 0
    ELSE 1 END     AS SUITE_O
-   FROM JAN_RES  WHERE jan_day BETWEEN 20180102 AND 20180103; 
+   FROM JAN_RES  WHERE jan_day = 20180102; 
 
    
    SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 'D_ONDOL'
@@ -237,13 +237,13 @@ WHERE TABLE_NAME = 'jan_res' and (select * from jan_res where );
                     ELSE 'SUITE_B(SOLD OUT)' END     AS SUITE_B
      , CASE SUITE_O WHEN SUITE_O > 0 THEN 'SUITE_O'
                     ELSE 'SUITE_O(SOLD OUT)' END     AS SUITE_O
-  FROM JAN_RES
- WHERE  = '20180103'
+  FROM JAN_RES  WHERE jan_day = 20180102; 
 
 
 --애증의 SQL 날렸다.
  truncate table jan_res;
  
+ select * from jan_res;
  
  INSERT INTO `jan_res` (`jan_day`, `d_ondol`, `d_twin`, `t_ondol`, `o_ondol`, `suite_a`, `suite_b`, `suite_o`) VALUES
 	(20180101, 1, 1, 2, 2, 2, 2, 2),
