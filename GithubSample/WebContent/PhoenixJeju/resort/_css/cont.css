@@ -281,7 +281,7 @@ p.tit					{background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun 
 p.tit1					{padding:11px 0 15px 0px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#222222; text-align:center;}
 
 div.option						{width:311px; }
-div.option div.op_cont			{padding:20px 0 0 20px; overflow:hidden; font:normal 13px/28px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666; }
+div.option div.op_cont			{padding:20px 0 0 0px; overflow:hidden; font:normal 13px/28px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#666; }
 div.option div.op_cont p.name	{font:bold 16px/23px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#333;}
 div.option div.op_cont p span	{font-weight:bold;}
 div.option p.tit				{border-left:1px solid #777; background:#878787; padding:11px 0 15px 20px; font:bold 16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#fff;}
