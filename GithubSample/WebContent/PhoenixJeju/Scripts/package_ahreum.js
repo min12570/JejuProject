@@ -25,6 +25,7 @@ function readPackageJSON(){
 		start();
 	});
 }
+
 function start(){
 	//클릭이벤트 설정
 	$('.rsu_package li ul li').unbind("click").bind("click",function(){
