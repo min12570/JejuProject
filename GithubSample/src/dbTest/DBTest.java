@@ -16,14 +16,12 @@ public class DBTest extends Biz {
 		Statement st = (Statement) con.createStatement();
 		 
         String sql;
-//        sql = "select * FROM people;";
         sql = "select * FROM users;";
         
 
         ResultSet rs = st.executeQuery(sql);
         String sqlRecipeProcess = "";
         while (rs.next()) {
-//            sqlRecipeProcess = rs.getString("firstname");
         	 sqlRecipeProcess = rs.getString("user_id");
         }
         System.out.println(sqlRecipeProcess);

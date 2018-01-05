@@ -49,31 +49,21 @@ public class PackageServlet extends HttpServlet {
 		//ArrayList list = new ArrayList();
 		
 		if(db.equals("all")) {
-			System.out.println("101aaaaafasfasjiyoon");
 			Connection con = (Connection) biz.getConnection();//mySql ����
 			//여기까진 됨
 			Statement st = null;
-			System.out.println("101aaaaafasfasjiyoon");
 			try {
-				System.out.println("101aaaaafasfasjiyoon");
 				st = (Statement) con.createStatement();
-				System.out.println("01aaaaafasfasjiyoon");
 			} catch (SQLException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
-			System.out.println("111aaaaafasfasjiyoon");
-			
-			 
 	        String sql;
 	        sql = "select * FROM package;";
 
 	        ResultSet rs = null;
-	        System.out.println("1aaaaafasfasjiyoon");
 			try {
 				rs = st.executeQuery(sql);
-				System.out.println("2aaaaafasfasjiyoon");
-				System.out.println(rs+"sss");
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -81,8 +71,6 @@ public class PackageServlet extends HttpServlet {
 	        String sqlRecipeProcess = "";
 	        try {
 				while (rs.next()) {
-				    //sqlRecipeProcess = rs.getString("p_name");
-				    //list.add(sqlRecipeProcess);
 					int p_id = rs.getInt("p_id");
 					String p_name = rs.getString("p_name");
 					int p_weekdaycost = rs.getInt("p_weekdaycost");
@@ -106,9 +94,6 @@ public class PackageServlet extends HttpServlet {
 	        System.out.println(list.size());
 	        request.setAttribute("packList", list);
 	        request.setAttribute("p_number", p_number);
-	        
-	      // request.setAttribute("pName", "임의로 넣은 값");
-	      // request.setAttribute("aa", "넘어가라");
 	        
 			biz.close(con);//connection end	
 		}
