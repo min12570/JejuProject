@@ -752,7 +752,20 @@ padding:0px;
 						</div>
 
 						<div class="option" style="height: 290px;">
-							<p class="tit" onclick="test();" style="">옵션선택</p>
+						<style> .btn_white{
+    display: inline-block;
+    padding: 5px 10px 10px 5px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    font: bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica";
+    color: #555;
+    background: #fff;
+}
+.btn_white:hover			{padding: 5px 10px 10px 5px; border:1px solid #d5d5d5; border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; font:bold 13px/16px "Malgun Gothic","Dotum","Arial","verdana","Helvetica"; color:#555; background:#f5f5f5;}
+						</style>
+							<p class="tit" style="">옵션선택 <button onclick="test();" class = "btn_white">조회하기</button></p>
 							<div id="op_cont1" class="op_cont">
 								<div class="updown" id="updown">
 									<p class="text">&nbsp;&nbsp;시설구분</p>
