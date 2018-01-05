@@ -1148,7 +1148,7 @@ function test(){
 	alert("test");
 	var check_inGo = check_in_function();
 	var check_outGo = check_out_function();
-	 
+	
 	var check_in = check_inGo.substring(0, 4) + check_inGo.substring(5, 7) + check_inGo.substring(8, 10);
 	var check_out = check_outGo.substring(0, 4) + check_outGo.substring(5, 7) + check_outGo.substring(8, 10);
 

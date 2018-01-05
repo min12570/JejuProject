@@ -52,11 +52,11 @@ public class Jan_resServlet extends HttpServlet {
 		//location.href="main.jan_res?db3=selectNalja?check_inGo="+check_inGo + "&check_outGo=" + check_outGo;
 System.out.println(check_inGo+","+check_outGo);
 		// 2018-01-01에서 '-'값 제거 ex)20180101
-		String check_in = check_inGo.substring(0, 4) + check_inGo.substring(5, 7) + check_inGo.substring(8, 10);
-		String check_out = check_outGo.substring(0, 4) + check_outGo.substring(5, 7) + check_outGo.substring(8, 10);
+		//String check_in = check_inGo.substring(0, 4) + check_inGo.substring(5, 7) + check_inGo.substring(8, 10);
+		//String check_out = check_outGo.substring(0, 4) + check_outGo.substring(5, 7) + check_outGo.substring(8, 10);
 
 		// 체크인 to 체크아웃 값 콘솔에서 확인
-		System.out.println(check_in + " to " + check_out);
+		//System.out.println(check_in + " to " + check_out);
 		if(db3.equals("selectNalja")) {
 			System.out.println("jan_DB");
 			Connection con = (Connection) biz.getConnection();			
@@ -64,9 +64,8 @@ System.out.println(check_inGo+","+check_outGo);
 			
 			   ResultSet rs = null;
 			 String sql;
-			 int checkIn = Integer.parseInt(check_in); // 체크인 날짜값
-				int checkOut = Integer.parseInt(check_out); // 체크아웃 날짜값
-				
+			 int checkIn = Integer.parseInt(check_inGo); // 체크인 날짜값
+				int checkOut = Integer.parseInt(check_outGo); // 체크아웃 날짜값
 			 sql = "	SELECT CASE D_ONDOL WHEN D_ONDOL > 0 THEN 0\r\n" + 
 			 		"	ELSE 1 END 	 AS D_ONDOL	 		\r\n" + 
 			 		"    , CASE D_TWIN WHEN D_TWIN > 0 THEN 0\r\n" + 
@@ -146,8 +145,12 @@ System.out.println(check_inGo+","+check_outGo);
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	       
+	       int count = checkIn- checkOut;
 	        request.setAttribute("jan_resName", jan_res);
+	        int cost = 302000;
+	        int stay = checkOut - checkIn;
+	        request.setAttribute("stay", stay);
+	        request.setAttribute("cost", cost);
 			
 			//next = "./syncSelect.jsp";//resort/reservation/re_package.jsp";
 		}
